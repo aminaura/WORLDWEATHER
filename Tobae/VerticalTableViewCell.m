@@ -87,28 +87,15 @@ static NSString * const TableViewCustomCellIdentifier = @"Cell";
         cell_object = [Cell loadFromNib];
     }
     
-    NSDictionary *weathers = [self getweather:self.weather_capital[indexPath.row]];
+/*    NSDictionary *weathers = [self getweather:self.weather_capital[indexPath.row]];
     cell_object.title.text = [NSString stringWithFormat:@"%@",_weather_capital[indexPath.row]];
     
     NSString *imageKeyname = weathers[@"icons"][0];
     cell_object.weather_icon_image.image = weather_icon[imageKeyname];
+    */
     
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.bounces = YES;
-    
-    if (indexPath.row % 2 == 0) {
-        cell_object.backgroundColor = [UIColor colorWithHue:0.0
-                                          saturation:0.0
-                                          brightness:0.67
-                                               alpha:1.0];
-    }
-    // 奇数セル
-    else {
-        cell_object.backgroundColor = [UIColor colorWithHue:0.0
-                                          saturation:0.0
-                                          brightness:0.73
-                                               alpha:1.0];
-    }
     
     // セルの向きを横向きに
     cell_object.contentView.transform = CGAffineTransformMakeRotation(M_PI / 2);
@@ -126,30 +113,6 @@ static NSString * const TableViewCustomCellIdentifier = @"Cell";
     return 140.0;
 }
 
--(NSDictionary *)getweather:(NSString *)string{
-    
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?q=%@", string]];
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-    NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-    
-    // ⑦ weather.mainの値を抽出
-    NSArray *main = [object valueForKeyPath:@"weather.main"]; //天候
-    NSArray *description = [object valueForKeyPath:@"weather.description"]; // 天候詳細
-    NSArray *speed = [object valueForKeyPath:@"wind.speed"]; //風速
-    NSArray *icons = [object valueForKeyPath:@"weather.icon"];
-    
-    
-    NSLog(@"main(天候)=%@,description(天候詳細)=%@,speed(風速)=%@,icons(天気アイコン)=%@",main,description,speed,icons);
-    
-    NSDictionary *weather= @{@"main":main,
-                             @"description":description,
-                             @"speed":speed,
-                             @"icons":icons};
-    
-    return weather;
-}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     

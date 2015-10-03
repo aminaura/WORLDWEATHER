@@ -14,6 +14,8 @@
     IBOutlet UILabel *countryla;
     IBOutlet UILabel *temperaturela;
     
+    IBOutlet UIView *view1;
+    IBOutlet UIView *view6;
     
     NSDate *date;
 }
