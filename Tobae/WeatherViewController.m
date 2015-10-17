@@ -8,6 +8,7 @@
 
 #import "WeatherViewController.h"
 #import "VerticalTableViewCell.h"
+#import "CapitalStrManager.h"
 
 @interface WeatherViewController (){
     NSMutableDictionary * array;
@@ -20,7 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://openweathermap.org/city/%@", capitalstr]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://openweathermap.org/city/%@", [CapitalStrManager sharedManager].capitalstr]];
+    
+    NSLog(@"aaaaaa = %@",[CapitalStrManager sharedManager].capitalstr);
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
@@ -241,7 +244,8 @@
                 @"Bolivia"].mutableCopy;
 
     
-    Capitalla.text = capitalstr;
+    Capitalla.text = [CapitalStrManager sharedManager].capitalstr
+    ;
     
 }
 
@@ -263,5 +267,7 @@
     
 
 }
+
+
 
 @end

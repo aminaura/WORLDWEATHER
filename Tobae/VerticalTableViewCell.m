@@ -9,7 +9,7 @@
 
 #import "VerticalTableViewCell.h"
 #import "Cell.h"
-
+#import "CapitalStrManager.h"
 
 
 @interface VerticalTableViewCell(){
@@ -90,6 +90,7 @@ static NSString * const TableViewCustomCellIdentifier = @"Cell";
     NSDictionary *weathers = [self getweather:self.weather_capital[indexPath.row]];
     cell_object.title.text = [NSString stringWithFormat:@"%@",_weather_capital[indexPath.row]];
     
+    
     NSString *imageKeyname = weathers[@"icons"][0];
     cell_object.weather_icon_image.image = weather_icon[imageKeyname];
     
@@ -133,7 +134,6 @@ static NSString * const TableViewCustomCellIdentifier = @"Cell";
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-    
     // ⑦ weather.mainの値を抽出
     NSArray *main = [object valueForKeyPath:@"weather.main"]; //天候
     NSArray *description = [object valueForKeyPath:@"weather.description"]; // 天候詳細
@@ -153,7 +153,20 @@ static NSString * const TableViewCustomCellIdentifier = @"Cell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    capitalstr = [NSString stringWithFormat:@"%@",_weather_capital[indexPath.row]];
+    [CapitalStrManager sharedManager].capitalstr = [NSString stringWithFormat:@"%@",_weather_capital[indexPath.row]];
+    
+    [[self getViewController] performSegueWithIdentifier:@"toNext" sender:self];
+}
+
+-(UIViewController *)getViewController{
+    UIResponder *responder = self;
+    while((responder = responder.nextResponder) != nil)
+    {
+        if([responder isKindOfClass:[UIViewController class]]){
+            return (UIViewController*)responder;
+        }
+    }
+    return  nil;
 }
 
 

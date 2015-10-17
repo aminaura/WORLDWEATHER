@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB44DB2D1BBFB1520054EF17 /* CapitalStrManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB44DB2C1BBFB1520054EF17 /* CapitalStrManager.m */; settings = {ASSET_TAGS = (); }; };
+		DB44DB2F1BBFC5BD0054EF17 /* View.png in Resources */ = {isa = PBXBuildFile; fileRef = DB44DB2E1BBFC5BD0054EF17 /* View.png */; settings = {ASSET_TAGS = (); }; };
+		DB44DB361BBFC6310054EF17 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = DB44DB301BBFC6310054EF17 /* Back.png */; settings = {ASSET_TAGS = (); }; };
+		DB44DB371BBFC6310054EF17 /* Favorite_Add.png in Resources */ = {isa = PBXBuildFile; fileRef = DB44DB311BBFC6310054EF17 /* Favorite_Add.png */; settings = {ASSET_TAGS = (); }; };
+		DB44DB381BBFC6310054EF17 /* Favorite_Cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = DB44DB321BBFC6310054EF17 /* Favorite_Cancel.png */; settings = {ASSET_TAGS = (); }; };
+		DB44DB391BBFC6310054EF17 /* Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = DB44DB331BBFC6310054EF17 /* Profile.png */; settings = {ASSET_TAGS = (); }; };
+		DB44DB3A1BBFC6310054EF17 /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = DB44DB341BBFC6310054EF17 /* Search.png */; settings = {ASSET_TAGS = (); }; };
+		DB44DB3B1BBFC6310054EF17 /* Setting.png in Resources */ = {isa = PBXBuildFile; fileRef = DB44DB351BBFC6310054EF17 /* Setting.png */; settings = {ASSET_TAGS = (); }; };
+		DB44DB3D1BBFC7180054EF17 /* 3Dscan楓PC_square.tif in Resources */ = {isa = PBXBuildFile; fileRef = DB44DB3C1BBFC7180054EF17 /* 3Dscan楓PC_square.tif */; settings = {ASSET_TAGS = (); }; };
 		DBA71AF61B914E14001926A5 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA71AF51B914E14001926A5 /* Cell.xib */; };
 		DBA71AF91B914E9F001926A5 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA71AF81B914E9F001926A5 /* Cell.m */; };
 		DBCAA9251B817032003E70EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCAA9241B817032003E70EE /* main.m */; };
@@ -16,10 +25,6 @@
 		DBCAA9311B817032003E70EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBCAA92F1B817032003E70EE /* Main.storyboard */; };
 		DBCAA9331B817032003E70EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCAA9321B817032003E70EE /* Images.xcassets */; };
 		DBCAA9361B817032003E70EE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBCAA9341B817032003E70EE /* LaunchScreen.xib */; };
-		DBCAA9421B817032003E70EE /* TobaeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCAA9411B817032003E70EE /* TobaeTests.m */; };
-		DBCAA94C1B81704B003E70EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCAA94B1B81704B003E70EE /* CoreGraphics.framework */; };
-		DBCAA94E1B817053003E70EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCAA94D1B817053003E70EE /* UIKit.framework */; };
-		DBCAA9501B81705B003E70EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCAA94F1B81705B003E70EE /* Foundation.framework */; };
 		DBCAAAD51B8170C1003E70EE /* VerticalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCAAAD41B8170C1003E70EE /* VerticalTableViewCell.m */; };
 		DBCAABC71B820B9A003E70EE /* tobae_daruma_character.ai in Resources */ = {isa = PBXBuildFile; fileRef = DBCAAAF41B820B9A003E70EE /* tobae_daruma_character.ai */; };
 		DBCAABC81B820B9A003E70EE /* tobae_daruma_character.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBCAAAF51B820B9A003E70EE /* tobae_daruma_character.jpg */; };
@@ -214,29 +219,29 @@
 		DBCAAC851B820B9A003E70EE /* Weather-App-Icons.png in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABBB1B820B9A003E70EE /* Weather-App-Icons.png */; };
 		DBCAAC861B820B9A003E70EE /* IMG_Article.PNG in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABBD1B820B9A003E70EE /* IMG_Article.PNG */; };
 		DBCAAC871B820B9A003E70EE /* IMG_Loading.png in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABBE1B820B9A003E70EE /* IMG_Loading.png */; };
-		DBCAAC881B820B9A003E70EE /* IMG_Loading.psd in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABBF1B820B9A003E70EE /* IMG_Loading.psd */; };
 		DBCAAC891B820B9A003E70EE /* IMG_Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABC01B820B9A003E70EE /* IMG_Menu.png */; };
-		DBCAAC8A1B820B9A003E70EE /* IMG_Menu.psd in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABC11B820B9A003E70EE /* IMG_Menu.psd */; };
 		DBCAAC8B1B820B9A003E70EE /* IMG_Profile1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABC21B820B9A003E70EE /* IMG_Profile1.PNG */; };
 		DBCAAC8C1B820B9A003E70EE /* IMG_Profile2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABC31B820B9A003E70EE /* IMG_Profile2.PNG */; };
-		DBCAAC8D1B820B9A003E70EE /* Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABC41B820B9A003E70EE /* Profile.png */; };
-		DBCAAC8E1B820B9A003E70EE /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABC51B820B9A003E70EE /* Search.png */; };
-		DBCAAC8F1B820B9A003E70EE /* Search_Profile.ai in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABC61B820B9A003E70EE /* Search_Profile.ai */; };
 		DBD8F4151BA512A7000CA272 /* ufonts.com_century-gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBD8F4141BA512A7000CA272 /* ufonts.com_century-gothic.ttf */; };
 		DBD8F4181BA51611000CA272 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD8F4171BA51611000CA272 /* WeatherViewController.m */; };
+		DBE9085C1BBFD35900D46502 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE9085B1BBFD35900D46502 /* DetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F1784E0A7FD934E43816FB40 /* libPods-Tobae.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B00C1C247026F035B60E4E /* libPods-Tobae.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		DBCAA93C1B817032003E70EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DBCAA9171B817032003E70EE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DBCAA91E1B817032003E70EE;
-			remoteInfo = Tobae;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		07B00C1C247026F035B60E4E /* libPods-Tobae.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tobae.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6750A9DFD9B6AEE9D360114D /* Pods-Tobae.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tobae.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tobae/Pods-Tobae.release.xcconfig"; sourceTree = "<group>"; };
+		C811A5A72C11285CD5184CBA /* Pods-Tobae.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tobae.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tobae/Pods-Tobae.debug.xcconfig"; sourceTree = "<group>"; };
+		DB44DB2B1BBFB1520054EF17 /* CapitalStrManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapitalStrManager.h; sourceTree = "<group>"; };
+		DB44DB2C1BBFB1520054EF17 /* CapitalStrManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapitalStrManager.m; sourceTree = "<group>"; };
+		DB44DB2E1BBFC5BD0054EF17 /* View.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = View.png; sourceTree = "<group>"; };
+		DB44DB301BBFC6310054EF17 /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back.png; sourceTree = "<group>"; };
+		DB44DB311BBFC6310054EF17 /* Favorite_Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Favorite_Add.png; sourceTree = "<group>"; };
+		DB44DB321BBFC6310054EF17 /* Favorite_Cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Favorite_Cancel.png; sourceTree = "<group>"; };
+		DB44DB331BBFC6310054EF17 /* Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Profile.png; sourceTree = "<group>"; };
+		DB44DB341BBFC6310054EF17 /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search.png; sourceTree = "<group>"; };
+		DB44DB351BBFC6310054EF17 /* Setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Setting.png; sourceTree = "<group>"; };
+		DB44DB3C1BBFC7180054EF17 /* 3Dscan楓PC_square.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "3Dscan楓PC_square.tif"; sourceTree = "<group>"; };
 		DBA71AF51B914E14001926A5 /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 		DBA71AF71B914E9F001926A5 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
 		DBA71AF81B914E9F001926A5 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
@@ -251,12 +256,6 @@
 		DBCAA9301B817032003E70EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBCAA9321B817032003E70EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DBCAA9351B817032003E70EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		DBCAA93B1B817032003E70EE /* TobaeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TobaeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBCAA9401B817032003E70EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBCAA9411B817032003E70EE /* TobaeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TobaeTests.m; sourceTree = "<group>"; };
-		DBCAA94B1B81704B003E70EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		DBCAA94D1B817053003E70EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		DBCAA94F1B81705B003E70EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DBCAAAD31B8170C1003E70EE /* VerticalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalTableViewCell.h; sourceTree = "<group>"; };
 		DBCAAAD41B8170C1003E70EE /* VerticalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalTableViewCell.m; sourceTree = "<group>"; };
 		DBCAAAF41B820B9A003E70EE /* tobae_daruma_character.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tobae_daruma_character.ai; sourceTree = "<group>"; };
@@ -452,17 +451,14 @@
 		DBCAABBB1B820B9A003E70EE /* Weather-App-Icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Weather-App-Icons.png"; sourceTree = "<group>"; };
 		DBCAABBD1B820B9A003E70EE /* IMG_Article.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_Article.PNG; sourceTree = "<group>"; };
 		DBCAABBE1B820B9A003E70EE /* IMG_Loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_Loading.png; sourceTree = "<group>"; };
-		DBCAABBF1B820B9A003E70EE /* IMG_Loading.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_Loading.psd; sourceTree = "<group>"; };
 		DBCAABC01B820B9A003E70EE /* IMG_Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_Menu.png; sourceTree = "<group>"; };
-		DBCAABC11B820B9A003E70EE /* IMG_Menu.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_Menu.psd; sourceTree = "<group>"; };
 		DBCAABC21B820B9A003E70EE /* IMG_Profile1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_Profile1.PNG; sourceTree = "<group>"; };
 		DBCAABC31B820B9A003E70EE /* IMG_Profile2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_Profile2.PNG; sourceTree = "<group>"; };
-		DBCAABC41B820B9A003E70EE /* Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Profile.png; sourceTree = "<group>"; };
-		DBCAABC51B820B9A003E70EE /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search.png; sourceTree = "<group>"; };
-		DBCAABC61B820B9A003E70EE /* Search_Profile.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Search_Profile.ai; sourceTree = "<group>"; };
 		DBD8F4141BA512A7000CA272 /* ufonts.com_century-gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ufonts.com_century-gothic.ttf"; sourceTree = "<group>"; };
 		DBD8F4161BA51611000CA272 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
 		DBD8F4171BA51611000CA272 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		DBE9085A1BBFD35900D46502 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		DBE9085B1BBFD35900D46502 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -470,31 +466,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBCAA9501B81705B003E70EE /* Foundation.framework in Frameworks */,
-				DBCAA94E1B817053003E70EE /* UIKit.framework in Frameworks */,
-				DBCAA94C1B81704B003E70EE /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DBCAA9381B817032003E70EE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				F1784E0A7FD934E43816FB40 /* libPods-Tobae.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C31B5560ED6548192D69C62A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07B00C1C247026F035B60E4E /* libPods-Tobae.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DBCAA9161B817032003E70EE = {
 			isa = PBXGroup;
 			children = (
-				DBCAA94F1B81705B003E70EE /* Foundation.framework */,
-				DBCAA94D1B817053003E70EE /* UIKit.framework */,
-				DBCAA94B1B81704B003E70EE /* CoreGraphics.framework */,
 				DBCAA9211B817032003E70EE /* Tobae */,
-				DBCAA93E1B817032003E70EE /* TobaeTests */,
 				DBCAA9201B817032003E70EE /* Products */,
+				E0B81006CAAD33F7F5CB752B /* Pods */,
+				C31B5560ED6548192D69C62A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -502,7 +495,6 @@
 			isa = PBXGroup;
 			children = (
 				DBCAA91F1B817032003E70EE /* WEATHER.app */,
-				DBCAA93B1B817032003E70EE /* TobaeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -522,6 +514,10 @@
 				DBA71AF81B914E9F001926A5 /* Cell.m */,
 				DBD8F4161BA51611000CA272 /* WeatherViewController.h */,
 				DBD8F4171BA51611000CA272 /* WeatherViewController.m */,
+				DB44DB2B1BBFB1520054EF17 /* CapitalStrManager.h */,
+				DB44DB2C1BBFB1520054EF17 /* CapitalStrManager.m */,
+				DBE9085A1BBFD35900D46502 /* DetailViewController.h */,
+				DBE9085B1BBFD35900D46502 /* DetailViewController.m */,
 				DBCAA92F1B817032003E70EE /* Main.storyboard */,
 				DBA71AF51B914E14001926A5 /* Cell.xib */,
 				DBCAA9321B817032003E70EE /* Images.xcassets */,
@@ -541,26 +537,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DBCAA93E1B817032003E70EE /* TobaeTests */ = {
-			isa = PBXGroup;
-			children = (
-				DBCAA9411B817032003E70EE /* TobaeTests.m */,
-				DBCAA93F1B817032003E70EE /* Supporting Files */,
-			);
-			path = TobaeTests;
-			sourceTree = "<group>";
-		};
-		DBCAA93F1B817032003E70EE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				DBCAA9401B817032003E70EE /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		DBCAAAF21B820B9A003E70EE /* sozai */ = {
 			isa = PBXGroup;
 			children = (
+				DB44DB301BBFC6310054EF17 /* Back.png */,
+				DB44DB311BBFC6310054EF17 /* Favorite_Add.png */,
+				DB44DB321BBFC6310054EF17 /* Favorite_Cancel.png */,
+				DB44DB331BBFC6310054EF17 /* Profile.png */,
+				DB44DB341BBFC6310054EF17 /* Search.png */,
+				DB44DB351BBFC6310054EF17 /* Setting.png */,
 				DBCAAAF31B820B9A003E70EE /* Icon_Daruma */,
 				DBCAAB011B820B9A003E70EE /* Icon_Map */,
 				DBCAAB271B820B9A003E70EE /* Icon_Weather */,
@@ -842,16 +827,22 @@
 			children = (
 				DBCAABBD1B820B9A003E70EE /* IMG_Article.PNG */,
 				DBCAABBE1B820B9A003E70EE /* IMG_Loading.png */,
-				DBCAABBF1B820B9A003E70EE /* IMG_Loading.psd */,
+				DB44DB2E1BBFC5BD0054EF17 /* View.png */,
 				DBCAABC01B820B9A003E70EE /* IMG_Menu.png */,
-				DBCAABC11B820B9A003E70EE /* IMG_Menu.psd */,
 				DBCAABC21B820B9A003E70EE /* IMG_Profile1.PNG */,
 				DBCAABC31B820B9A003E70EE /* IMG_Profile2.PNG */,
-				DBCAABC41B820B9A003E70EE /* Profile.png */,
-				DBCAABC51B820B9A003E70EE /* Search.png */,
-				DBCAABC61B820B9A003E70EE /* Search_Profile.ai */,
+				DB44DB3C1BBFC7180054EF17 /* 3Dscan楓PC_square.tif */,
 			);
 			path = Sample_Screen;
+			sourceTree = "<group>";
+		};
+		E0B81006CAAD33F7F5CB752B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C811A5A72C11285CD5184CBA /* Pods-Tobae.debug.xcconfig */,
+				6750A9DFD9B6AEE9D360114D /* Pods-Tobae.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -861,9 +852,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBCAA9451B817032003E70EE /* Build configuration list for PBXNativeTarget "Tobae" */;
 			buildPhases = (
+				62C090C6F78E34390E64929F /* Check Pods Manifest.lock */,
 				DBCAA91B1B817032003E70EE /* Sources */,
 				DBCAA91C1B817032003E70EE /* Frameworks */,
 				DBCAA91D1B817032003E70EE /* Resources */,
+				75AA61E142B411F414226CC9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -873,24 +866,6 @@
 			productName = Tobae;
 			productReference = DBCAA91F1B817032003E70EE /* WEATHER.app */;
 			productType = "com.apple.product-type.application";
-		};
-		DBCAA93A1B817032003E70EE /* TobaeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DBCAA9481B817032003E70EE /* Build configuration list for PBXNativeTarget "TobaeTests" */;
-			buildPhases = (
-				DBCAA9371B817032003E70EE /* Sources */,
-				DBCAA9381B817032003E70EE /* Frameworks */,
-				DBCAA9391B817032003E70EE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DBCAA93D1B817032003E70EE /* PBXTargetDependency */,
-			);
-			name = TobaeTests;
-			productName = TobaeTests;
-			productReference = DBCAA93B1B817032003E70EE /* TobaeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -903,10 +878,6 @@
 				TargetAttributes = {
 					DBCAA91E1B817032003E70EE = {
 						CreatedOnToolsVersion = 6.4;
-					};
-					DBCAA93A1B817032003E70EE = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = DBCAA91E1B817032003E70EE;
 					};
 				};
 			};
@@ -924,7 +895,6 @@
 			projectRoot = "";
 			targets = (
 				DBCAA91E1B817032003E70EE /* Tobae */,
-				DBCAA93A1B817032003E70EE /* TobaeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -958,6 +928,7 @@
 				DBCAABF21B820B9A003E70EE /* SouthAmerica.png in Resources */,
 				DBCAAC181B820B9A003E70EE /* Cloud-Drizzle-Moon.svg in Resources */,
 				DBCAAC2B1B820B9A003E70EE /* Cloud-Moon.svg in Resources */,
+				DB44DB361BBFC6310054EF17 /* Back.png in Resources */,
 				DBCAAC751B820B9A003E70EE /* snow_later.png in Resources */,
 				DBCAAC351B820B9A003E70EE /* Cloud-Snow-Moon.svg in Resources */,
 				DBCAAC651B820B9A003E70EE /* cloudy_snow_later.png in Resources */,
@@ -988,6 +959,7 @@
 				DBCAAC081B820B9A003E70EE /* 16.png in Resources */,
 				DBCAAC241B820B9A003E70EE /* Cloud-Hail-Moon.svg in Resources */,
 				DBCAAC2D1B820B9A003E70EE /* Cloud-Rain-Moon-Alt.svg in Resources */,
+				DB44DB381BBFC6310054EF17 /* Favorite_Cancel.png in Resources */,
 				DBCAABD31B820B9A003E70EE /* tobae_daruma_voice.png in Resources */,
 				DBCAA9311B817032003E70EE /* Main.storyboard in Resources */,
 				DBCAAC821B820B9A003E70EE /* Weather-App-Icons.ai in Resources */,
@@ -999,6 +971,7 @@
 				DBCAAC121B820B9A003E70EE /* Climacons.fw.png in Resources */,
 				DBCAAC171B820B9A003E70EE /* Cloud-Drizzle-Moon-Alt.svg in Resources */,
 				DBCAABF41B820B9A003E70EE /* SouthAmerica_25pixel.png in Resources */,
+				DB44DB391BBFC6310054EF17 /* Profile.png in Resources */,
 				DBCAAC371B820B9A003E70EE /* Cloud-Snow-Sun.svg in Resources */,
 				DBCAABC71B820B9A003E70EE /* tobae_daruma_character.ai in Resources */,
 				DBCAABCF1B820B9A003E70EE /* tobae_daruma_overseas.png in Resources */,
@@ -1008,6 +981,7 @@
 				DBCAAC461B820B9A003E70EE /* Moon-First-Quarter.svg in Resources */,
 				DBCAAC721B820B9A003E70EE /* s_sunny.psd in Resources */,
 				DBCAAC541B820B9A003E70EE /* Sunrise.svg in Resources */,
+				DB44DB3B1BBFC6310054EF17 /* Setting.png in Resources */,
 				DBA71AF61B914E14001926A5 /* Cell.xib in Resources */,
 				DBCAABF91B820B9A003E70EE /* 01.png in Resources */,
 				DBCAAC851B820B9A003E70EE /* Weather-App-Icons.png in Resources */,
@@ -1019,17 +993,18 @@
 				DBCAABD81B820B9A003E70EE /* Africa_text_25pixel.png in Resources */,
 				DBCAAC681B820B9A003E70EE /* occasionally_rain.png in Resources */,
 				DBCAAC3D1B820B9A003E70EE /* Cloud-Wind.svg in Resources */,
+				DB44DB371BBFC6310054EF17 /* Favorite_Add.png in Resources */,
 				DBCAAC5F1B820B9A003E70EE /* cloudy.png in Resources */,
 				DBCAAC841B820B9A003E70EE /* Weather-App-Icons.psd in Resources */,
 				DBCAAC381B820B9A003E70EE /* Cloud-Snow.svg in Resources */,
 				DBCAA9361B817032003E70EE /* LaunchScreen.xib in Resources */,
 				DBCAABD21B820B9A003E70EE /* tobae_daruma_technology.png in Resources */,
-				DBCAAC8F1B820B9A003E70EE /* Search_Profile.ai in Resources */,
 				DBCAABF11B820B9A003E70EE /* Oceania_text_25pixel.png in Resources */,
 				DBCAAC031B820B9A003E70EE /* 11.png in Resources */,
 				DBCAABC81B820B9A003E70EE /* tobae_daruma_character.jpg in Resources */,
 				DBCAAC011B820B9A003E70EE /* 09.png in Resources */,
 				DBCAABF71B820B9A003E70EE /* World.png in Resources */,
+				DB44DB3A1BBFC6310054EF17 /* Search.png in Resources */,
 				DBCAABE01B820B9A003E70EE /* Europe_25pixel.png in Resources */,
 				DBCAABFB1B820B9A003E70EE /* 03.png in Resources */,
 				DBCAAC491B820B9A003E70EE /* Moon-New.svg in Resources */,
@@ -1044,6 +1019,7 @@
 				DBCAABDA1B820B9A003E70EE /* Asia_20pixel.png in Resources */,
 				DBCAAC4F1B820B9A003E70EE /* Shades.svg in Resources */,
 				DBCAAC4E1B820B9A003E70EE /* Moon.svg in Resources */,
+				DB44DB2F1BBFC5BD0054EF17 /* View.png in Resources */,
 				DBCAAC201B820B9A003E70EE /* Cloud-Fog-Sun.svg in Resources */,
 				DBCAAC471B820B9A003E70EE /* Moon-Full.svg in Resources */,
 				DBCAAC481B820B9A003E70EE /* Moon-Last-Quarter.svg in Resources */,
@@ -1076,10 +1052,10 @@
 				DBCAAC5D1B820B9A003E70EE /* Umbrella.svg in Resources */,
 				DBCAAC781B820B9A003E70EE /* snow_occasionally_sunny.png in Resources */,
 				DBCAAC871B820B9A003E70EE /* IMG_Loading.png in Resources */,
-				DBCAAC8D1B820B9A003E70EE /* Profile.png in Resources */,
 				DBCAAC711B820B9A003E70EE /* rain_sunny_later.png in Resources */,
 				DBCAAC161B820B9A003E70EE /* Cloud-Drizzle-Alt.svg in Resources */,
 				DBCAABF61B820B9A003E70EE /* SouthAmerica_text_25pixel.png in Resources */,
+				DB44DB3D1BBFC7180054EF17 /* 3Dscan楓PC_square.tif in Resources */,
 				DBCAAC5E1B820B9A003E70EE /* Wind.svg in Resources */,
 				DBCAAC631B820B9A003E70EE /* cloudy_occasionally_sunny.png in Resources */,
 				DBCAAC211B820B9A003E70EE /* Cloud-Fog.svg in Resources */,
@@ -1090,9 +1066,7 @@
 				DBCAABD11B820B9A003E70EE /* tobae_daruma_sound.png in Resources */,
 				DBCAAC7E1B820B9A003E70EE /* preview1.jpg in Resources */,
 				DBCAAC021B820B9A003E70EE /* 10.png in Resources */,
-				DBCAAC8E1B820B9A003E70EE /* Search.png in Resources */,
 				DBCAABCC1B820B9A003E70EE /* tobae_daruma_figure.png in Resources */,
-				DBCAAC881B820B9A003E70EE /* IMG_Loading.psd in Resources */,
 				DBCAAC621B820B9A003E70EE /* cloudy_occasionally_snow.png in Resources */,
 				DBCAAC791B820B9A003E70EE /* snow_rain_later.png in Resources */,
 				DBCAAC6F1B820B9A003E70EE /* rain_occasionally_sunny.png in Resources */,
@@ -1121,7 +1095,6 @@
 				DBCAABEC1B820B9A003E70EE /* NorthAmerica_text_25pixel.png in Resources */,
 				DBCAAC451B820B9A003E70EE /* Degrees-Fahrenheit.svg in Resources */,
 				DBCAABC91B820B9A003E70EE /* tobae_daruma_direction.png in Resources */,
-				DBCAAC8A1B820B9A003E70EE /* IMG_Menu.psd in Resources */,
 				DBCAAC3E1B820B9A003E70EE /* Cloud.svg in Resources */,
 				DBCAAC3B1B820B9A003E70EE /* Cloud-Wind-Moon.svg in Resources */,
 				DBCAABEB1B820B9A003E70EE /* NorthAmerica_30pixel.png in Resources */,
@@ -1142,14 +1115,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DBCAA9391B817032003E70EE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62C090C6F78E34390E64929F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+		75AA61E142B411F414226CC9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tobae/Pods-Tobae-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DBCAA91B1B817032003E70EE /* Sources */ = {
@@ -1160,6 +1159,8 @@
 				DBD8F4181BA51611000CA272 /* WeatherViewController.m in Sources */,
 				DBCAA9281B817032003E70EE /* AppDelegate.m in Sources */,
 				DBCAA92B1B817032003E70EE /* Tobae.xcdatamodeld in Sources */,
+				DB44DB2D1BBFB1520054EF17 /* CapitalStrManager.m in Sources */,
+				DBE9085C1BBFD35900D46502 /* DetailViewController.m in Sources */,
 				DBCAA92E1B817032003E70EE /* ViewController.m in Sources */,
 				DBCAA9251B817032003E70EE /* main.m in Sources */,
 				DBCAAAD51B8170C1003E70EE /* VerticalTableViewCell.m in Sources */,
@@ -1167,23 +1168,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DBCAA9371B817032003E70EE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DBCAA9421B817032003E70EE /* TobaeTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DBCAA93D1B817032003E70EE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DBCAA91E1B817032003E70EE /* Tobae */;
-			targetProxy = DBCAA93C1B817032003E70EE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DBCAA92F1B817032003E70EE /* Main.storyboard */ = {
@@ -1289,10 +1274,12 @@
 		};
 		DBCAA9461B817032003E70EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C811A5A72C11285CD5184CBA /* Pods-Tobae.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tobae/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_MODULE_NAME = WEATHER;
 				PRODUCT_NAME = WEATHER;
 			};
@@ -1300,46 +1287,14 @@
 		};
 		DBCAA9471B817032003E70EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6750A9DFD9B6AEE9D360114D /* Pods-Tobae.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tobae/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_MODULE_NAME = WEATHER;
 				PRODUCT_NAME = WEATHER;
-			};
-			name = Release;
-		};
-		DBCAA9491B817032003E70EE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TobaeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tobae.app/Tobae";
-			};
-			name = Debug;
-		};
-		DBCAA94A1B817032003E70EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TobaeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tobae.app/Tobae";
 			};
 			name = Release;
 		};
@@ -1360,15 +1315,6 @@
 			buildConfigurations = (
 				DBCAA9461B817032003E70EE /* Debug */,
 				DBCAA9471B817032003E70EE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DBCAA9481B817032003E70EE /* Build configuration list for PBXNativeTarget "TobaeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DBCAA9491B817032003E70EE /* Debug */,
-				DBCAA94A1B817032003E70EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

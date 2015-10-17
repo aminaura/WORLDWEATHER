@@ -238,7 +238,7 @@
                                  @"Bridgetown",
                                  @"Belmopan",
                                  @"Tegucigalpa",
-                                 @"Mexico City"].mutableCopy;
+                                 @"MexicoCity"].mutableCopy;
             
             cell.row_num = 23;
 

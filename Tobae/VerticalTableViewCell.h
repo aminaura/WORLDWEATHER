@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-NSString *capitalstr;
-
 @interface VerticalTableViewCell : UITableViewCell<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *horizontalTableView;
-@property(nonatomic,strong) NSMutableArray *weather_capital;
+@property(nonatomic, strong) NSMutableArray *weather_capital;
 @property int row_num;
+@property (nonatomic,strong) NSString * capitalstr;
 - (void)buildHorizontalTableView;
 @end
