@@ -14,7 +14,7 @@
 
 @interface VerticalTableViewCell(){
     NSDictionary *weather_icon;
-    
+    UIImage *iconimg;
     NSString *weatherstr;
 }
 
@@ -93,6 +93,7 @@ static NSString * const TableViewCustomCellIdentifier = @"Cell";
     
     NSString *imageKeyname = weathers[@"icons"][0];
     cell_object.weather_icon_image.image = weather_icon[imageKeyname];
+    iconimg = weather_icon[imageKeyname];
     
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.bounces = YES;
@@ -127,9 +128,9 @@ static NSString * const TableViewCustomCellIdentifier = @"Cell";
     return 140.0;
 }
 
--(NSDictionary *)getweather:(NSString *)string{
+- (NSDictionary *)getweather:(NSString *)string{
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?q=%@", string]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?APPID=b8f4ce09ae1ca4d1b34a14438e857866&q=%@", string]];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
@@ -155,7 +156,11 @@ static NSString * const TableViewCustomCellIdentifier = @"Cell";
     
     [CapitalStrManager sharedManager].capitalstr = [NSString stringWithFormat:@"%@",_weather_capital[indexPath.row]];
     
-    [[self getViewController] performSegueWithIdentifier:@"toNext" sender:self];
+    Cell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    [CapitalStrManager sharedManager].icon = cell.weather_icon_image.image;
+    
+    [[self getViewController] performSegueWithIdentifier:@"toDetail" sender:self];
 }
 
 -(UIViewController *)getViewController{

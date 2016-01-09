@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="ufonts.com_century-gothic.ttf">
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
             <string>CenturyGothic</string>
             <string>CenturyGothic</string>
             <string>CenturyGothic</string>
@@ -86,7 +98,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="verticalTableView" destination="atI-Zp-Stn" id="4RT-j1-qaJ"/>
-                        <segue destination="AoJ-Tl-sAW" kind="presentation" identifier="toNext" modalTransitionStyle="crossDissolve" id="W0k-yZ-HPr"/>
+                        <segue destination="AoJ-Tl-sAW" kind="presentation" identifier="toDetail" modalTransitionStyle="crossDissolve" id="W0k-yZ-HPr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -108,6 +120,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="View.png" translatesAutoresizingMaskIntoConstraints="NO" id="yYT-Oa-xIb">
                                 <rect key="frame" x="8" y="254" width="358" height="405"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cp2-ue-2hd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <action selector="back" destination="AoJ-Tl-sAW" eventType="touchUpInside" id="GOu-zb-mzZ"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="01.png" translatesAutoresizingMaskIntoConstraints="NO" id="eU0-5e-KCZ">
                                 <rect key="frame" x="8" y="40" width="129" height="129"/>
                             </imageView>
@@ -118,7 +136,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="America" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5B-bh-KXm">
-                                <rect key="frame" x="149" y="77" width="75" height="20"/>
+                                <rect key="frame" x="149" y="77" width="213" height="20"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -134,17 +152,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="humidity : 50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKH-ry-6gu">
-                                <rect key="frame" x="198" y="188" width="130" height="24"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="19"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rainfall : 50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNY-dE-qdI">
-                                <rect key="frame" x="198" y="219" width="113" height="24"/>
+                                <rect key="frame" x="182" y="188" width="180" height="24"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="19"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="39℃" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOY-aj-gg8">
-                                <rect key="frame" x="146" y="123" width="126" height="46"/>
+                                <rect key="frame" x="146" y="123" width="216" height="46"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="54"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -158,20 +171,14 @@
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="9/18" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioh-Xs-Hwx">
-                                <rect key="frame" x="24" y="273" width="48" height="32"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="sun" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFn-hI-XNB">
-                                <rect key="frame" x="83" y="276" width="39" height="26"/>
+                                <rect key="frame" x="83" y="276" width="54" height="26"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="22"/>
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rainfall:50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZf-xF-7Ie">
-                                <rect key="frame" x="256" y="278" width="94" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZf-xF-7Ie">
+                                <rect key="frame" x="256" y="278" width="106" height="21"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -185,20 +192,20 @@
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="9/18" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2k-kp-CnJ">
-                                <rect key="frame" x="24" y="341" width="48" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="9/18" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2k-kp-CnJ">
+                                <rect key="frame" x="16" y="341" width="56" height="32"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="mon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szg-J8-5rS">
-                                <rect key="frame" x="83" y="344" width="49" height="26"/>
+                                <rect key="frame" x="83" y="344" width="54" height="26"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="20"/>
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rainfall:50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGj-iu-ecL">
-                                <rect key="frame" x="256" y="346" width="94" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGj-iu-ecL">
+                                <rect key="frame" x="256" y="346" width="106" height="21"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -212,20 +219,20 @@
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="9/18" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oi-uB-dmX">
-                                <rect key="frame" x="24" y="406" width="48" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="9/18" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oi-uB-dmX">
+                                <rect key="frame" x="16" y="406" width="56" height="32"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="tue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEM-02-EmD">
-                                <rect key="frame" x="83" y="409" width="39" height="26"/>
+                                <rect key="frame" x="83" y="409" width="54" height="26"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="22"/>
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rainfall:50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6b-Vk-kaf">
-                                <rect key="frame" x="256" y="411" width="94" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6b-Vk-kaf">
+                                <rect key="frame" x="256" y="411" width="106" height="21"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -239,20 +246,14 @@
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="9/18" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybx-xG-ysJ">
-                                <rect key="frame" x="24" y="473" width="48" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="9/18" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybx-xG-ysJ">
+                                <rect key="frame" x="16" y="473" width="56" height="32"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="wed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3V-cK-rFz">
-                                <rect key="frame" x="83" y="476" width="49" height="26"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="20"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rainfall:50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGO-5b-Wgx">
-                                <rect key="frame" x="256" y="478" width="94" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGO-5b-Wgx">
+                                <rect key="frame" x="256" y="478" width="106" height="21"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -266,20 +267,20 @@
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="9/18" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgb-cp-Z4x">
-                                <rect key="frame" x="24" y="543" width="48" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="9/18" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgb-cp-Z4x">
+                                <rect key="frame" x="16" y="543" width="56" height="32"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="thu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VR9-he-wMx">
-                                <rect key="frame" x="83" y="546" width="39" height="26"/>
+                                <rect key="frame" x="83" y="546" width="54" height="26"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="23"/>
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rainfall:50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhb-vs-C9r">
-                                <rect key="frame" x="256" y="548" width="94" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhb-vs-C9r">
+                                <rect key="frame" x="256" y="548" width="106" height="21"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -293,20 +294,20 @@
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="9/18" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjE-MT-qx3">
-                                <rect key="frame" x="24" y="611" width="48" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="9/18" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjE-MT-qx3">
+                                <rect key="frame" x="16" y="611" width="56" height="32"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="fri" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZh-eI-mfm">
-                                <rect key="frame" x="83" y="614" width="18" height="26"/>
+                                <rect key="frame" x="83" y="614" width="54" height="26"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="23"/>
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rainfall:50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q85-IX-pkl">
-                                <rect key="frame" x="256" y="616" width="94" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q85-IX-pkl">
+                                <rect key="frame" x="256" y="616" width="106" height="21"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
                                 <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -315,6 +316,23 @@
                                 <rect key="frame" x="8" y="40" width="39" height="39"/>
                                 <state key="normal" backgroundImage="Favorite_Add.png"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain : 50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNY-dE-qdI">
+                                <rect key="frame" x="182" y="220" width="180" height="24"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="19"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="wed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3V-cK-rFz">
+                                <rect key="frame" x="83" y="476" width="54" height="26"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="20"/>
+                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="11/31" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioh-Xs-Hwx">
+                                <rect key="frame" x="16" y="274" width="56" height="32"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
+                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -322,24 +340,249 @@
                     <connections>
                         <outlet property="capitallabel" destination="wyD-n0-rhd" id="px1-cA-ocS"/>
                         <outlet property="countrylabel" destination="d5B-bh-KXm" id="pvH-uQ-GAV"/>
+                        <outlet property="humidityla" destination="fKH-ry-6gu" id="FYG-AI-Tfw"/>
                         <outlet property="image" destination="eU0-5e-KCZ" id="LbN-W8-Vcy"/>
-                        <outlet property="temperaturela" destination="GOY-aj-gg8" id="r0x-fb-JpW"/>
-                        <outletCollection property="datelabels" destination="ioh-Xs-Hwx" id="Z4J-BW-rR2"/>
-                        <outletCollection property="datelabels" destination="w2k-kp-CnJ" id="6YX-tu-HiH"/>
-                        <outletCollection property="datelabels" destination="2oi-uB-dmX" id="ZmG-fj-45f"/>
-                        <outletCollection property="datelabels" destination="ybx-xG-ysJ" id="QMB-b7-TxO"/>
-                        <outletCollection property="datelabels" destination="Zgb-cp-Z4x" id="Tgt-Vm-QIj"/>
-                        <outletCollection property="datelabels" destination="fjE-MT-qx3" id="cA4-OJ-8p2"/>
+                        <outlet property="sunrise" destination="hbx-Eq-fFw" id="BOB-G9-u0X"/>
+                        <outlet property="sunset" destination="a4W-um-MRW" id="gYu-Hq-u8N"/>
+                        <outletCollection property="imageViews" destination="c0I-HC-rou" id="hrY-xY-jSz"/>
+                        <outletCollection property="imageViews" destination="kQX-oL-u6U" id="TRH-7r-mBi"/>
+                        <outletCollection property="imageViews" destination="1Vf-Tt-X45" id="PaS-TI-aet"/>
+                        <outletCollection property="imageViews" destination="dhw-wU-gsG" id="XZr-qZ-Z8s"/>
+                        <outletCollection property="imageViews" destination="GaS-Ku-BKi" id="EoQ-oI-nXq"/>
+                        <outletCollection property="imageViews" destination="itV-VC-3ct" id="LW9-kp-KQU"/>
+                        <outletCollection property="rainfallla" destination="mNY-dE-qdI" id="hn3-Nr-MeF"/>
+                        <outletCollection property="rainfallla" destination="ZZf-xF-7Ie" id="BHB-Sh-bdd"/>
+                        <outletCollection property="rainfallla" destination="aGj-iu-ecL" id="Yfj-oq-frQ"/>
+                        <outletCollection property="rainfallla" destination="L6b-Vk-kaf" id="gSK-ZD-5h1"/>
+                        <outletCollection property="rainfallla" destination="wGO-5b-Wgx" id="l2u-tt-x4i"/>
+                        <outletCollection property="rainfallla" destination="Lhb-vs-C9r" id="ENh-kV-uel"/>
+                        <outletCollection property="rainfallla" destination="q85-IX-pkl" id="wxQ-zb-lsM"/>
+                        <outletCollection property="templa" destination="GOY-aj-gg8" id="FDf-7h-trg"/>
+                        <outletCollection property="templa" destination="IM1-wg-NSD" id="QyC-Kg-TZ8"/>
+                        <outletCollection property="templa" destination="nXv-fs-rY8" id="x13-Oh-8tw"/>
+                        <outletCollection property="templa" destination="HEl-Ri-TeE" id="zty-an-xuL"/>
+                        <outletCollection property="templa" destination="eMo-T6-f2E" id="8Cc-hV-SPR"/>
+                        <outletCollection property="templa" destination="jX3-Fs-a5Q" id="dZQ-ll-jOA"/>
+                        <outletCollection property="templa" destination="qgs-ME-JhC" id="YFh-7Q-e3Z"/>
+                        <outletCollection property="datelabel" destination="ioh-Xs-Hwx" id="faw-7O-b0G"/>
+                        <outletCollection property="datelabel" destination="w2k-kp-CnJ" id="5Nf-Sm-oRx"/>
+                        <outletCollection property="datelabel" destination="2oi-uB-dmX" id="CMj-EM-h74"/>
+                        <outletCollection property="datelabel" destination="ybx-xG-ysJ" id="cTS-aH-g9y"/>
+                        <outletCollection property="datelabel" destination="Zgb-cp-Z4x" id="P6S-9E-tyo"/>
+                        <outletCollection property="datelabel" destination="fjE-MT-qx3" id="FPV-CE-fhy"/>
+                        <outletCollection property="weekdayla" destination="YFn-hI-XNB" id="o6m-AL-RZz"/>
+                        <outletCollection property="weekdayla" destination="Szg-J8-5rS" id="egM-ay-1xN"/>
+                        <outletCollection property="weekdayla" destination="hEM-02-EmD" id="biQ-Oe-xNP"/>
+                        <outletCollection property="weekdayla" destination="k3V-cK-rFz" id="9oc-zY-HRz"/>
+                        <outletCollection property="weekdayla" destination="VR9-he-wMx" id="R6J-jY-rrx"/>
+                        <outletCollection property="weekdayla" destination="nZh-eI-mfm" id="D0k-9s-A0V"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="ToBack" id="YLI-I3-DUe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ij-wQ-KGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="843.5" y="259.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Log In View Controller-->
+        <scene sceneID="UXT-Gq-RNl">
+            <objects>
+                <viewController id="30P-5r-YPr" customClass="LogInViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6OH-tl-VSD"/>
+                        <viewControllerLayoutGuide type="bottom" id="lpZ-16-wPK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Lh-hW-kfA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAP-NK-jIx">
+                                <rect key="frame" x="0.0" y="-1" width="375" height="67.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ac-hs-aGn">
+                                        <rect key="frame" x="19" y="25" width="26" height="26"/>
+                                        <state key="normal" backgroundImage="Back.png">
+                                            <color key="titleColor" red="0.23401134579999999" green="0.7605160916" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KI1-XD-bmI">
+                                        <rect key="frame" x="327" y="25" width="26" height="26"/>
+                                        <state key="normal" backgroundImage="Setting.png"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgf-di-Efc">
+                                        <rect key="frame" x="156" y="27" width="62" height="22"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fim-Te-Fve">
+                                <rect key="frame" x="15" y="146.5" width="209" height="51"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNh-oa-yiR">
+                                <rect key="frame" x="15" y="114.5" width="93" height="24"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obb-gg-gnF">
+                                <rect key="frame" x="15" y="212.5" width="166" height="24"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cum-2D-43d">
+                                <rect key="frame" x="15" y="592.5" width="345" height="54"/>
+                                <state key="normal" backgroundImage="LogIn.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="login" destination="30P-5r-YPr" eventType="touchUpInside" id="zdB-kG-019"/>
+                                    <action selector="signup" destination="CNy-2O-gff" eventType="touchUpInside" id="Ly7-UP-WGT"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GeD-qx-Dhw">
+                                <rect key="frame" x="15" y="244.5" width="209" height="54"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.82899803321678323" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="PassWordField" destination="GeD-qx-Dhw" id="d7N-C9-7Z1"/>
+                        <outlet property="UserNameField" destination="Fim-Te-Fve" id="tL8-0w-UXM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ao5-ey-r4s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-479.5" y="1116.5"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="b7S-WJ-vKr">
+            <objects>
+                <viewController id="CNy-2O-gff" customClass="SignUpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hYh-yd-cGC"/>
+                        <viewControllerLayoutGuide type="bottom" id="BCp-Qd-jQY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="62V-Lp-Sae">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3Dscan楓PC_square.tif" translatesAutoresizingMaskIntoConstraints="NO" id="zcc-gd-T4b">
+                                <rect key="frame" x="15" y="82.5" width="139" height="139"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2zu-PV-1TJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNA-M3-uM1">
+                                        <rect key="frame" x="19" y="25" width="26" height="26"/>
+                                        <state key="normal" backgroundImage="Back.png">
+                                            <color key="titleColor" red="0.23401134579999999" green="0.7605160916" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hus-ni-hU3">
+                                        <rect key="frame" x="327" y="25" width="26" height="26"/>
+                                        <state key="normal" backgroundImage="Setting.png"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmt-y8-GAU">
+                                        <rect key="frame" x="156" y="27" width="62" height="22"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="USER NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aq8-G4-5eV">
+                                <rect key="frame" x="170" y="82" width="190" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="COMMENTS" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SER-e7-95R">
+                                <rect key="frame" x="170" y="144" width="190" height="77.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGH-Al-Qnz">
+                                <rect key="frame" x="12" y="82" width="39" height="39"/>
+                                <state key="normal" backgroundImage="Favorite_Add.png"/>
+                                <connections>
+                                    <action selector="selectimage" destination="CNy-2O-gff" eventType="touchUpInside" id="67o-7r-UI4"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I7c-ji-9JN">
+                                <rect key="frame" x="0.0" y="237" width="375" height="67.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Infomation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bon-NL-4HC">
+                                        <rect key="frame" x="64" y="23" width="166" height="24"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSx-M7-sgr">
+                                        <rect key="frame" x="16" y="17" width="34" height="34"/>
+                                        <state key="normal" backgroundImage="Favorite_Add.png"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="beu-d5-iQw">
+                                <rect key="frame" x="15" y="352" width="209" height="51"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDy-zC-eJ2">
+                                <rect key="frame" x="15" y="320" width="127" height="24"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXq-sF-2x2">
+                                <rect key="frame" x="15" y="418" width="166" height="24"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbN-vg-H8r">
+                                <rect key="frame" x="15" y="593" width="345" height="54"/>
+                                <state key="normal" backgroundImage="SignUp.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signup" destination="CNy-2O-gff" eventType="touchUpInside" id="az0-S0-vDB"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9SB-Rc-LU4">
+                                <rect key="frame" x="15" y="450" width="209" height="54"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.83014641608391604" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="Commentfield" destination="SER-e7-95R" id="3Kg-Zu-ylN"/>
+                        <outlet property="Mailadressfield" destination="beu-d5-iQw" id="Kmj-fB-bH2"/>
+                        <outlet property="Passwordfield" destination="9SB-Rc-LU4" id="Ok9-Zi-oFV"/>
+                        <outlet property="UserIDfield" destination="Aq8-G4-5eV" id="VCA-Rf-mkH"/>
+                        <outlet property="imageView" destination="zcc-gd-T4b" id="oS3-1h-2T2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lDL-GU-mv6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58.5" y="1116.5"/>
+        </scene>
+        <!--Main View Controller-->
         <scene sceneID="ydx-VM-mrg">
             <objects>
-                <viewController id="8ys-Hl-bqX" sceneMemberID="viewController">
+                <viewController id="8ys-Hl-bqX" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r6i-e3-qGB"/>
                         <viewControllerLayoutGuide type="bottom" id="iA8-k1-zHj"/>
@@ -351,31 +594,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3Dscan楓PC_square.tif" translatesAutoresizingMaskIntoConstraints="NO" id="Aig-ed-Ucq">
                                 <rect key="frame" x="12" y="82.5" width="139" height="139"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uuE-Fc-tCF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfR-hH-cO7">
-                                        <rect key="frame" x="161" y="27" width="52" height="22"/>
-                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crt-sy-TlM">
-                                        <rect key="frame" x="19" y="25" width="26" height="26"/>
-                                        <state key="normal" backgroundImage="Back.png">
-                                            <color key="titleColor" red="0.23401134579999999" green="0.7605160916" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="8nX-rh-HLA"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MY-tg-3Tu">
-                                        <rect key="frame" x="327" y="25" width="26" height="26"/>
-                                        <state key="normal" backgroundImage="Setting.png"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student,WASEDA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgL-fy-Wgl">
                                 <rect key="frame" x="159" y="130.5" width="209" height="21"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="16"/>
@@ -399,7 +617,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NiN-r8-Jmo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="01.png" translatesAutoresizingMaskIntoConstraints="NO" id="NiN-r8-Jmo">
                                 <rect key="frame" x="82" y="356.5" width="210" height="210"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o6o-re-C3S">
@@ -418,14 +636,54 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uuE-Fc-tCF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfR-hH-cO7">
+                                        <rect key="frame" x="161" y="27" width="52" height="22"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crt-sy-TlM">
+                                        <rect key="frame" x="19" y="25" width="26" height="26"/>
+                                        <state key="normal" backgroundImage="Back.png">
+                                            <color key="titleColor" red="0.23401134579999999" green="0.7605160916" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logout" destination="8ys-Hl-bqX" eventType="touchUpInside" id="vBn-xW-gHe"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="8nX-rh-HLA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MY-tg-3Tu">
+                                        <rect key="frame" x="327" y="25" width="26" height="26"/>
+                                        <state key="normal" backgroundImage="Setting.png"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hsx-dQ-KT9">
+                                <rect key="frame" x="152" y="191" width="133" height="30"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                                <state key="normal" title="Change Image">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="change" destination="8ys-Hl-bqX" eventType="touchUpInside" id="POC-rW-HY1"/>
+                                    <action selector="selectimage" destination="8ys-Hl-bqX" eventType="touchUpInside" id="Cmu-RG-Ecl"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.82999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.82909233044911101" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageView" destination="Aig-ed-Ucq" id="luL-Uc-AFn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Cp-ae-Vxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="378.5" y="1042.5"/>
+            <point key="canvasLocation" x="378.5" y="1116.5"/>
         </scene>
     </scenes>
     <resources>
@@ -434,10 +692,15 @@
         <image name="3Dscan楓PC_square.tif" width="1602" height="1602"/>
         <image name="Back.png" width="106" height="106"/>
         <image name="Favorite_Add.png" width="106" height="106"/>
+        <image name="LogIn.png" width="1471" height="233"/>
         <image name="Profile.png" width="106" height="106"/>
         <image name="Search.png" width="106" height="106"/>
         <image name="Setting.png" width="106" height="106"/>
+        <image name="SignUp.png" width="1467" height="229"/>
         <image name="View.png" width="1496" height="1688"/>
         <image name="World_43pixel.png" width="91" height="43"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8nX-rh-HLA"/>
+    </inferredMetricsTieBreakers>
 </document>

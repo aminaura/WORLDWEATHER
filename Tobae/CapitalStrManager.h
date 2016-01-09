@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface CapitalStrManager: NSObject
 
@@ -16,7 +17,7 @@
 @property (nonatomic, strong) NSString *rainfall;
 @property (nonatomic, strong) NSString *sunrise;
 @property (nonatomic, strong) NSString *sunset;
-@property (nonatomic, strong) NSString *icon;
+@property (nonatomic, strong) UIImage *icon;
 @property (nonatomic, strong) NSString *date;
 @property (nonatomic, strong) NSString *dayoftheweek;
 

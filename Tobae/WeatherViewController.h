@@ -4,7 +4,7 @@
 //
 //  Created by 菅野楓 on 2015/09/13.
 //  Copyright (c) 2015年 Original_Weather. All rights reserved.
-//
+//ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー
 
 #import <UIKit/UIKit.h>
 

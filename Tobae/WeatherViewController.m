@@ -4,7 +4,7 @@
 //
 //  Created by 菅野楓 on 2015/09/13.
 //  Copyright (c) 2015年 Original_Weather. All rights reserved.
-//
+//ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー
 
 #import "WeatherViewController.h"
 #import "VerticalTableViewCell.h"
@@ -20,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSLog(@"Icon == %@", [CapitalStrManager sharedManager].icon);
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://openweathermap.org/city/%@", [CapitalStrManager sharedManager].capitalstr]];
     
@@ -244,12 +246,12 @@
                 @"Bolivia"].mutableCopy;
 
     
-    Capitalla.text = [CapitalStrManager sharedManager].capitalstr
-    ;
+    Capitalla.text = [CapitalStrManager sharedManager].capitalstr;
     
 }
 
 -(void)getdate{
+    
     date  = [NSDate date];
     NSDate *now = [NSDate date];
     
@@ -264,8 +266,6 @@
     NSInteger month = comps.month;
     NSInteger day = comps.day;
     
-    
-
 }
 
 

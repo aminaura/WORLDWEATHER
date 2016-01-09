@@ -14,7 +14,18 @@
     IBOutlet UILabel * capitallabel;
     IBOutlet UILabel * countrylabel;
     IBOutlet UILabel * temperaturela;
-    IBOutletCollection (UILabel) NSArray* datelabels;
+    IBOutletCollection (UILabel) NSArray *datelabel;
+    IBOutletCollection (UIImageView) NSArray *imageViews;
+    IBOutletCollection (UILabel) NSArray *rainfallla;
+    
+    IBOutletCollection (UILabel) NSArray *weekdayla;
+    
+    IBOutletCollection (UILabel) NSArray *templa;
+    IBOutlet UILabel *humidityla;
+    
+    IBOutlet UILabel *sunrise;
+    IBOutlet UILabel *sunset;
     NSDate * date;
 }
+-(IBAction)back;
 @end
