@@ -41,16 +41,8 @@
 
 -(IBAction)back{
     // 戻るコード
-//    [self dismissViewControllerAnimated:YES completion:nil];
-    
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration: 1.0];  //フリップする時間
-    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
-    self.navigationController.navigationBarHidden = NO; //遷移先でナビゲーションバーを非表示
-    
     [self dismissViewControllerAnimated:YES completion:nil];
-    [UIView commitAnimations]; //アニメーション開始
-}
+    }
 
 
 
@@ -80,7 +72,7 @@
     
     
     NSString *name = [CapitalStrManager sharedManager].capitalstr;
-    NSString *URL_String = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?q=%@&mode=json&units=metric&cnt=7&appid=2de143494c0b295cca9337e1e96b00e0",name];
+    NSString *URL_String = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?q=%@&mode=json&units=metric&cnt=7&appid=b8f4ce09ae1ca4d1b34a14438e857866",name];
     
     
     NSURL *url = [NSURL URLWithString: URL_String];
@@ -136,7 +128,7 @@
 -(void)sunrise: (NSString *)string{
     
     NSString *name = [CapitalStrManager sharedManager].capitalstr;
-    NSString *URL_String = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?q=%@&appid=2de143494c0b295cca9337e1e96b00e0",name];
+    NSString *URL_String = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?q=%@&appid=b8f4ce09ae1ca4d1b34a14438e857866",name];
     
     
     NSURL *url = [NSURL URLWithString: URL_String];

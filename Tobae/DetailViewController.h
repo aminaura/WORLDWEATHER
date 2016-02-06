@@ -27,5 +27,6 @@
     IBOutlet UILabel *sunset;
     NSDate * date;
 }
+
 -(IBAction)back;
 @end

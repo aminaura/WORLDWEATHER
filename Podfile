@@ -3,5 +3,5 @@
 
 target 'Tobae' do
 pod 'AFNetworking', '~> 2.6.0'
-pod 'Parse', '~> 1.8.5'
+pod 'Parse', '~> 1.10.0’
 end

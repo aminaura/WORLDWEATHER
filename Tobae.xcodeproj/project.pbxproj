@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB24C0761C43CD70007866E2 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB24C0751C43CD70007866E2 /* SettingViewController.m */; };
+		DB24C0791C43CE3C007866E2 /* ChangePassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB24C0781C43CE3C007866E2 /* ChangePassWordViewController.m */; };
+		DB24C07C1C43CE81007866E2 /* ChangeMailAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB24C07B1C43CE81007866E2 /* ChangeMailAddressViewController.m */; };
+		DB318D3F1C6602A8007D5D6F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB318D3E1C6602A8007D5D6F /* SearchViewController.m */; };
 		DB44DB2D1BBFB1520054EF17 /* CapitalStrManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB44DB2C1BBFB1520054EF17 /* CapitalStrManager.m */; };
 		DB44DB2F1BBFC5BD0054EF17 /* View.png in Resources */ = {isa = PBXBuildFile; fileRef = DB44DB2E1BBFC5BD0054EF17 /* View.png */; };
 		DB44DB361BBFC6310054EF17 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = DB44DB301BBFC6310054EF17 /* Back.png */; };
@@ -16,13 +20,18 @@
 		DB44DB3A1BBFC6310054EF17 /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = DB44DB341BBFC6310054EF17 /* Search.png */; };
 		DB44DB3B1BBFC6310054EF17 /* Setting.png in Resources */ = {isa = PBXBuildFile; fileRef = DB44DB351BBFC6310054EF17 /* Setting.png */; };
 		DB44DB3D1BBFC7180054EF17 /* 3Dscan楓PC_square.tif in Resources */ = {isa = PBXBuildFile; fileRef = DB44DB3C1BBFC7180054EF17 /* 3Dscan楓PC_square.tif */; };
-		DB79E8821C14268F003F1049 /* SignUp.png in Resources */ = {isa = PBXBuildFile; fileRef = DB79E8811C14268F003F1049 /* SignUp.png */; };
 		DB9B3EE21C40CD4B00BF2812 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B3EE11C40CD4B00BF2812 /* SignUpViewController.m */; };
 		DB9B3EE51C40CF3B00BF2812 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B3EE41C40CF3B00BF2812 /* MainViewController.m */; };
 		DB9B3EE81C40D13800BF2812 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B3EE71C40D13800BF2812 /* LogInViewController.m */; };
-		DB9B3EEC1C40D66B00BF2812 /* LogIn.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9B3EEB1C40D66B00BF2812 /* LogIn.png */; };
+		DB9B3EFB1C40F5A500BF2812 /* SignIn.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9B3EF91C40F5A500BF2812 /* SignIn.png */; };
+		DB9B3EFC1C40F5A500BF2812 /* SignUp.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9B3EFA1C40F5A500BF2812 /* SignUp.png */; };
+		DB9B3EFF1C40F93A00BF2812 /* SignIn2.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9B3EFD1C40F93A00BF2812 /* SignIn2.png */; };
+		DB9B3F001C40F93A00BF2812 /* SignUp2.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9B3EFE1C40F93A00BF2812 /* SignUp2.png */; };
+		DB9B3F061C410EA700BF2812 /* View2.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9B3F051C410EA700BF2812 /* View2.png */; };
+		DBA238591C65B31E006DECD2 /* World2.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA238581C65B31E006DECD2 /* World2.png */; };
 		DBA71AF61B914E14001926A5 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA71AF51B914E14001926A5 /* Cell.xib */; };
 		DBA71AF91B914E9F001926A5 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA71AF81B914E9F001926A5 /* Cell.m */; };
+		DBACD3881C41C0C7002DF54A /* Editing.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD3871C41C0C7002DF54A /* Editing.png */; };
 		DBCAA9251B817032003E70EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCAA9241B817032003E70EE /* main.m */; };
 		DBCAA9281B817032003E70EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCAA9271B817032003E70EE /* AppDelegate.m */; };
 		DBCAA92B1B817032003E70EE /* Tobae.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBCAA9291B817032003E70EE /* Tobae.xcdatamodeld */; };
@@ -238,6 +247,7 @@
 		DBE8CD131C12F03D00E1C96C /* icon5.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE8CD0C1C12F03D00E1C96C /* icon5.png */; };
 		DBE8CD141C12F03D00E1C96C /* icon6.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE8CD0D1C12F03D00E1C96C /* icon6.png */; };
 		DBE9085C1BBFD35900D46502 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE9085B1BBFD35900D46502 /* DetailViewController.m */; };
+		DBF36A741C46739F009FB5A3 /* Userimage.png in Resources */ = {isa = PBXBuildFile; fileRef = DBF36A731C46739F009FB5A3 /* Userimage.png */; };
 		F1784E0A7FD934E43816FB40 /* libPods-Tobae.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B00C1C247026F035B60E4E /* libPods-Tobae.a */; };
 /* End PBXBuildFile section */
 
@@ -245,6 +255,14 @@
 		07B00C1C247026F035B60E4E /* libPods-Tobae.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tobae.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6750A9DFD9B6AEE9D360114D /* Pods-Tobae.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tobae.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tobae/Pods-Tobae.release.xcconfig"; sourceTree = "<group>"; };
 		C811A5A72C11285CD5184CBA /* Pods-Tobae.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tobae.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tobae/Pods-Tobae.debug.xcconfig"; sourceTree = "<group>"; };
+		DB24C0741C43CD70007866E2 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		DB24C0751C43CD70007866E2 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		DB24C0771C43CE3C007866E2 /* ChangePassWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePassWordViewController.h; sourceTree = "<group>"; };
+		DB24C0781C43CE3C007866E2 /* ChangePassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePassWordViewController.m; sourceTree = "<group>"; };
+		DB24C07A1C43CE81007866E2 /* ChangeMailAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeMailAddressViewController.h; sourceTree = "<group>"; };
+		DB24C07B1C43CE81007866E2 /* ChangeMailAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeMailAddressViewController.m; sourceTree = "<group>"; };
+		DB318D3D1C6602A8007D5D6F /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		DB318D3E1C6602A8007D5D6F /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		DB44DB2B1BBFB1520054EF17 /* CapitalStrManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapitalStrManager.h; sourceTree = "<group>"; };
 		DB44DB2C1BBFB1520054EF17 /* CapitalStrManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapitalStrManager.m; sourceTree = "<group>"; };
 		DB44DB2E1BBFC5BD0054EF17 /* View.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = View.png; sourceTree = "<group>"; };
@@ -255,17 +273,22 @@
 		DB44DB341BBFC6310054EF17 /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search.png; sourceTree = "<group>"; };
 		DB44DB351BBFC6310054EF17 /* Setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Setting.png; sourceTree = "<group>"; };
 		DB44DB3C1BBFC7180054EF17 /* 3Dscan楓PC_square.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "3Dscan楓PC_square.tif"; sourceTree = "<group>"; };
-		DB79E8811C14268F003F1049 /* SignUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUp.png; sourceTree = "<group>"; };
 		DB9B3EE01C40CD4B00BF2812 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		DB9B3EE11C40CD4B00BF2812 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		DB9B3EE31C40CF3B00BF2812 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		DB9B3EE41C40CF3B00BF2812 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		DB9B3EE61C40D13800BF2812 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		DB9B3EE71C40D13800BF2812 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
-		DB9B3EEB1C40D66B00BF2812 /* LogIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogIn.png; sourceTree = "<group>"; };
+		DB9B3EF91C40F5A500BF2812 /* SignIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignIn.png; sourceTree = "<group>"; };
+		DB9B3EFA1C40F5A500BF2812 /* SignUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUp.png; sourceTree = "<group>"; };
+		DB9B3EFD1C40F93A00BF2812 /* SignIn2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignIn2.png; sourceTree = "<group>"; };
+		DB9B3EFE1C40F93A00BF2812 /* SignUp2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUp2.png; sourceTree = "<group>"; };
+		DB9B3F051C410EA700BF2812 /* View2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = View2.png; sourceTree = "<group>"; };
+		DBA238581C65B31E006DECD2 /* World2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = World2.png; path = ../../World2.png; sourceTree = "<group>"; };
 		DBA71AF51B914E14001926A5 /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 		DBA71AF71B914E9F001926A5 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
 		DBA71AF81B914E9F001926A5 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		DBACD3871C41C0C7002DF54A /* Editing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Editing.png; sourceTree = "<group>"; };
 		DBCAA91F1B817032003E70EE /* WEATHER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WEATHER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCAA9231B817032003E70EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBCAA9241B817032003E70EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -488,6 +511,7 @@
 		DBE8CD0D1C12F03D00E1C96C /* icon6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon6.png; sourceTree = "<group>"; };
 		DBE9085A1BBFD35900D46502 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		DBE9085B1BBFD35900D46502 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		DBF36A731C46739F009FB5A3 /* Userimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Userimage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -549,10 +573,18 @@
 				DBE9085B1BBFD35900D46502 /* DetailViewController.m */,
 				DB9B3EE01C40CD4B00BF2812 /* SignUpViewController.h */,
 				DB9B3EE11C40CD4B00BF2812 /* SignUpViewController.m */,
-				DB9B3EE31C40CF3B00BF2812 /* MainViewController.h */,
-				DB9B3EE41C40CF3B00BF2812 /* MainViewController.m */,
 				DB9B3EE61C40D13800BF2812 /* LogInViewController.h */,
 				DB9B3EE71C40D13800BF2812 /* LogInViewController.m */,
+				DB9B3EE31C40CF3B00BF2812 /* MainViewController.h */,
+				DB9B3EE41C40CF3B00BF2812 /* MainViewController.m */,
+				DB24C0741C43CD70007866E2 /* SettingViewController.h */,
+				DB24C0751C43CD70007866E2 /* SettingViewController.m */,
+				DB24C0771C43CE3C007866E2 /* ChangePassWordViewController.h */,
+				DB24C0781C43CE3C007866E2 /* ChangePassWordViewController.m */,
+				DB24C07A1C43CE81007866E2 /* ChangeMailAddressViewController.h */,
+				DB24C07B1C43CE81007866E2 /* ChangeMailAddressViewController.m */,
+				DB318D3D1C6602A8007D5D6F /* SearchViewController.h */,
+				DB318D3E1C6602A8007D5D6F /* SearchViewController.m */,
 				DBCAA92F1B817032003E70EE /* Main.storyboard */,
 				DBA71AF51B914E14001926A5 /* Cell.xib */,
 				DBCAA9321B817032003E70EE /* Images.xcassets */,
@@ -576,12 +608,14 @@
 			isa = PBXGroup;
 			children = (
 				DBDE2A141BD2183A00B1D9B2 /* World のコピー.png */,
+				DBACD3871C41C0C7002DF54A /* Editing.png */,
 				DB44DB301BBFC6310054EF17 /* Back.png */,
 				DB44DB311BBFC6310054EF17 /* Favorite_Add.png */,
 				DB44DB321BBFC6310054EF17 /* Favorite_Cancel.png */,
 				DB44DB331BBFC6310054EF17 /* Profile.png */,
 				DB44DB341BBFC6310054EF17 /* Search.png */,
 				DB44DB351BBFC6310054EF17 /* Setting.png */,
+				DBF36A731C46739F009FB5A3 /* Userimage.png */,
 				DBCAAAF31B820B9A003E70EE /* Icon_Daruma */,
 				DBCAAB011B820B9A003E70EE /* Icon_Map */,
 				DBCAAB271B820B9A003E70EE /* Icon_Weather */,
@@ -614,6 +648,7 @@
 		DBCAAB011B820B9A003E70EE /* Icon_Map */ = {
 			isa = PBXGroup;
 			children = (
+				DBA238581C65B31E006DECD2 /* World2.png */,
 				DBCAAB021B820B9A003E70EE /* Africa.png */,
 				DBCAAB031B820B9A003E70EE /* Africa_20pixel.png */,
 				DBCAAB041B820B9A003E70EE /* Africa_25pixel.png */,
@@ -865,6 +900,7 @@
 				DBCAABBD1B820B9A003E70EE /* IMG_Article.PNG */,
 				DBCAABBE1B820B9A003E70EE /* IMG_Loading.png */,
 				DB44DB2E1BBFC5BD0054EF17 /* View.png */,
+				DB9B3F051C410EA700BF2812 /* View2.png */,
 				DBCAABC01B820B9A003E70EE /* IMG_Menu.png */,
 				DBCAABC21B820B9A003E70EE /* IMG_Profile1.PNG */,
 				DBCAABC31B820B9A003E70EE /* IMG_Profile2.PNG */,
@@ -883,8 +919,10 @@
 				DBE8CD0B1C12F03D00E1C96C /* icon4.png */,
 				DBE8CD0C1C12F03D00E1C96C /* icon5.png */,
 				DBE8CD0D1C12F03D00E1C96C /* icon6.png */,
-				DB9B3EEB1C40D66B00BF2812 /* LogIn.png */,
-				DB79E8811C14268F003F1049 /* SignUp.png */,
+				DB9B3EF91C40F5A500BF2812 /* SignIn.png */,
+				DB9B3EFA1C40F5A500BF2812 /* SignUp.png */,
+				DB9B3EFD1C40F93A00BF2812 /* SignIn2.png */,
+				DB9B3EFE1C40F93A00BF2812 /* SignUp2.png */,
 			);
 			name = icons;
 			path = Sample_Screen/icons;
@@ -981,6 +1019,8 @@
 				DBCAAC361B820B9A003E70EE /* Cloud-Snow-Sun-Alt.svg in Resources */,
 				DBCAAC1D1B820B9A003E70EE /* Cloud-Fog-Moon-Alt.svg in Resources */,
 				DBCAABF21B820B9A003E70EE /* SouthAmerica.png in Resources */,
+				DBA238591C65B31E006DECD2 /* World2.png in Resources */,
+				DB9B3F061C410EA700BF2812 /* View2.png in Resources */,
 				DBCAAC181B820B9A003E70EE /* Cloud-Drizzle-Moon.svg in Resources */,
 				DBCAAC2B1B820B9A003E70EE /* Cloud-Moon.svg in Resources */,
 				DB44DB361BBFC6310054EF17 /* Back.png in Resources */,
@@ -1012,6 +1052,7 @@
 				DBCAABDF1B820B9A003E70EE /* Europe_20pixel.png in Resources */,
 				DBCAAC571B820B9A003E70EE /* Thermometer-25.svg in Resources */,
 				DBCAABF51B820B9A003E70EE /* SouthAmerica_30pixel.png in Resources */,
+				DBF36A741C46739F009FB5A3 /* Userimage.png in Resources */,
 				DBCAAC081B820B9A003E70EE /* 16.png in Resources */,
 				DBCAAC241B820B9A003E70EE /* Cloud-Hail-Moon.svg in Resources */,
 				DBCAAC2D1B820B9A003E70EE /* Cloud-Rain-Moon-Alt.svg in Resources */,
@@ -1033,6 +1074,7 @@
 				DBCAABCF1B820B9A003E70EE /* tobae_daruma_overseas.png in Resources */,
 				DBCAAC7B1B820B9A003E70EE /* sunny.png in Resources */,
 				DBCAAC641B820B9A003E70EE /* cloudy_rain_later.png in Resources */,
+				DBACD3881C41C0C7002DF54A /* Editing.png in Resources */,
 				DBCAAC861B820B9A003E70EE /* IMG_Article.PNG in Resources */,
 				DBCAAC461B820B9A003E70EE /* Moon-First-Quarter.svg in Resources */,
 				DBCAAC721B820B9A003E70EE /* s_sunny.psd in Resources */,
@@ -1053,17 +1095,18 @@
 				DBCAAC5F1B820B9A003E70EE /* cloudy.png in Resources */,
 				DBCAAC841B820B9A003E70EE /* Weather-App-Icons.psd in Resources */,
 				DBCAAC381B820B9A003E70EE /* Cloud-Snow.svg in Resources */,
+				DB9B3EFB1C40F5A500BF2812 /* SignIn.png in Resources */,
 				DBCAA9361B817032003E70EE /* LaunchScreen.xib in Resources */,
 				DBCAABD21B820B9A003E70EE /* tobae_daruma_technology.png in Resources */,
 				DBCAABF11B820B9A003E70EE /* Oceania_text_25pixel.png in Resources */,
 				DBCAAC031B820B9A003E70EE /* 11.png in Resources */,
+				DB9B3EFF1C40F93A00BF2812 /* SignIn2.png in Resources */,
 				DBCAABC81B820B9A003E70EE /* tobae_daruma_character.jpg in Resources */,
 				DBCAAC011B820B9A003E70EE /* 09.png in Resources */,
 				DBCAABF71B820B9A003E70EE /* World.png in Resources */,
 				DB44DB3A1BBFC6310054EF17 /* Search.png in Resources */,
 				DBCAABE01B820B9A003E70EE /* Europe_25pixel.png in Resources */,
 				DBCAABFB1B820B9A003E70EE /* 03.png in Resources */,
-				DB9B3EEC1C40D66B00BF2812 /* LogIn.png in Resources */,
 				DBCAAC491B820B9A003E70EE /* Moon-New.svg in Resources */,
 				DBCAAC741B820B9A003E70EE /* snow_cloudy_later.png in Resources */,
 				DBCAAC531B820B9A003E70EE /* Sun.svg in Resources */,
@@ -1083,7 +1126,6 @@
 				DBCAAC481B820B9A003E70EE /* Moon-Last-Quarter.svg in Resources */,
 				DBCAAC3C1B820B9A003E70EE /* Cloud-Wind-Sun.svg in Resources */,
 				DBCAAC441B820B9A003E70EE /* Degrees-Celcius.svg in Resources */,
-				DB79E8821C14268F003F1049 /* SignUp.png in Resources */,
 				DBCAAC391B820B9A003E70EE /* Cloud-Sun.svg in Resources */,
 				DBCAABEA1B820B9A003E70EE /* NorthAmerica_25pixel.png in Resources */,
 				DBCAABED1B820B9A003E70EE /* Oceania.png in Resources */,
@@ -1136,6 +1178,7 @@
 				DBCAABDC1B820B9A003E70EE /* Asia_30pixel.png in Resources */,
 				DBCAAC761B820B9A003E70EE /* snow_occasionally_cloudy.png in Resources */,
 				DBCAAC311B820B9A003E70EE /* Cloud-Rain.svg in Resources */,
+				DB9B3F001C40F93A00BF2812 /* SignUp2.png in Resources */,
 				DBCAAC4A1B820B9A003E70EE /* Moon-Waning-Crescent.svg in Resources */,
 				DBCAAC7D1B820B9A003E70EE /* license-README-FIRST.txt in Resources */,
 				DBCAAC401B820B9A003E70EE /* Compass-North.svg in Resources */,
@@ -1162,6 +1205,7 @@
 				DBCAAC3B1B820B9A003E70EE /* Cloud-Wind-Moon.svg in Resources */,
 				DBCAABEB1B820B9A003E70EE /* NorthAmerica_30pixel.png in Resources */,
 				DBCAAC4D1B820B9A003E70EE /* Moon-Waxing-Gibbous.svg in Resources */,
+				DB9B3EFC1C40F5A500BF2812 /* SignUp.png in Resources */,
 				DBCAABEE1B820B9A003E70EE /* Oceania_20pixel.png in Resources */,
 				DBCAAC6D1B820B9A003E70EE /* rain_occasionally_cloudy.png in Resources */,
 				DBCAAC6E1B820B9A003E70EE /* rain_occasionally_snow.png in Resources */,
@@ -1222,6 +1266,9 @@
 				DBCAAC141B820B9A003E70EE /* README.md in Sources */,
 				DBD8F4181BA51611000CA272 /* WeatherViewController.m in Sources */,
 				DBCAA9281B817032003E70EE /* AppDelegate.m in Sources */,
+				DB24C0791C43CE3C007866E2 /* ChangePassWordViewController.m in Sources */,
+				DB24C0761C43CD70007866E2 /* SettingViewController.m in Sources */,
+				DB318D3F1C6602A8007D5D6F /* SearchViewController.m in Sources */,
 				DBCAA92B1B817032003E70EE /* Tobae.xcdatamodeld in Sources */,
 				DB44DB2D1BBFB1520054EF17 /* CapitalStrManager.m in Sources */,
 				DBE9085C1BBFD35900D46502 /* DetailViewController.m in Sources */,
@@ -1231,6 +1278,7 @@
 				DBCAA9251B817032003E70EE /* main.m in Sources */,
 				DBCAAAD51B8170C1003E70EE /* VerticalTableViewCell.m in Sources */,
 				DB9B3EE21C40CD4B00BF2812 /* SignUpViewController.m in Sources */,
+				DB24C07C1C43CE81007866E2 /* ChangeMailAddressViewController.m in Sources */,
 				DBA71AF91B914E9F001926A5 /* Cell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1347,7 +1395,7 @@
 				INFOPLIST_FILE = Tobae/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_MODULE_NAME = WEATHER;
 				PRODUCT_NAME = WEATHER;
 			};
@@ -1361,7 +1409,7 @@
 				INFOPLIST_FILE = Tobae/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_MODULE_NAME = WEATHER;
 				PRODUCT_NAME = WEATHER;
 			};

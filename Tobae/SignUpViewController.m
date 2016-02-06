@@ -22,7 +22,7 @@
     IBOutlet UITextField *UserIDfield;
     IBOutlet UITextField *Mailadressfield;
     IBOutlet UITextField *Passwordfield;
-    IBOutlet UITextField *Commentfield;
+    IBOutlet UITextField *commentfield;
 
     
 }
@@ -51,10 +51,22 @@
     user.username = UserIDfield.text;
     user.email    = Mailadressfield.text; //optional
     user.password = Passwordfield.text;
+
     NSData *imageData = UIImagePNGRepresentation(selectedImage);
     
+    if(imageData == nil){
+        UIAlertView *alert = [[UIAlertView alloc]init];
+        alert.message = @"Please select your userimage.";
+        alert.title = @"Error";
+        [alert addButtonWithTitle:@"OK"];
+        [alert show];
+        return;
+    }
+
     PFFile *imageFile =[PFFile fileWithName:@"image.png" data:imageData];
     [user setObject:imageFile forKey:@"image"];
+    [user setObject:commentfield.text forKey:@"Comments"];
+    
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             //ユーザの作成に成功
@@ -92,7 +104,7 @@
             [self presentViewController:picker animated:YES completion:nil];
         }
     }
-    else{
+    else if(buttonIndex == 1){
         if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]){
             UIImagePickerController *picker = [[UIImagePickerController alloc] init];
             picker.delegate = self;
@@ -102,6 +114,9 @@
         }
         
     }
+    else{
+        
+    }
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary<NSString *,id> *)editingInfo{
@@ -109,5 +124,11 @@
     imageView.image = selectedImage;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+-(IBAction)back{
+    [self dismissViewControllerAnimated:self completion:nil];
+}
+
+
 
 @end

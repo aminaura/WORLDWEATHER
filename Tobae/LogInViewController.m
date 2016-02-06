@@ -8,7 +8,7 @@
 
 #import "LogInViewController.h"
 #import <Parse/Parse.h>
-@interface LogInViewController ()
+@interface LogInViewController ()<UITextFieldDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @end
 
@@ -23,6 +23,8 @@
     PassWordField.delegate = self;
     // Do any additional setup after loading the view.
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -42,12 +44,16 @@
                                     block:^(PFUser *user, NSError *error) {
                                         if (user) {
                                             //ユーザのログインに成功
-                                            [self performSegueWithIdentifier:@"ToHome" sender:nil];
+                                            [self performSegueWithIdentifier:@"Gomain" sender:nil];
                                         } else {
                                             //ユーザのログインに失敗
                                             NSLog(@"error...%@",error);
                                         }
                                     }];
+}
+
+-(IBAction)back{
+    [self dismissViewControllerAnimated:self completion:nil];
 }
 
 
