@@ -309,7 +309,7 @@
 - (void)filterContainsWithSearchText:(NSString *)searchText
 {
     //CONTAINS右辺値が含まれているか,cは大文字小文字の区別なしオプション
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF contains[c] %@", searchText];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF contains[l] %@", searchText];
     
     self.SearchCapitals= [self.Capitals filteredArrayUsingPredicate:predicate];
 

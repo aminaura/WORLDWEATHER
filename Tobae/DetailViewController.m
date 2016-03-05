@@ -15,6 +15,7 @@
     NSDictionary * array;
     NSMutableArray * country;
     NSDictionary *weather_icon;
+    NSDictionary * weekday;
     NSString *imageKeyname;
     
     NSMutableArray * capital;
@@ -573,6 +574,7 @@
 }
 
 - (int)getNumberOfArray: (NSMutableArray *)mutableArray withKey: (NSString *)key {
+    
     for (int i  = 0; i < mutableArray.count; i++) {
         if ([mutableArray[i] isEqualToString:key]) {
             return i;
@@ -591,43 +593,49 @@
             
         }
         else{
-            // 日付のオフセットを生成
+            
             NSDateComponents *dateComp = [[NSDateComponents alloc] init];
             
-            // 1日後とする
+            // 1~7日後とする
             [dateComp setDay:i];
             
             // 1日後のNSDateインスタンスを取得する
-            date = [[NSCalendar currentCalendar] dateByAddingComponents:dateComp toDate:[NSDate date] options:0];
+            NSDate *date = [[NSCalendar currentCalendar] dateByAddingComponents:dateComp toDate:[NSDate date] options:0];
             
             NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+            NSDateFormatter* formatter_e = [[NSDateFormatter alloc] init];
             
             // 変換用の書式を設定します。
             [formatter setDateFormat:@"MM/dd"];
+            [formatter_e setDateFormat:@"E"];
             
             // NSDate を NSString に変換します。
             NSString *dateStr = [formatter stringFromDate:date];
+            NSString *eStr = [formatter_e stringFromDate:date];
+
             
+            NSLog(@"date=%@",dateStr);
+            NSLog(@"e=%@",eStr);
+
+            
+            //日付を表示
             
             UILabel *datela = datelabel[i-1];
             datela.text = [NSString stringWithFormat:@"%@",dateStr];
             
+            weekday = @{//day
+                        @"Sun":@"sun",
+                        @"Mon":@"mon",
+                        @"Tue":@"tue",
+                        @"Wed":@"wed",
+                        @"Thu":@"thu",
+                        @"Fri":@"fri",
+                        @"Sat":@"sat"};
             
-            NSCalendar *calendar = [NSCalendar currentCalendar];
-            NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitWeekday fromDate:date];
-            NSInteger weekday = [components weekday];
             
-            NSMutableArray  *weekdays = @[@"Sun.",
-                                          @"Mon.",
-                                          @"Tue.",
-                                          @"Wed.",
-                                          @"Thu.",
-                                          @"Fri.",
-                                          @"Sat."].mutableCopy;
-            
+            UILabel *weekdayl = weekdayla[i - 1];
+            weekdayl.text = [weekday valueForKey:eStr];
 
-            
-            ((UILabel *)weekdayla[i - 1]).text = [NSString stringWithFormat:@"%@",weekdays[weekday -1]];
             
         }
     }

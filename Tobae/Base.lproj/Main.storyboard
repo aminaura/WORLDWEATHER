@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -142,85 +143,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rko-LC-NaG">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="1" y="-8" width="375" height="667"/>
                                 <connections>
                                     <action selector="back" destination="AoJ-Tl-sAW" eventType="touchUpInside" id="pjB-Lc-85Y"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="01.png" translatesAutoresizingMaskIntoConstraints="NO" id="eU0-5e-KCZ">
-                                <rect key="frame" x="18" y="18" width="140" height="140"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iAr-Rk-r5L">
-                                <rect key="frame" x="18" y="244.5" width="340" height="67.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="sun" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFn-hI-XNB">
-                                        <rect key="frame" x="61" y="20" width="54" height="26"/>
-                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="22"/>
-                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.44313725490196076" green="0.45098039215686275" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fb1-gV-Pzg">
-                                <rect key="frame" x="18" y="311.5" width="340" height="67.5"/>
-                                <color key="backgroundColor" red="0.31372549019607843" green="0.31764705882352939" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7gR-rs-Jvp">
-                                <rect key="frame" x="18" y="377.5" width="340" height="67.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="tue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEM-02-EmD">
-                                        <rect key="frame" x="62" y="21" width="54" height="25"/>
-                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="22"/>
-                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.44313725490196076" green="0.45098039215686275" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c0t-3T-GEc">
-                                <rect key="frame" x="18" y="444" width="340" height="67.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="wed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3V-cK-rFz">
-                                        <rect key="frame" x="62" y="21" width="54" height="26"/>
-                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="20"/>
-                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.31372549019607843" green="0.31764705882352939" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbG-N9-ANs">
-                                <rect key="frame" x="18" y="511.5" width="340" height="67.5"/>
-                                <color key="backgroundColor" red="0.44313725490196076" green="0.45098039215686275" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hb9-dm-xz0">
-                                <rect key="frame" x="18" y="579" width="340" height="67.5"/>
-                                <color key="backgroundColor" red="0.31372549019607843" green="0.31764705882352939" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="03.png" translatesAutoresizingMaskIntoConstraints="NO" id="c0I-HC-rou">
-                                <rect key="frame" x="135" y="257" width="45" height="45"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="03.png" translatesAutoresizingMaskIntoConstraints="NO" id="dhw-wU-gsG">
-                                <rect key="frame" x="135" y="324" width="45" height="45"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="03.png" translatesAutoresizingMaskIntoConstraints="NO" id="GaS-Ku-BKi">
-                                <rect key="frame" x="135" y="389" width="45" height="45"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50mm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhb-vs-C9r">
-                                <rect key="frame" x="262" y="538" width="91" height="21"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="03.png" translatesAutoresizingMaskIntoConstraints="NO" id="itV-VC-3ct">
-                                <rect key="frame" x="135" y="456" width="45" height="45"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="03.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Vf-Tt-X45">
-                                <rect key="frame" x="135" y="526" width="45" height="45"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="03.png" translatesAutoresizingMaskIntoConstraints="NO" id="kQX-oL-u6U">
-                                <rect key="frame" x="135" y="592" width="45" height="45"/>
+                                <rect key="frame" x="17" y="18" width="140" height="140"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="United States of America" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5B-bh-KXm">
                                 <rect key="frame" x="166" y="54" width="189" height="21"/>
@@ -234,160 +163,238 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30℃" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IM1-wg-NSD">
-                                <rect key="frame" x="197" y="268" width="50" height="21"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50mm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZf-xF-7Ie">
-                                <rect key="frame" x="258" y="269" width="91" height="21"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30℃" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXv-fs-rY8">
-                                <rect key="frame" x="197" y="336" width="50" height="21"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="mon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szg-J8-5rS">
-                                <rect key="frame" x="79" y="333" width="54" height="26"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="20"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50mm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGj-iu-ecL">
-                                <rect key="frame" x="258" y="336" width="91" height="21"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30℃" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEl-Ri-TeE">
-                                <rect key="frame" x="197" y="401" width="50" height="21"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50mm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6b-Vk-kaf">
-                                <rect key="frame" x="258" y="401" width="91" height="21"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30℃" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMo-T6-f2E">
-                                <rect key="frame" x="197" y="468" width="50" height="21"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="1/4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybx-xG-ysJ">
-                                <rect key="frame" x="20" y="463" width="56" height="32"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50mm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGO-5b-Wgx">
-                                <rect key="frame" x="258" y="468" width="91" height="21"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30℃" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jX3-Fs-a5Q">
-                                <rect key="frame" x="197" y="538" width="50" height="21"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="1/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgb-cp-Z4x">
-                                <rect key="frame" x="20" y="533" width="56" height="32"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="thu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VR9-he-wMx">
-                                <rect key="frame" x="81" y="535" width="54" height="26"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="23"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30℃" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgs-ME-JhC">
-                                <rect key="frame" x="197" y="606" width="50" height="21"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="1/6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjE-MT-qx3">
-                                <rect key="frame" x="20" y="599" width="56" height="32"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50mm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q85-IX-pkl">
-                                <rect key="frame" x="258" y="606" width="91" height="21"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2i-41-S5Q">
-                                <rect key="frame" x="18" y="18" width="39" height="39"/>
-                                <state key="normal" backgroundImage="Favorite_Add.png"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="1/2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2k-kp-CnJ">
-                                <rect key="frame" x="20" y="331" width="56" height="32"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="1/3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oi-uB-dmX">
-                                <rect key="frame" x="20" y="396" width="56" height="32"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="1/1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioh-Xs-Hwx">
-                                <rect key="frame" x="20" y="264" width="56" height="32"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="fri" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZh-eI-mfm">
-                                <rect key="frame" x="81" y="600" width="54" height="26"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="23"/>
-                                <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="sunrize : 5:20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbx-Eq-fFw">
-                                <rect key="frame" x="30" y="168" width="136" height="32"/>
+                                <rect key="frame" x="17" y="173" width="136" height="32"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="sunset  : 18:25" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4W-um-MRW">
-                                <rect key="frame" x="30" y="198" width="136" height="32"/>
+                                <rect key="frame" x="17" y="199" width="136" height="32"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="humidity : 50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKH-ry-6gu">
-                                <rect key="frame" x="197" y="172" width="161" height="24"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="19"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain : 50mm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNY-dE-qdI">
-                                <rect key="frame" x="197" y="204" width="161" height="24"/>
+                                <rect key="frame" x="171" y="203" width="161" height="24"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Washington,D.C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyD-n0-rhd">
-                                <rect key="frame" x="166" y="18" width="209" height="41"/>
+                                <rect key="frame" x="166" y="16" width="209" height="41"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2i-41-S5Q">
+                                <rect key="frame" x="17" y="18" width="39" height="39"/>
+                                <state key="normal" backgroundImage="Favorite_Add.png"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain : 50mm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNY-dE-qdI">
+                                <rect key="frame" x="172" y="177" width="161" height="24"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iAr-Rk-r5L">
+                                <rect key="frame" x="18" y="244.5" width="340" height="67.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="1/1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioh-Xs-Hwx">
+                                        <rect key="frame" x="3" y="18.5" width="56" height="32"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="sun" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFn-hI-XNB">
+                                        <rect key="frame" x="61" y="21" width="54" height="26"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="22"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="03.png" translatesAutoresizingMaskIntoConstraints="NO" id="c0I-HC-rou">
+                                        <rect key="frame" x="112" y="11.5" width="45" height="45"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30℃" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IM1-wg-NSD">
+                                        <rect key="frame" x="171" y="23.5" width="50" height="21"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50mm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZf-xF-7Ie">
+                                        <rect key="frame" x="238" y="23.5" width="91" height="21"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.44313725490196076" green="0.45098039215686275" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7gR-rs-Jvp">
+                                <rect key="frame" x="18" y="377.5" width="340" height="67.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="1/3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oi-uB-dmX">
+                                        <rect key="frame" x="3" y="18.5" width="56" height="32"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="tue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEM-02-EmD">
+                                        <rect key="frame" x="62" y="21" width="54" height="25"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="22"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="03.png" translatesAutoresizingMaskIntoConstraints="NO" id="GaS-Ku-BKi">
+                                        <rect key="frame" x="113" y="11.5" width="45" height="45"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30℃" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEl-Ri-TeE">
+                                        <rect key="frame" x="174" y="23.5" width="50" height="21"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50mm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6b-Vk-kaf">
+                                        <rect key="frame" x="241" y="23.5" width="91" height="21"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.44313725490196076" green="0.45098039215686275" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c0t-3T-GEc">
+                                <rect key="frame" x="17" y="444.5" width="340" height="67.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="1/4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybx-xG-ysJ">
+                                        <rect key="frame" x="3" y="18.5" width="56" height="32"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="wed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3V-cK-rFz">
+                                        <rect key="frame" x="62" y="21" width="54" height="26"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="20"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="03.png" translatesAutoresizingMaskIntoConstraints="NO" id="itV-VC-3ct">
+                                        <rect key="frame" x="115" y="11.5" width="45" height="45"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30℃" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMo-T6-f2E">
+                                        <rect key="frame" x="168" y="23.5" width="50" height="21"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50mm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGO-5b-Wgx">
+                                        <rect key="frame" x="241" y="23.5" width="91" height="21"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.31372549019607843" green="0.31764705882352939" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbG-N9-ANs">
+                                <rect key="frame" x="18" y="511.5" width="340" height="67.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="1/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgb-cp-Z4x">
+                                        <rect key="frame" x="3" y="18.5" width="56" height="32"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="thu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VR9-he-wMx">
+                                        <rect key="frame" x="63" y="21.5" width="54" height="26"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="23"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="03.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Vf-Tt-X45">
+                                        <rect key="frame" x="115" y="11.5" width="45" height="45"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30℃" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jX3-Fs-a5Q">
+                                        <rect key="frame" x="168" y="23.5" width="50" height="21"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50mm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhb-vs-C9r">
+                                        <rect key="frame" x="241" y="23.5" width="91" height="21"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.44313725490196076" green="0.45098039215686275" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hb9-dm-xz0">
+                                <rect key="frame" x="18" y="579" width="340" height="67.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="1/6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjE-MT-qx3">
+                                        <rect key="frame" x="3" y="18" width="56" height="32"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="fri" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZh-eI-mfm">
+                                        <rect key="frame" x="65" y="21" width="54" height="26"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="23"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="03.png" translatesAutoresizingMaskIntoConstraints="NO" id="kQX-oL-u6U">
+                                        <rect key="frame" x="116" y="12" width="45" height="45"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30℃" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgs-ME-JhC">
+                                        <rect key="frame" x="169" y="24" width="50" height="21"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50mm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q85-IX-pkl">
+                                        <rect key="frame" x="124" y="24" width="91" height="21"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.31372549019607843" green="0.31764705882352939" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fb1-gV-Pzg">
+                                <rect key="frame" x="18" y="311" width="340" height="67.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="1/2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2k-kp-CnJ">
+                                        <rect key="frame" x="3" y="18.5" width="56" height="32"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="mon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szg-J8-5rS">
+                                        <rect key="frame" x="62" y="21.5" width="54" height="26"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="20"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="03.png" translatesAutoresizingMaskIntoConstraints="NO" id="dhw-wU-gsG">
+                                        <rect key="frame" x="113" y="11.5" width="45" height="45"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rain:50mm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGj-iu-ecL">
+                                        <rect key="frame" x="241" y="23" width="91" height="21"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30℃" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXv-fs-rY8">
+                                        <rect key="frame" x="172" y="23" width="50" height="21"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="21"/>
+                                        <color key="textColor" red="0.86131779100000005" green="0.86131779100000005" blue="0.86131779100000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.31372549019607843" green="0.31764705882352939" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.14117647058823529" green="0.14901960784313725" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -399,38 +406,39 @@
                         <outlet property="image" destination="eU0-5e-KCZ" id="LbN-W8-Vcy"/>
                         <outlet property="sunrise" destination="hbx-Eq-fFw" id="BOB-G9-u0X"/>
                         <outlet property="sunset" destination="a4W-um-MRW" id="gYu-Hq-u8N"/>
-                        <outletCollection property="rainfallla" destination="mNY-dE-qdI" id="hn3-Nr-MeF"/>
-                        <outletCollection property="rainfallla" destination="ZZf-xF-7Ie" id="BHB-Sh-bdd"/>
-                        <outletCollection property="rainfallla" destination="aGj-iu-ecL" id="Yfj-oq-frQ"/>
-                        <outletCollection property="rainfallla" destination="L6b-Vk-kaf" id="gSK-ZD-5h1"/>
-                        <outletCollection property="rainfallla" destination="wGO-5b-Wgx" id="l2u-tt-x4i"/>
-                        <outletCollection property="rainfallla" destination="q85-IX-pkl" id="wxQ-zb-lsM"/>
+                        <outlet property="temperaturela" destination="GOY-aj-gg8" id="Z3I-8t-Kb9"/>
                         <outletCollection property="templa" destination="GOY-aj-gg8" id="FDf-7h-trg"/>
-                        <outletCollection property="templa" destination="IM1-wg-NSD" id="QyC-Kg-TZ8"/>
-                        <outletCollection property="templa" destination="nXv-fs-rY8" id="x13-Oh-8tw"/>
-                        <outletCollection property="templa" destination="HEl-Ri-TeE" id="zty-an-xuL"/>
-                        <outletCollection property="templa" destination="eMo-T6-f2E" id="8Cc-hV-SPR"/>
-                        <outletCollection property="templa" destination="jX3-Fs-a5Q" id="dZQ-ll-jOA"/>
-                        <outletCollection property="templa" destination="qgs-ME-JhC" id="YFh-7Q-e3Z"/>
+                        <outletCollection property="weekdayla" destination="YFn-hI-XNB" id="Vw4-R2-bE6"/>
+                        <outletCollection property="weekdayla" destination="hEM-02-EmD" id="lf6-dx-1bP"/>
+                        <outletCollection property="weekdayla" destination="k3V-cK-rFz" id="oLq-Uo-wsO"/>
+                        <outletCollection property="weekdayla" destination="Szg-J8-5rS" id="cuC-mD-CYv"/>
+                        <outletCollection property="weekdayla" destination="VR9-he-wMx" id="4RW-99-1Er"/>
+                        <outletCollection property="weekdayla" destination="nZh-eI-mfm" id="wK9-GY-U11"/>
+                        <outletCollection property="imageViews" destination="c0I-HC-rou" id="hrY-xY-jSz"/>
+                        <outletCollection property="imageViews" destination="dhw-wU-gsG" id="XZr-qZ-Z8s"/>
+                        <outletCollection property="imageViews" destination="GaS-Ku-BKi" id="EoQ-oI-nXq"/>
+                        <outletCollection property="imageViews" destination="itV-VC-3ct" id="LW9-kp-KQU"/>
+                        <outletCollection property="imageViews" destination="1Vf-Tt-X45" id="PaS-TI-aet"/>
+                        <outletCollection property="imageViews" destination="kQX-oL-u6U" id="TRH-7r-mBi"/>
                         <outletCollection property="datelabel" destination="ioh-Xs-Hwx" id="faw-7O-b0G"/>
                         <outletCollection property="datelabel" destination="w2k-kp-CnJ" id="5Nf-Sm-oRx"/>
                         <outletCollection property="datelabel" destination="2oi-uB-dmX" id="CMj-EM-h74"/>
                         <outletCollection property="datelabel" destination="ybx-xG-ysJ" id="cTS-aH-g9y"/>
                         <outletCollection property="datelabel" destination="Zgb-cp-Z4x" id="P6S-9E-tyo"/>
                         <outletCollection property="datelabel" destination="fjE-MT-qx3" id="FPV-CE-fhy"/>
-                        <outletCollection property="weekdayla" destination="Szg-J8-5rS" id="egM-ay-1xN"/>
-                        <outletCollection property="weekdayla" destination="VR9-he-wMx" id="R6J-jY-rrx"/>
-                        <outletCollection property="imageViews" destination="c0I-HC-rou" id="hrY-xY-jSz"/>
-                        <outletCollection property="imageViews" destination="dhw-wU-gsG" id="XZr-qZ-Z8s"/>
-                        <outletCollection property="imageViews" destination="GaS-Ku-BKi" id="EoQ-oI-nXq"/>
+                        <outletCollection property="templa" destination="IM1-wg-NSD" id="QyC-Kg-TZ8"/>
+                        <outletCollection property="templa" destination="nXv-fs-rY8" id="x13-Oh-8tw"/>
+                        <outletCollection property="templa" destination="HEl-Ri-TeE" id="zty-an-xuL"/>
+                        <outletCollection property="templa" destination="eMo-T6-f2E" id="8Cc-hV-SPR"/>
+                        <outletCollection property="templa" destination="jX3-Fs-a5Q" id="dZQ-ll-jOA"/>
+                        <outletCollection property="templa" destination="qgs-ME-JhC" id="YFh-7Q-e3Z"/>
+                        <outletCollection property="rainfallla" destination="ZZf-xF-7Ie" id="BHB-Sh-bdd"/>
+                        <outletCollection property="rainfallla" destination="aGj-iu-ecL" id="Yfj-oq-frQ"/>
+                        <outletCollection property="rainfallla" destination="L6b-Vk-kaf" id="gSK-ZD-5h1"/>
+                        <outletCollection property="rainfallla" destination="wGO-5b-Wgx" id="l2u-tt-x4i"/>
                         <outletCollection property="rainfallla" destination="Lhb-vs-C9r" id="ENh-kV-uel"/>
-                        <outletCollection property="imageViews" destination="itV-VC-3ct" id="LW9-kp-KQU"/>
-                        <outletCollection property="imageViews" destination="1Vf-Tt-X45" id="PaS-TI-aet"/>
-                        <outletCollection property="imageViews" destination="kQX-oL-u6U" id="TRH-7r-mBi"/>
-                        <outletCollection property="weekdayla" destination="nZh-eI-mfm" id="D0k-9s-A0V"/>
-                        <outletCollection property="weekdayla" destination="YFn-hI-XNB" id="o6m-AL-RZz"/>
-                        <outletCollection property="weekdayla" destination="hEM-02-EmD" id="biQ-Oe-xNP"/>
-                        <outletCollection property="weekdayla" destination="k3V-cK-rFz" id="9oc-zY-HRz"/>
+                        <outletCollection property="rainfallla" destination="q85-IX-pkl" id="wxQ-zb-lsM"/>
+                        <outletCollection property="rainfallla" destination="mNY-dE-qdI" id="hn3-Nr-MeF"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="ToBack" modalTransitionStyle="crossDissolve" id="YLI-I3-DUe"/>
                     </connections>
                 </viewController>
