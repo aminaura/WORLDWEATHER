@@ -184,6 +184,7 @@ static NSString * const TableViewCustomCellIdentifier = @"Cell";
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?APPID=b8f4ce09ae1ca4d1b34a14438e857866&q=%@", string]];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
     /*
     __block NSDictionary *object;
     [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {

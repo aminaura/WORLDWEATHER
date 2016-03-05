@@ -7,6 +7,7 @@
 //
 
 #import "SearchViewController.h"
+#import "CapitalStrManager.h"
 
 @interface SearchViewController ()<UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchDisplayDelegate>
 
@@ -26,6 +27,8 @@
 @implementation SearchViewController{
     NSString *capitalname;
     NSDictionary *listDict;
+    UIImage *cellimg;
+    NSDictionary *weather_icon;
 }
 
 
@@ -238,6 +241,7 @@
     
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -321,8 +325,83 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     listDict = [_Capitals objectAtIndex:indexPath.row];
+    
+    weather_icon = @{//day
+                     @"01d":[UIImage imageNamed:@"01.png"],
+                     @"02d":[UIImage imageNamed:@"02.png"],
+                     @"03d":[UIImage imageNamed:@"09.png"],
+                     @"04d":[UIImage imageNamed:@"12.png"],
+                     @"09d":[UIImage imageNamed:@"11.png"],
+                     @"10d":[UIImage imageNamed:@"05.png"],
+                     @"11d":[UIImage imageNamed:@"13.png"],
+                     @"13d":[UIImage imageNamed:@"15.png"],
+                     @"50d":[UIImage imageNamed:@"10.png"],
+                     //night
+                     @"01n":[UIImage imageNamed:@"17.png"],
+                     @"02n":[UIImage imageNamed:@"18.png"],
+                     @"03n":[UIImage imageNamed:@"09.png"],
+                     @"04n":[UIImage imageNamed:@"12.png"],
+                     @"09n":[UIImage imageNamed:@"22.png"],
+                     @"10n":[UIImage imageNamed:@"21.png"],
+                     @"11n":[UIImage imageNamed:@"23.png"],
+                     @"13n":[UIImage imageNamed:@"24.png"],
+                     @"50n":[UIImage imageNamed:@"19.png"]};
+
+
+    // この部分が重要
+    dispatch_queue_t q_global = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_queue_t q_main = dispatch_get_main_queue();
+    
+    // 実行待ち
+    dispatch_async(q_global, ^{
+        // NSDictionary *weathers = [self getweather:self.weather_capital[indexPath.row]];
+        
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?APPID=b8f4ce09ae1ca4d1b34a14438e857866&q=%@",_Capitals[indexPath.row]]];
+        
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+        
+        // NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+        
+        [NSURLConnection sendAsynchronousRequest:request
+                                           queue:[NSOperationQueue mainQueue]
+                               completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                                   if (data) {
+                                       NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+                                       
+                                       if (object) {
+                                           // ⑦ weather.mainの値を抽出
+                                           NSArray *main = [object valueForKeyPath:@"weather.main"]; //天候
+                                           NSArray *description = [object valueForKeyPath:@"weather.description"]; // 天候詳細
+                                           NSArray *speed = [object valueForKeyPath:@"wind.speed"]; //風速
+                                           NSArray *icons = [object valueForKeyPath:@"weather.icon"];
+                                           
+                                           
+                                           NSLog(@"main(天候)=%@,description(天候詳細)=%@,speed(風速)=%@,icons(天気アイコン)=%@",main,description,speed,icons);
+                                           
+                                           NSMutableDictionary *weather= @{@"main":main,
+                                                                           @"description":description,
+                                                                           @"speed":speed,
+                                                                           @"icons":icons}.mutableCopy;
+                                           dispatch_async(q_main, ^{
+                                               NSString *imageKeyname = weather[@"icons"][0];
+                                               cellimg = weather_icon[imageKeyname];
+                                           });
+                                       }else {
+                                           // TODO: ここに取得できなかったときの処理。でも本当は、「すでに取れてたらリクエストを送らない」というのが正解
+                                       }
+                                   }else {
+                                       NSLog(@"レスポンス == %@, エラー == %@", response, error);
+                                   }
+                               }];
+    });
+    
+    [CapitalStrManager sharedManager].capitalstr = [NSString stringWithFormat:@"%@",_Capitals[indexPath.row]];
     capitalname = _Capitals[indexPath.row];
+    [CapitalStrManager sharedManager].icon = cellimg;
+    [CapitalStrManager sharedManager].capitalstr = _Capitals[indexPath.row];
+    
     [self performSegueWithIdentifier:@"goDetail" sender:self];
+
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -337,6 +416,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     return 50;
 }
+
 
 
 
