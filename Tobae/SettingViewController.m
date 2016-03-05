@@ -89,6 +89,7 @@
                     if (succeeded) {
                         //ユーザの退会に成功
                         [self.presentingViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+                        NSLog(@"quit");
                     } else {
                         //ユーザの退会に失敗
                         NSLog(@"error..%@",error);

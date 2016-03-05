@@ -4,7 +4,7 @@
 //
 //  Created by 菅野楓 on 2015/09/13.
 //  Copyright (c) 2015年 Original_Weather. All rights reserved.
-//ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー
+//ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・・ー・ー・ー・ー
 
 #import "WeatherViewController.h"
 #import "VerticalTableViewCell.h"
@@ -25,7 +25,7 @@
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://openweathermap.org/city/%@", [CapitalStrManager sharedManager].capitalstr]];
     
-    NSLog(@"aaaaaa = %@",[CapitalStrManager sharedManager].capitalstr);
+    NSLog(@"CapitalStrManager = %@",[CapitalStrManager sharedManager].capitalstr);
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
@@ -37,17 +37,12 @@
     NSArray *speed = [object valueForKeyPath:@"wind.speed"]; //風速
     NSArray *temperature = [object valueForKeyPath:@"weather.temperature"];
     
-    temperaturela.text = [NSString stringWithFormat:@"%@℃",temperature];
+    temperaturela.text = [NSString stringWithFormat:@"%@",temperature];
     
-    NSLog(@"main(天候)=%@,description(天候詳細)=%@,speed(風速)=%@,icons(天気アイコン)=%@",main,description,speed,temperature);
-    
-    NSDictionary *weather= @{@"main":main,
-                             @"description":description,
-                             @"speed":speed,
-                             @"Tempereture":temperature};
+    NSLog(@"main(天候)= %@,description（天候詳細）=%@,speed（風速）=%@,icons（天気アイコン=%@",main,description,speed,temperature);
     
     
-    array = @[  @"Algeria",
+      array = @[@"Algeria",
                 @"Angola",
                 @"Uganda",
                 @"Egypt",
@@ -267,7 +262,5 @@
     NSInteger day = comps.day;
     
 }
-
-
 
 @end

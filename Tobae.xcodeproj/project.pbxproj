@@ -10,7 +10,7 @@
 		DB24C0761C43CD70007866E2 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB24C0751C43CD70007866E2 /* SettingViewController.m */; };
 		DB24C0791C43CE3C007866E2 /* ChangePassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB24C0781C43CE3C007866E2 /* ChangePassWordViewController.m */; };
 		DB24C07C1C43CE81007866E2 /* ChangeMailAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB24C07B1C43CE81007866E2 /* ChangeMailAddressViewController.m */; };
-		DB318D3F1C6602A8007D5D6F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB318D3E1C6602A8007D5D6F /* SearchViewController.m */; };
+		DB2EBAED1C6C1EC8000127E1 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2EBAEC1C6C1EC8000127E1 /* SearchViewController.m */; };
 		DB44DB2D1BBFB1520054EF17 /* CapitalStrManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB44DB2C1BBFB1520054EF17 /* CapitalStrManager.m */; };
 		DB44DB2F1BBFC5BD0054EF17 /* View.png in Resources */ = {isa = PBXBuildFile; fileRef = DB44DB2E1BBFC5BD0054EF17 /* View.png */; };
 		DB44DB361BBFC6310054EF17 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = DB44DB301BBFC6310054EF17 /* Back.png */; };
@@ -261,8 +261,8 @@
 		DB24C0781C43CE3C007866E2 /* ChangePassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePassWordViewController.m; sourceTree = "<group>"; };
 		DB24C07A1C43CE81007866E2 /* ChangeMailAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeMailAddressViewController.h; sourceTree = "<group>"; };
 		DB24C07B1C43CE81007866E2 /* ChangeMailAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeMailAddressViewController.m; sourceTree = "<group>"; };
-		DB318D3D1C6602A8007D5D6F /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		DB318D3E1C6602A8007D5D6F /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		DB2EBAEB1C6C1EC8000127E1 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		DB2EBAEC1C6C1EC8000127E1 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		DB44DB2B1BBFB1520054EF17 /* CapitalStrManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapitalStrManager.h; sourceTree = "<group>"; };
 		DB44DB2C1BBFB1520054EF17 /* CapitalStrManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapitalStrManager.m; sourceTree = "<group>"; };
 		DB44DB2E1BBFC5BD0054EF17 /* View.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = View.png; sourceTree = "<group>"; };
@@ -534,6 +534,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DB2EBAEA1C6C1E8D000127E1 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		DBCAA9161B817032003E70EE = {
 			isa = PBXGroup;
 			children = (
@@ -583,8 +590,9 @@
 				DB24C0781C43CE3C007866E2 /* ChangePassWordViewController.m */,
 				DB24C07A1C43CE81007866E2 /* ChangeMailAddressViewController.h */,
 				DB24C07B1C43CE81007866E2 /* ChangeMailAddressViewController.m */,
-				DB318D3D1C6602A8007D5D6F /* SearchViewController.h */,
-				DB318D3E1C6602A8007D5D6F /* SearchViewController.m */,
+				DB2EBAEB1C6C1EC8000127E1 /* SearchViewController.h */,
+				DB2EBAEC1C6C1EC8000127E1 /* SearchViewController.m */,
+				DB2EBAEA1C6C1E8D000127E1 /* New Group */,
 				DBCAA92F1B817032003E70EE /* Main.storyboard */,
 				DBA71AF51B914E14001926A5 /* Cell.xib */,
 				DBCAA9321B817032003E70EE /* Images.xcassets */,
@@ -1268,7 +1276,7 @@
 				DBCAA9281B817032003E70EE /* AppDelegate.m in Sources */,
 				DB24C0791C43CE3C007866E2 /* ChangePassWordViewController.m in Sources */,
 				DB24C0761C43CD70007866E2 /* SettingViewController.m in Sources */,
-				DB318D3F1C6602A8007D5D6F /* SearchViewController.m in Sources */,
+				DB2EBAED1C6C1EC8000127E1 /* SearchViewController.m in Sources */,
 				DBCAA92B1B817032003E70EE /* Tobae.xcdatamodeld in Sources */,
 				DB44DB2D1BBFB1520054EF17 /* CapitalStrManager.m in Sources */,
 				DBE9085C1BBFD35900D46502 /* DetailViewController.m in Sources */,
@@ -1393,7 +1401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tobae/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_MODULE_NAME = WEATHER;
@@ -1407,7 +1415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tobae/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_MODULE_NAME = WEATHER;

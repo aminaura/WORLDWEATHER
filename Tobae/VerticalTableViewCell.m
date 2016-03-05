@@ -100,16 +100,16 @@ static NSString * const TableViewCustomCellIdentifier = @"Cell";
     
     if (indexPath.row % 2 == 0) {
         cell_object.backgroundColor = [UIColor colorWithHue:0.0
-                                          saturation:0.0
-                                          brightness:0.67
-                                               alpha:1.0];
+                                                 saturation:0.0
+                                                 brightness:0.67
+                                                      alpha:1.0];
     }
     // 奇数セル
     else {
         cell_object.backgroundColor = [UIColor colorWithHue:0.0
-                                          saturation:0.0
-                                          brightness:0.73
-                                               alpha:1.0];
+                                                 saturation:0.0
+                                                 brightness:0.73
+                                                      alpha:1.0];
     }
     
     // セルの向きを横向きに
@@ -135,6 +135,7 @@ static NSString * const TableViewCustomCellIdentifier = @"Cell";
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    
     // ⑦ weather.mainの値を抽出
     NSArray *main = [object valueForKeyPath:@"weather.main"]; //天候
     NSArray *description = [object valueForKeyPath:@"weather.description"]; // 天候詳細
@@ -143,11 +144,12 @@ static NSString * const TableViewCustomCellIdentifier = @"Cell";
     
     
     NSLog(@"main(天候)=%@,description(天候詳細)=%@,speed(風速)=%@,icons(天気アイコン)=%@",main,description,speed,icons);
+    NSLog(@"str=%@",string);
     
-    NSDictionary *weather= @{@"main":main,
-                             @"description":description,
-                             @"speed":speed,
-                             @"icons":icons};
+    NSMutableDictionary *weather= @{@"main":main,
+                                    @"description":description,
+                                    @"speed":speed,
+                                    @"icons":icons}.mutableCopy;
     
     return weather;
 }

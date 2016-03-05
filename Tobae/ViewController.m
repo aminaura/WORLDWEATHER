@@ -35,7 +35,7 @@
     self.verticalTableView.delegate = self;
     self.verticalTableView.dataSource = self;
     
-    // セルを使うと宣言する？
+    // セルを使うと宣言する
     [self.verticalTableView registerClass:[VerticalTableViewCell class]
                    forCellReuseIdentifier:@"vertical"];
     

@@ -91,7 +91,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRE-vn-KfI">
-                                <rect key="frame" x="327" y="25" width="34" height="34"/>
+                                <rect key="frame" x="327" y="28" width="34" height="34"/>
                                 <state key="normal" image="Search.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -99,8 +99,16 @@
                                     <segue destination="vig-vS-our" kind="presentation" modalTransitionStyle="crossDissolve" id="bSj-LK-cQc"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="World2.png" translatesAutoresizingMaskIntoConstraints="NO" id="nDI-KB-8dL">
+                                <rect key="frame" x="142" y="11" width="91" height="67"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="atI-Zp-Stn">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections/>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6d-RR-o4e">
-                                <rect key="frame" x="18" y="25" width="34" height="34"/>
+                                <rect key="frame" x="20" y="28" width="34" height="34"/>
                                 <state key="normal" image="Profile.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -108,14 +116,6 @@
                                     <segue destination="30P-5r-YPr" kind="presentation" modalTransitionStyle="crossDissolve" id="jCu-VU-snP"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="World2.png" translatesAutoresizingMaskIntoConstraints="NO" id="nDI-KB-8dL">
-                                <rect key="frame" x="142" y="8" width="91" height="67"/>
-                            </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="atI-Zp-Stn">
-                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <sections/>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.19215686274509802" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -574,7 +574,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNA-M3-uM1">
-                                        <rect key="frame" x="18" y="18" width="34" height="34"/>
+                                        <rect key="frame" x="18" y="21" width="34" height="34"/>
                                         <state key="normal" backgroundImage="Back.png">
                                             <color key="titleColor" red="0.23401134579999999" green="0.7605160916" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -583,11 +583,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hus-ni-hU3">
-                                        <rect key="frame" x="324" y="18" width="34" height="34"/>
+                                        <rect key="frame" x="324" y="21" width="34" height="34"/>
                                         <state key="normal" backgroundImage="Setting.png"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmt-y8-GAU">
-                                        <rect key="frame" x="117" y="8" width="141" height="55"/>
+                                        <rect key="frame" x="117" y="11" width="141" height="55"/>
                                         <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -688,7 +688,7 @@
                                 <rect key="frame" x="0.0" y="-2" width="375" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLp-QL-te4">
-                                        <rect key="frame" x="129" y="8" width="117" height="55"/>
+                                        <rect key="frame" x="129" y="10" width="117" height="55"/>
                                         <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -746,7 +746,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3H2-8O-LJR">
-                                <rect key="frame" x="18" y="18" width="34" height="34"/>
+                                <rect key="frame" x="18" y="22" width="34" height="34"/>
                                 <state key="normal" backgroundImage="Back.png">
                                     <color key="titleColor" red="0.23401134579999999" green="0.7605160916" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -768,6 +768,9 @@
                                 <state key="normal" title="Quit">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="quit" destination="Lxe-G5-T2i" eventType="touchUpInside" id="hQC-w6-Aba"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2g-lo-NBL">
                                 <rect key="frame" x="18" y="584" width="339" height="55"/>
@@ -778,7 +781,6 @@
                                 </state>
                                 <connections>
                                     <action selector="logout" destination="Lxe-G5-T2i" eventType="touchUpInside" id="xEg-JY-ra1"/>
-                                    <action selector="quit" destination="Lxe-G5-T2i" eventType="touchUpInside" id="Yn5-CM-zdN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1007,14 +1009,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MY-tg-3Tu">
-                                        <rect key="frame" x="325" y="18" width="34" height="34"/>
+                                        <rect key="frame" x="325" y="21" width="34" height="34"/>
                                         <state key="normal" backgroundImage="Setting.png"/>
                                         <connections>
                                             <segue destination="Lxe-G5-T2i" kind="presentation" modalTransitionStyle="crossDissolve" id="pXq-hK-OzS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crt-sy-TlM">
-                                        <rect key="frame" x="18" y="18" width="34" height="34"/>
+                                        <rect key="frame" x="18" y="21" width="34" height="34"/>
                                         <state key="normal" backgroundImage="Back.png">
                                             <color key="titleColor" red="0.23401134579999999" green="0.7605160916" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -1023,7 +1025,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfR-hH-cO7">
-                                        <rect key="frame" x="130" y="8" width="115" height="55"/>
+                                        <rect key="frame" x="130" y="11" width="115" height="55"/>
                                         <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1064,16 +1066,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncl-G5-SNI">
-                                        <rect key="frame" x="18" y="18" width="34" height="34"/>
+                                        <rect key="frame" x="18" y="25" width="34" height="34"/>
                                         <state key="normal" backgroundImage="Back.png">
                                             <color key="titleColor" red="0.23401134579999999" green="0.7605160916" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="back" destination="vig-vS-our" eventType="touchUpInside" id="71R-cv-lMG"/>
                                             <action selector="logout" destination="8ys-Hl-bqX" eventType="touchUpInside" id="Xad-6A-djS"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBw-hQ-2oO">
-                                        <rect key="frame" x="130" y="8" width="115" height="55"/>
+                                        <rect key="frame" x="130" y="14" width="115" height="55"/>
                                         <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1081,10 +1084,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.14117647059999999" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="apW-yh-AAx">
-                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVz-l4-omF">
                                 <rect key="frame" x="0.0" y="70" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1092,6 +1091,12 @@
                                     <outlet property="delegate" destination="vig-vS-our" id="ptv-fJ-aY5"/>
                                 </connections>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="apW-yh-AAx">
+                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.31372549019607843" green="0.31764705882352939" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -1100,6 +1105,7 @@
                         <outlet property="searchBar" destination="uVz-l4-omF" id="nSu-Kk-MOg"/>
                         <outlet property="searchDisplayController" destination="y7H-Rb-fiR" id="gL5-4E-Yy7"/>
                         <outlet property="tableView" destination="apW-yh-AAx" id="SLp-Tb-UNr"/>
+                        <segue destination="AoJ-Tl-sAW" kind="presentation" identifier="goDetail" modalTransitionStyle="crossDissolve" id="g6G-gs-QeO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ie-XD-GG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1131,5 +1137,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fj0-il-hXa"/>
+        <segue reference="g6G-gs-QeO"/>
     </inferredMetricsTieBreakers>
 </document>
