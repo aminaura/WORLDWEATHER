@@ -28,5 +28,11 @@
     NSDate * date;
 }
 
+@property (nonatomic, strong)UIImage *iconImage;
+
+
+
 -(IBAction)back;
+
+
 @end
