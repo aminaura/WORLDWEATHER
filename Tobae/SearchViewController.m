@@ -348,53 +348,6 @@
                      @"50n":[UIImage imageNamed:@"19.png"]};
 
 
-    // この部分が重要
-    dispatch_queue_t q_global = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_queue_t q_main = dispatch_get_main_queue();
-    
-    // 実行待ち
-    dispatch_async(q_global, ^{
-        // NSDictionary *weathers = [self getweather:self.weather_capital[indexPath.row]];
-        
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?APPID=b8f4ce09ae1ca4d1b34a14438e857866&q=%@",_Capitals[indexPath.row]]];
-        
-        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-        
-        // NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-        
-        [NSURLConnection sendAsynchronousRequest:request
-                                           queue:[NSOperationQueue mainQueue]
-                               completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                                   if (data) {
-                                       NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-                                       
-                                       if (object) {
-                                           // ⑦ weather.mainの値を抽出
-                                           NSArray *main = [object valueForKeyPath:@"weather.main"]; //天候
-                                           NSArray *description = [object valueForKeyPath:@"weather.description"]; // 天候詳細
-                                           NSArray *speed = [object valueForKeyPath:@"wind.speed"]; //風速
-                                           NSArray *icons = [object valueForKeyPath:@"weather.icon"];
-                                           
-                                           
-                                           NSLog(@"main(天候)=%@,description(天候詳細)=%@,speed(風速)=%@,icons(天気アイコン)=%@",main,description,speed,icons);
-                                           
-                                           NSMutableDictionary *weather= @{@"main":main,
-                                                                           @"description":description,
-                                                                           @"speed":speed,
-                                                                           @"icons":icons}.mutableCopy;
-                                           dispatch_async(q_main, ^{
-                                               NSString *imageKeyname = weather[@"icons"][0];
-                                               cellimg = weather_icon[imageKeyname];
-                                           });
-                                       }else {
-                                           // TODO: ここに取得できなかったときの処理。でも本当は、「すでに取れてたらリクエストを送らない」というのが正解
-                                       }
-                                   }else {
-                                       NSLog(@"レスポンス == %@, エラー == %@", response, error);
-                                   }
-                               }];
-    });
-    
     [CapitalStrManager sharedManager].capitalstr = [NSString stringWithFormat:@"%@",_Capitals[indexPath.row]];
     capitalname = _Capitals[indexPath.row];
     [CapitalStrManager sharedManager].icon = cellimg;
@@ -417,7 +370,9 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 50;
 }
 
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+}
 
 
 

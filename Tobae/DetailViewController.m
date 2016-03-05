@@ -83,8 +83,7 @@
     NSURLResponse *responce;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&responce error:&error];
     NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-    
-    //  NSLog(@"DATA==%@",object);
+   
     
     NSArray *listarray = [object valueForKeyPath:@"list"]; //天候;
     

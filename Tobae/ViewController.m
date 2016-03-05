@@ -387,6 +387,7 @@
         UIImage *image = [UIImage imageNamed:@"Africa_text_25pixel.png"];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
         imageView.contentMode = UIViewContentModeLeft;
+        
         return imageView;
         
     }
@@ -419,8 +420,8 @@
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
         imageView.contentMode = UIViewContentModeLeft;
         
-        
         return imageView;
+        
     }
     else if (section==5) {
         UIImage *image = [UIImage imageNamed:@"Oceania_text_25pixel.png"];
