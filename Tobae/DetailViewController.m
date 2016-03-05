@@ -26,29 +26,86 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     capitallabel.text = [CapitalStrManager sharedManager].capitalstr;
-    UIImage *icon =[CapitalStrManager sharedManager].icon;
-    image.image = icon;
+    
+    [self sendRequestForWeather];
     
     [self country];
     
     [self getweather:[CapitalStrManager sharedManager].capitalstr];
     [self sunrise:[CapitalStrManager sharedManager].capitalstr];
-
+    
     
     [self get];
     
 }
 
+- (void)sendRequestForWeather {
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?APPID=b8f4ce09ae1ca4d1b34a14438e857866&q=%@", [CapitalStrManager sharedManager].capitalstr]];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    __block NSDictionary *object;
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+        if (connectionError) {
+            // Error
+            NSLog(@"エラー == %@", connectionError);
+            
+        }else {
+            NSLog(@"responseText = %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+            object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+            NSArray *main = [object valueForKeyPath:@"weather.main"]; //天候
+            NSArray *description = [object valueForKeyPath:@"weather.description"]; // 天候詳細
+            NSArray *speed = [object valueForKeyPath:@"wind.speed"]; //風速
+            NSArray *icons = [object valueForKeyPath:@"weather.icon"];
+            humidityla.text = [NSString stringWithFormat:@"humidity : %@％", [object valueForKeyPath:@"main.humidity"]];
+
+            NSMutableDictionary *weather= @{@"main":main,
+                                            @"description":description,
+                                            @"speed":speed,
+                                            @"icons":icons}.mutableCopy;
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                weather_icon = @{//day
+                                 @"01d":[UIImage imageNamed:@"01.png"],
+                                 @"02d":[UIImage imageNamed:@"02.png"],
+                                 @"03d":[UIImage imageNamed:@"09.png"],
+                                 @"04d":[UIImage imageNamed:@"12.png"],
+                                 @"09d":[UIImage imageNamed:@"11.png"],
+                                 @"10d":[UIImage imageNamed:@"05.png"],
+                                 @"11d":[UIImage imageNamed:@"13.png"],
+                                 @"13d":[UIImage imageNamed:@"15.png"],
+                                 @"50d":[UIImage imageNamed:@"10.png"],
+                                 //night
+                                 @"01n":[UIImage imageNamed:@"17.png"],
+                                 @"02n":[UIImage imageNamed:@"18.png"],
+                                 @"03n":[UIImage imageNamed:@"09.png"],
+                                 @"04n":[UIImage imageNamed:@"12.png"],
+                                 @"09n":[UIImage imageNamed:@"22.png"],
+                                 @"10n":[UIImage imageNamed:@"21.png"],
+                                 @"11n":[UIImage imageNamed:@"23.png"],
+                                 @"13n":[UIImage imageNamed:@"24.png"],
+                                 @"50n":[UIImage imageNamed:@"19.png"]};
+
+                image.image = weather_icon[weather[@"icons"][0]];
+            });
+        }
+    }];
+}
+
+
 -(IBAction)back{
     // 戻るコード
     [self dismissViewControllerAnimated:YES completion:nil];
-    }
+}
 
 
 
 
-- (void)getweather: (NSString *)string{
+- (void)getweather: (NSString *)string {
     
     weather_icon = @{//day
                      @"01d":[UIImage imageNamed:@"01.png"],
@@ -98,11 +155,6 @@
         }
     }
     
-    humidityla.text = [NSString stringWithFormat:@"humidity:%@",[listarray[0]  valueForKey:@"humidity"]];
-    
-    
-    
-    
     //   TODO: 降水量が取れるようにする。(rain keyがある日とない日があるので注意)
     for(int i = 0; i < listarray.count; i ++){
         if ([listarray[i] valueForKey:@"rain"]) {
@@ -110,7 +162,7 @@
             int rain = [[listarray[i]  valueForKey:@"rain"]intValue];
             
             ((UILabel *)rainfallla[i]).text = [NSString stringWithFormat:@"rain:%dmm",rain];
-
+            
         }else {
             ((UILabel *)rainfallla[i]).text = @"rain:0mm";
         }
@@ -144,7 +196,7 @@
     NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
     
     NSDictionary *sysDic = [object valueForKeyPath:@"sys"]; //天候;
-
+    
     NSDate *sunriseDate = [NSDate dateWithTimeIntervalSince1970:[[sysDic valueForKey:@"sunrise"] doubleValue]];
     NSDate *sunsetDate = [NSDate dateWithTimeIntervalSince1970:[[sysDic valueForKey:@"sunset"] doubleValue]];
     
@@ -162,7 +214,7 @@
     [sunsetFormatter setDateFormat:@"HH:mm"];
     NSString *sunsetstr = [sunriseFormatter stringFromDate:sunsetDate];
     
-     
+    
     NSLog(@"sunsetDate: %@", sunsetDate);
     sunset.text = [NSString stringWithFormat:@"sunset：%@",sunsetstr];
 }
@@ -611,11 +663,11 @@
             // NSDate を NSString に変換します。
             NSString *dateStr = [formatter stringFromDate:date];
             NSString *eStr = [formatter_e stringFromDate:date];
-
+            
             
             NSLog(@"date=%@",dateStr);
             NSLog(@"e=%@",eStr);
-
+            
             
             //日付を表示
             
@@ -634,7 +686,7 @@
             
             UILabel *weekdayl = weekdayla[i - 1];
             weekdayl.text = [weekday valueForKey:eStr];
-
+            
             
         }
     }
