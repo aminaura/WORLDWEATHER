@@ -353,8 +353,9 @@
     [CapitalStrManager sharedManager].icon = cellimg;
     [CapitalStrManager sharedManager].capitalstr = _Capitals[indexPath.row];
     
-    [self performSegueWithIdentifier:@"goDetail" sender:self];
+    [self performSegueWithIdentifier:@"ToDetail" sender:self];
 
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -370,9 +371,6 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 50;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-}
 
 
 

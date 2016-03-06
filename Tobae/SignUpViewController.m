@@ -7,9 +7,12 @@
 //
 
 #import "SignUpViewController.h"
+#import "LogInViewController.h"
 #import <Parse/Parse.h>
 
 @interface SignUpViewController ()<UITextFieldDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+
+@property (nonatomic) int issegue;
 
 @end
 
@@ -66,11 +69,12 @@
     PFFile *imageFile =[PFFile fileWithName:@"image.png" data:imageData];
     [user setObject:imageFile forKey:@"image"];
     [user setObject:commentfield.text forKey:@"Comments"];
+        
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             //ユーザの作成に成功
-            [self performSegueWithIdentifier:@"ToHome" sender:self];
+            [self dismissViewControllerAnimated:self completion:nil];
         } else {
             NSLog(@"error...%@",error);
             //アプリの作成に失敗

@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "VerticalTableViewCell.h"
 #import "CapitalStrManager.h"
+#import <Parse/Parse.h>
 
 @interface DetailViewController ()
 {
@@ -19,6 +20,11 @@
     NSString *imageKeyname;
     
     NSMutableArray * capital;
+    
+    NSMutableArray * favarray;
+    
+    IBOutlet UIButton *addfav;
+    int favcount;
 }
 @end
 
@@ -38,6 +44,20 @@
     
     
     [self get];
+    
+    NSString *name = [CapitalStrManager sharedManager].capitalstr;
+    
+    PFUser *user = [PFUser  currentUser];
+    
+    favarray = [user objectForKey:@"favorites"];
+    
+    if([[user objectForKey:@"favorites"] containsObject:name]){
+        [addfav setImage:[UIImage imageNamed:@"Favorite_Cancel.png"] forState:UIControlStateNormal];
+    }
+    else {
+        [addfav setImage:[UIImage imageNamed:@"Favorite_Add.png"] forState:UIControlStateNormal];
+    }
+
     
 }
 
@@ -139,6 +159,8 @@
     NSError *error;
     NSURLResponse *responce;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&responce error:&error];
+    
+    // TODO: スペースがあるものはここで落ちる
     NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
    
     
@@ -155,16 +177,15 @@
         }
     }
     
-    //   TODO: 降水量が取れるようにする。(rain keyがある日とない日があるので注意)
     for(int i = 0; i < listarray.count; i ++){
         if ([listarray[i] valueForKey:@"rain"]) {
             
             int rain = [[listarray[i]  valueForKey:@"rain"]intValue];
             
-            ((UILabel *)rainfallla[i]).text = [NSString stringWithFormat:@"rain:%dmm",rain];
+            ((UILabel *)rainfallla[i]).text = [NSString stringWithFormat:@"rain : %dmm",rain];
             
         }else {
-            ((UILabel *)rainfallla[i]).text = @"rain:0mm";
+            ((UILabel *)rainfallla[i]).text = @"rain : 0mm";
         }
     }
     
@@ -208,7 +229,7 @@
     NSString *sunrisestr = [sunriseFormatter stringFromDate:sunriseDate];
     
     NSLog(@"sunriseDate: %@", sunriseDate);
-    sunrise.text = [NSString stringWithFormat:@"sunrise：%@",sunrisestr];
+    sunrise.text = [NSString stringWithFormat:@"sunrise : %@",sunrisestr];
     
     NSDateFormatter *sunsetFormatter = [[NSDateFormatter alloc] init];
     [sunsetFormatter setDateFormat:@"HH:mm"];
@@ -216,7 +237,7 @@
     
     
     NSLog(@"sunsetDate: %@", sunsetDate);
-    sunset.text = [NSString stringWithFormat:@"sunset：%@",sunsetstr];
+    sunset.text = [NSString stringWithFormat:@"sunset : %@",sunsetstr];
 }
 
 
@@ -621,7 +642,6 @@
     int count = [self getNumberOfArray:capital withKey:[CapitalStrManager sharedManager].capitalstr];
     
     countrylabel.text = [NSString stringWithFormat:@"%@",country[count]];
-    
 }
 
 - (int)getNumberOfArray: (NSMutableArray *)mutableArray withKey: (NSString *)key {
@@ -690,6 +710,67 @@
             
         }
     }
+}
+
+-(IBAction)addfavorite{
+    PFUser *user  = [PFUser currentUser];
+    
+    if([[addfav currentImage] isEqual:[UIImage imageNamed:@"Favorite_Add.png"]]){
+        if(!user){
+            UIAlertView *alert =[[UIAlertView alloc]
+                                 initWithTitle:@"You should login!"
+                                 message:@"If you want to add, you should to login!"
+                                 delegate:nil
+                                 cancelButtonTitle:nil
+                                 otherButtonTitles:@"OK", nil
+                                 ];
+            [alert show];
+        }
+        else{
+            if(favcount >= 11){
+                UIAlertView *alert =[[UIAlertView alloc]
+                                     initWithTitle:@"You can't add favorate anymore!"
+                                     message:@"There are too many favorates!"
+                                     delegate:nil
+                                     cancelButtonTitle:nil
+                                     otherButtonTitles:@"OK", nil
+                                     ];
+                [alert show];
+                
+            }
+            else{
+                [user addUniqueObject:capitallabel.text forKey:@"favorites"];
+                [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                    NSLog(@"error...%@",error);
+                }];
+                [addfav setImage:[UIImage imageNamed:@"Favorite_Cancel.png"] forState:UIControlStateNormal];
+                favcount = favcount + 1;
+            }
+                    }
+
+    }
+    else{
+        if(!user){
+            UIAlertView *alert =[[UIAlertView alloc]
+                                 initWithTitle:@"You should login!"
+                                 message:@"If you want to delete, you should to login!"
+                                 delegate:nil
+                                 cancelButtonTitle:nil
+                                 otherButtonTitles:@"OK", nil
+                                 ];
+            [alert show];
+        }
+        else{
+            [user removeObject:capitallabel.text forKey:@"favorites"];
+            [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                NSLog(@"error...%@",error);
+            }];
+            [addfav setImage:[UIImage imageNamed:@"Favorite_Add.png"] forState:UIControlStateNormal];
+            favcount = favcount - 1;
+        }
+
+    }
+
 }
 
 

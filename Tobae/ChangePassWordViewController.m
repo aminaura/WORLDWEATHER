@@ -72,8 +72,7 @@
 }
 
 -(IBAction)back{
-    [self.presentingViewController.presentingViewController.presentingViewController
-        .presentingViewController  dismissViewControllerAnimated:YES completion:nil];
+    [self  dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

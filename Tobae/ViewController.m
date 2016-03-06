@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "VerticalTableViewCell.h"
+#import <Parse/Parse.h>
 
 @interface ViewController (){
     NSMutableArray * titlesArray;
@@ -49,6 +50,7 @@
     [_verticalTableView addSubview:_refreshControl];
 
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -313,6 +315,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
     return 7;
 }
 
@@ -353,29 +356,29 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     
     //第１セクションの設定
-    if (section==0) {
+    
+    //第２セクションの設定
+    if (section==1) {
         return @"AFRICA";
     }
-    //第２セクションの設定
-    else if (section==1) {
+    else if (section==2) {
         return @"ASIA";
     }
-    else if (section==2) {
+    else if (section==3) {
         return @"EUROPE";
     }
-    else if (section==3) {
+    else if (section==4) {
         return @"NORTH AMERICA";
     }
-    else if (section==4) {
+    else if (section==5) {
         return @"NIS";
     }
-    else if (section==5) {
+    else if (section==6) {
         return @"OCEANIA";
     }
     else if (section==6) {
         return @"SOURTH AMERICA";
     }
-    
     return nil;
 }
 
@@ -469,6 +472,16 @@
 - (void)endRefresh
 {
     [_refreshControl endRefreshing];
+}
+
+-(IBAction)goprofile{
+    PFUser *user = [PFUser currentUser];
+    if(!user){
+        [self performSegueWithIdentifier:@"ToSignIn" sender:self];
+    }
+    else{
+        [self performSegueWithIdentifier:@"ToProfile" sender:self];
+    }
 }
 
 

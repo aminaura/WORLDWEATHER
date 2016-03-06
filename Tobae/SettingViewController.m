@@ -114,6 +114,7 @@
         if (!error) {
             //ユーザのログアウトに成功
             [self dismissViewControllerAnimated:YES completion:nil];
+            NSLog(@"logout");
         } else {
             //ユーザのログアウトに失敗
             NSLog(@"error..%@",error);
@@ -184,6 +185,16 @@
     NSData *imageData = [file getData];
     UIImage *userImage = [UIImage imageWithData:imageData];
     imageView.image = userImage;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    // textFieldを最初にイベントを受け取る対象から外すことで、
+    // キーボードを閉じる。
+    [newcomments resignFirstResponder];
+    [newusername resignFirstResponder];
+    
+    return YES;
 }
 
 @end

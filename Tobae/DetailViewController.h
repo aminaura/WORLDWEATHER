@@ -32,5 +32,6 @@
 
 
 -(IBAction)back;
+-(IBAction)addfavorite;
 
 @end

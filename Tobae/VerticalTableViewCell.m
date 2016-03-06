@@ -249,7 +249,7 @@ static NSString * const TableViewCustomCellIdentifier = @"Cell";
     
     [CapitalStrManager sharedManager].icon = cell.weather_icon_image.image;
     
-    [[self getViewController] performSegueWithIdentifier:@"toDetail" sender:self];
+    [[self getViewController] performSegueWithIdentifier:@"ToDetail" sender:self];
 }
 
 -(UIViewController *)getViewController{
@@ -262,7 +262,5 @@ static NSString * const TableViewCustomCellIdentifier = @"Cell";
     }
     return  nil;
 }
-
-
 
 @end
