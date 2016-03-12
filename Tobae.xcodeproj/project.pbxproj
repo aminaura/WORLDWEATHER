@@ -534,13 +534,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DB2EBAEA1C6C1E8D000127E1 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
-			sourceTree = "<group>";
-		};
 		DBCAA9161B817032003E70EE = {
 			isa = PBXGroup;
 			children = (
@@ -592,7 +585,6 @@
 				DB24C07B1C43CE81007866E2 /* ChangeMailAddressViewController.m */,
 				DB2EBAEB1C6C1EC8000127E1 /* SearchViewController.h */,
 				DB2EBAEC1C6C1EC8000127E1 /* SearchViewController.m */,
-				DB2EBAEA1C6C1E8D000127E1 /* New Group */,
 				DBCAA92F1B817032003E70EE /* Main.storyboard */,
 				DBA71AF51B914E14001926A5 /* Cell.xib */,
 				DBCAA9321B817032003E70EE /* Images.xcassets */,

@@ -40,10 +40,9 @@
     
     [self sendRequestForWeather];
     
-    [self country];
-    
-    [self getweather:[CapitalStrManager sharedManager].capitalstr];
-    [self sunrise:[CapitalStrManager sharedManager].capitalstr];
+//   //
+//
+//
     
     
     [self get];
@@ -116,6 +115,9 @@
                                  @"50n":[UIImage imageNamed:@"19.png"]};
 
                 image.image = weather_icon[weather[@"icons"][0]];
+                
+                [self country];
+
             });
         }
         }}];
@@ -175,7 +177,7 @@
             
             NSArray *listarray = [object valueForKeyPath:@"list"]; //天候;
             
-            NSLog(@"listArray == %@", listarray );
+            NSLog(@"listArray == %@", listarray);
             
             // UIImageViewに順番に入れていく
             for(int i = 0; i < listarray.count; i ++){
@@ -185,6 +187,7 @@
                     ((UIImageView *)imageViews[i - 1]).image = [weather_icon valueForKey:[[listarray[i] valueForKey:@"weather"][0] valueForKey:@"icon"]];
                 }
             }
+            
             
             for(int i = 0; i < listarray.count; i ++){
                 if ([listarray[i] valueForKey:@"rain"]) {
@@ -206,15 +209,11 @@
                 ((UILabel*)templa[j]).text = [NSString stringWithFormat:@"%d℃",temp];
                 
             }
-
         }
-    }
-    else{
+    }else {
        //TODO: エラー処理
     }
-    
-    
-    
+    [self sunrise:[CapitalStrManager sharedManager].capitalstr];
 }
 
 -(void)sunrise: (NSString *)string{
@@ -673,6 +672,7 @@
     NSLog(@"capitalstr = %@",[CapitalStrManager sharedManager].capitalstr);
     
     countrylabel.text = [countries valueForKey:[CapitalStrManager sharedManager].capitalstr];
+    [self getweather:[CapitalStrManager sharedManager].capitalstr];
     
 }
 

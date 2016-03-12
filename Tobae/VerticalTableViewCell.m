@@ -215,6 +215,8 @@ static NSString * const TableViewCustomCellIdentifier = @"Cell";
     
     [CapitalStrManager sharedManager].icon = cell.weather_icon_image.image;
     
+     [_horizontalTableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     [[self getViewController] performSegueWithIdentifier:@"ToDetail" sender:self];
 }
 

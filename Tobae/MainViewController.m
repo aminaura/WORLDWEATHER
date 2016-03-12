@@ -29,7 +29,7 @@
     NSMutableArray * array;
     NSDictionary * weather_icon;
     
-    UIImageView *img;
+    UIButton *img;
     UIButton *button;
     
 }
@@ -40,14 +40,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
+
+}
+
+-(void)viewWillAppear:(BOOL)animated {
     [self getUserImage];
     [self getComment];
     [self getUserName];
     
+    // これだとサーバーから取れない
     PFUser *user = [PFUser currentUser];
     array = [user objectForKey:@"favorites"];
+    NSLog(@"%@",array);
+    
+    // これでとってくる
+    PFQuery *query = [PFQuery queryWithClassName:@"_User"];
+    [query whereKey:@"username" equalTo:[PFUser currentUser].username];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        NSLog(@"objects == %@", objects);
+    }];
+    
+    
     
     NSInteger pageSize = array.count; // ページ数
     //self.view.bounds.size.width
@@ -94,7 +107,7 @@
                 // ⑦ weather.mainの値を抽出
                 NSArray *main = [object valueForKeyPath:@"list.weather.main"]; //天候
                 NSArray *description = [object valueForKeyPath:@"list.weather.description"]; // 天候詳細
-//                NSArray *speed = [object valueForKeyPath:@"wind.speed"]; //風速
+                //                NSArray *speed = [object valueForKeyPath:@"wind.speed"]; //風速
                 NSArray *icons = [object valueForKeyPath:@"list.weather.icon"];
                 
                 
@@ -129,60 +142,58 @@
                 
                 //         UILabel作成
                 NSLog(@"i * width = %f",(i * width));
-                button = [[UIButton alloc]initWithFrame:CGRectMake(i * width + 90, 240, 210, 26)];
-                [button setTitle:[NSString stringWithFormat:@"%@",array[i]] forState:UIControlStateNormal];
-                button.titleLabel.font = [UIFont fontWithName:@"Century Gothic" size:19];
-                button.titleLabel.textColor = [UIColor whiteColor];
-                button.titleLabel.textAlignment = NSTextAlignmentLeft;
-                [button addTarget:self action:@selector(goDetail) forControlEvents:UIControlEventTouchDown];
-                [scrollView addSubview:button];
                 
-                button = [[UIButton alloc]initWithFrame:CGRectMake(i * width + 90, 20, 210, 210)];
-                NSArray *imageKeyname = icons[0];
-                NSLog(@"imageKeyname = %@",imageKeyname);
-                UIImage *iconimg = [weather_icon objectForKey:imageKeyname[0]];
-                [button setBackgroundImage:iconimg forState:UIControlStateNormal];
-                [button addTarget:self action:@selector(goDetail) forControlEvents:UIControlEventTouchDown];
-                [scrollView addSubview:button];
+                if (!button) {
+                    button = [[UIButton alloc]initWithFrame:CGRectMake(i * width + 90, 240, 210, 26)];
+                    [button setTitle:[NSString stringWithFormat:@"%@",array[i]] forState:UIControlStateNormal];
+                    button.titleLabel.font = [UIFont fontWithName:@"Century Gothic" size:19];
+                    button.titleLabel.textColor = [UIColor whiteColor];
+                    button.titleLabel.textAlignment = NSTextAlignmentLeft;
+                    [button addTarget:self action:@selector(goDetail) forControlEvents:UIControlEventTouchDown];
+                    [scrollView addSubview:button];
+                }
                 
-                
+                if (!img) {
+                    img = [[UIButton alloc]initWithFrame:CGRectMake(i * width + 90, 20, 210, 210)];
+                    NSArray *imageKeyname = icons[0];
+                    NSLog(@"imageKeyname = %@",imageKeyname);
+                    UIImage *iconimg = [weather_icon objectForKey:imageKeyname[0]];
+                    [img setBackgroundImage:iconimg forState:UIControlStateNormal];
+                    [img addTarget:self action:@selector(goDetail) forControlEvents:UIControlEventTouchDown];
+                    [scrollView addSubview:img];
+                }
                 NSLog(@"imagenum:%d",i);
-            
-            // ページ数を設定
-            pageControl.numberOfPages = pageSize;
-            
-            // 現在のページを設定
-            pageControl.currentPage = 0;
-            
-            // デフォルトの色
-            pageControl.pageIndicatorTintColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0];
-            // 選択されてるページを現す色
-            pageControl.currentPageIndicatorTintColor =  [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-            
-            // ページコントロールをタップされたときに呼ばれるメソッドを設定
-            pageControl.userInteractionEnabled = YES;
-            [pageControl addTarget:self
-                            action:@selector(pageControl_Tapped:)
-                  forControlEvents:UIControlEventValueChanged];
-            
-            // ページコントロールを貼付ける
-            [self.view addSubview:pageControl];
-            
+                
+                if (!pageControl) {
+                    // ページ数を設定
+                    pageControl.numberOfPages = pageSize;
+                    
+                    // 現在のページを設定
+                    pageControl.currentPage = 0;
+                    
+                    // デフォルトの色
+                    pageControl.pageIndicatorTintColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0];
+                    
+                    // 選択されてるページを現す色
+                    pageControl.currentPageIndicatorTintColor =  [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+                    
+                    // ページコントロールをタップされたときに呼ばれるメソッドを設定
+                    pageControl.userInteractionEnabled = YES;
+                    [pageControl addTarget:self
+                                    action:@selector(pageControl_Tapped:)
+                          forControlEvents:UIControlEventValueChanged];
+                    
+                    // ページコントロールを貼付ける
+                    [self.view addSubview:pageControl];
+                }
             }
-        }
-        else{
+        }else {
             
         }
         
-      
-    
-}
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    [self getUserImage];
-    [self getComment];
-    [self getUserName];
+        
+        
+    }
     [self.view setNeedsDisplay];
 }
 
@@ -239,12 +250,11 @@
     
     [CapitalStrManager sharedManager].capitalstr = [NSString stringWithFormat:@"%@",array[currentPage]];
     
-    [CapitalStrManager sharedManager].icon = img.image;
+    [CapitalStrManager sharedManager].icon = [img backgroundImageForState:UIControlStateNormal];
 
     
     [self performSegueWithIdentifier:@"GoDetail" sender:self];
 }
-
 
 
 
