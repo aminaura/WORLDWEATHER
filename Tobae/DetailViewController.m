@@ -77,6 +77,7 @@
         }else {
             NSLog(@"responseText = %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
             object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+            NSLog(@"object = %@",object);
             NSArray *main = [object valueForKeyPath:@"weather.main"]; //天候
             NSArray *description = [object valueForKeyPath:@"weather.description"]; // 天候詳細
             NSArray *speed = [object valueForKeyPath:@"wind.speed"]; //風速
