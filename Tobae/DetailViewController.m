@@ -25,6 +25,9 @@
     
     IBOutlet UIButton *addfav;
     int favcount;
+    
+     NSInteger _buttonIndex;
+    NSMutableDictionary *countries;
 }
 @end
 
@@ -75,6 +78,7 @@
             NSLog(@"エラー == %@", connectionError);
             
         }else {
+            if(data.length){
             NSLog(@"responseText = %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
             object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
             NSLog(@"object = %@",object);
@@ -114,7 +118,8 @@
                 image.image = weather_icon[weather[@"icons"][0]];
             });
         }
-    }];
+        }}];
+    
 }
 
 
@@ -162,41 +167,50 @@
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&responce error:&error];
     
     // TODO: スペースがあるものはここで落ちる
-    NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-   
     
-    NSArray *listarray = [object valueForKeyPath:@"list"]; //天候;
-    
-    NSLog(@"listArray == %@", listarray );
-    
-    // UIImageViewに順番に入れていく
-    for(int i = 0; i < listarray.count; i ++){
-        if (i == 0) {
-            // 今日のアイコン
-        }else {
-            ((UIImageView *)imageViews[i - 1]).image = [weather_icon valueForKey:[[listarray[i] valueForKey:@"weather"][0] valueForKey:@"icon"]];
+    if(error == nil){
+        if(data.length){
+            NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+            
+            
+            NSArray *listarray = [object valueForKeyPath:@"list"]; //天候;
+            
+            NSLog(@"listArray == %@", listarray );
+            
+            // UIImageViewに順番に入れていく
+            for(int i = 0; i < listarray.count; i ++){
+                if (i == 0) {
+                    // 今日のアイコン
+                }else {
+                    ((UIImageView *)imageViews[i - 1]).image = [weather_icon valueForKey:[[listarray[i] valueForKey:@"weather"][0] valueForKey:@"icon"]];
+                }
+            }
+            
+            for(int i = 0; i < listarray.count; i ++){
+                if ([listarray[i] valueForKey:@"rain"]) {
+                    
+                    int rain = [[listarray[i]  valueForKey:@"rain"]intValue];
+                    
+                    ((UILabel *)rainfallla[i]).text = [NSString stringWithFormat:@"rain : %dmm",rain];
+                    
+                }else {
+                    ((UILabel *)rainfallla[i]).text = @"rain : 0mm";
+                }
+            }
+            
+            for(int j = 0; j < listarray.count; j ++){
+                
+                int temp = [[[(NSDictionary *)listarray[j] valueForKey:@"temp"] valueForKey:@"day"]intValue];
+                NSLog(@"%d",temp);
+                
+                ((UILabel*)templa[j]).text = [NSString stringWithFormat:@"%d℃",temp];
+                
+            }
+
         }
     }
-    
-    for(int i = 0; i < listarray.count; i ++){
-        if ([listarray[i] valueForKey:@"rain"]) {
-            
-            int rain = [[listarray[i]  valueForKey:@"rain"]intValue];
-            
-            ((UILabel *)rainfallla[i]).text = [NSString stringWithFormat:@"rain : %dmm",rain];
-            
-        }else {
-            ((UILabel *)rainfallla[i]).text = @"rain : 0mm";
-        }
-    }
-    
-    for(int j = 0; j < listarray.count; j ++){
-        
-        int temp = [[[(NSDictionary *)listarray[j] valueForKey:@"temp"] valueForKey:@"day"]intValue];
-        NSLog(@"%d",temp);
-        
-        ((UILabel*)templa[j]).text = [NSString stringWithFormat:@"%d℃",temp];
-        
+    else{
+       //TODO: エラー処理
     }
     
     
@@ -215,434 +229,451 @@
     NSError *error;
     NSURLResponse *responce;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&responce error:&error];
-    NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
     
-    NSDictionary *sysDic = [object valueForKeyPath:@"sys"]; //天候;
+    if(error != nil){
+        if(data.length){
+            NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+            NSDictionary *sysDic = [object valueForKeyPath:@"sys"]; //天候;
+            
+            NSDate *sunriseDate = [NSDate dateWithTimeIntervalSince1970:[[sysDic valueForKey:@"sunrise"] doubleValue]];
+            NSDate *sunsetDate = [NSDate dateWithTimeIntervalSince1970:[[sysDic valueForKey:@"sunset"] doubleValue]];
+            
+            
+            
+            
+            NSDateFormatter *sunriseFormatter = [[NSDateFormatter alloc] init];
+            [sunriseFormatter setDateFormat:@"HH:mm"];
+            NSString *sunrisestr = [sunriseFormatter stringFromDate:sunriseDate];
+            
+            NSLog(@"sunriseDate: %@", sunriseDate);
+            sunrise.text = [NSString stringWithFormat:@"sunrise : %@",sunrisestr];
+            
+            NSDateFormatter *sunsetFormatter = [[NSDateFormatter alloc] init];
+            [sunsetFormatter setDateFormat:@"HH:mm"];
+            NSString *sunsetstr = [sunriseFormatter stringFromDate:sunsetDate];
+            
+            
+            NSLog(@"sunsetDate: %@", sunsetDate);
+            sunset.text = [NSString stringWithFormat:@"sunset : %@",sunsetstr];
+
+        }
+    }
+    else{
+        
+    }
     
-    NSDate *sunriseDate = [NSDate dateWithTimeIntervalSince1970:[[sysDic valueForKey:@"sunrise"] doubleValue]];
-    NSDate *sunsetDate = [NSDate dateWithTimeIntervalSince1970:[[sysDic valueForKey:@"sunset"] doubleValue]];
-    
-    
-    
-    
-    NSDateFormatter *sunriseFormatter = [[NSDateFormatter alloc] init];
-    [sunriseFormatter setDateFormat:@"HH:mm"];
-    NSString *sunrisestr = [sunriseFormatter stringFromDate:sunriseDate];
-    
-    NSLog(@"sunriseDate: %@", sunriseDate);
-    sunrise.text = [NSString stringWithFormat:@"sunrise : %@",sunrisestr];
-    
-    NSDateFormatter *sunsetFormatter = [[NSDateFormatter alloc] init];
-    [sunsetFormatter setDateFormat:@"HH:mm"];
-    NSString *sunsetstr = [sunriseFormatter stringFromDate:sunsetDate];
-    
-    
-    NSLog(@"sunsetDate: %@", sunsetDate);
-    sunset.text = [NSString stringWithFormat:@"sunset : %@",sunsetstr];
-}
+    }
 
 
 -(void)country{
-    country = @[ @"Algeria",
-                 @"Angola",
-                 @"Uganda",
-                 @"Egypt",
-                 @"Ethiopia",
-                 @"Eritrea",
-                 @"Ghana",
-                 @"CapeVerde",
-                 @"GaboneseRepublic",
-                 @"Cameroon",
-                 @"Gambia",
-                 @"Guinea",
-                 @"Guinea-Bissau",
-                 @"Kenya",
-                 @"Coted'Ivoire",
-                 @"Comoros",
-                 @"RepublicofCongo",
-                 @"DemocraticRepublicoftheCongo",
-                 @"SaoTomeandPrincipe",
-                 @"Zambia",
-                 @"SierraLeone",
-                 @"Djibouti",
-                 @"Zimbabwe",
-                 @"Sudan",
-                 @"Swaziland",
-                 @"Seychelles",
-                 @"Senegal",
-                 @"Somalia",
-                 @"Tanzania",
-                 @"Chad",
-                 @"Tunisia",
-                 @"Togo",
-                 @"Nigeria",
-                 @"Namibia",
-                 @"Niger",
-                 @"BurkinaFaso",
-                 @"Burundi",
-                 @"Benin",
-                 @"Botswana",
-                 @"Madagascar",
-                 @"Malawi",
-                 @"Mali",
-                 @"Mauritius",
-                 @"Mauritania",
-                 @"Mozambique",
-                 @"Morocco",
-                 @"Libya",
-                 @"Liberia",
-                 @"Rwanda",
-                 @"Lesotho",
-                 @"Equatorial Guinea",
-                 @"CentralAfrican Republic",
-                 @"SouthAfrica",
-                 @"SouthSudan",
-                 @"Afghanistan",
-                 @"UnitedArabEmirates",
-                 @"Yemen",
-                 @"Israel",
-                 @"Iraq",
-                 @"Iran",
-                 @"India",
-                 @"Indonesia",
-                 @"Oman",
-                 @"Qatar",
-                 @"Cambodia",
-                 @"Cyprus",
-                 @"Kuwait",
-                 @"Saudi Arabia",
-                 @"Syria",
-                 @"Singapore",
-                 @"SriLanka",
-                 @"Thailand",
-                 @"Turkey",
-                 @"Nepal",
-                 @"Bahrain",
-                 @"Pakistan",
-                 @"Bangladesh",
-                 @"Philippines",
-                 @"Bhutan",
-                 @"Brunei",
-                 @"Vietnam",
-                 @"Malaysia",
-                 @"Myanmar",
-                 @"Maldives",
-                 @"Mongolia",
-                 @"Jordan",
-                 @"Laos",
-                 @"Lebanon",
-                 @"Korea",
-                 @"Taiwan",
-                 @"China",
-                 @"Timor-Leste",
-                 @"Japan",
-                 @"NorthKorea",
-                 @"Iceland",
-                 @"Ireland",
-                 @"Albania",
-                 @"Andorra",
-                 @"UnitedKingdom",
-                 @"Italy",
-                 @"Vatican",
-                 @"Estonia",
-                 @"Austria",
-                 @"Netherlands",
-                 @"Greece",
-                 @"Croatia",
-                 @"Kosovo",
-                 @"SanMarino",
-                 @"Switzerland",
-                 @"Sweden",
-                 @"Spain",
-                 @"SlovakRepublic",
-                 @"Slovenia",
-                 @"Serbia",
-                 @"CzechRepublic",
-                 @"Denmark",
-                 @"Germany",
-                 @"Norway",
-                 @"Hungary",
-                 @"Finland",
-                 @"France",
-                 @"Bulgaria",
-                 @"Belgium",
-                 @"Poland",
-                 @"BosniaandHerzegovina",
-                 @"Portugal",
-                 @"Macedonia",
-                 @"Malta",
-                 @"Monaco",
-                 @"Montenegro",
-                 @"Latvia",
-                 @"Lithuania",
-                 @"Liechtenstein",
-                 @"Romania",
-                 @"Luxembourg",
-                 @"UnitedStates",
-                 @"AntiguaandBarbuda",
-                 @"ElSalvador",
-                 @"Canada",
-                 @"Cuba",
-                 @"Guatemala",
-                 @"Grenada",
-                 @"Costa Rica",
-                 @"Jamaica",
-                 @"SaintChristopherandNevis",
-                 @"SaintVincentandtheGrenadines",
-                 @"SaintLucia",
-                 @"TrinidadandTobago",
-                 @"CommonwealthofDominica",
-                 @"DominicanRepublic",
-                 @"Nicaragua",
-                 @"Haiti",
-                 @"Panama",
-                 @"Bahamas",
-                 @"Barbados",
-                 @"Belize",
-                 @"Honduras",
-                 @"Mexico",
-                 @"Azerbaijan",
-                 @"Armenia",
-                 @"Ukraine",
-                 @"Uzbekistan",
-                 @"Kazakhstan",
-                 @"KyrgyzRepublic",
-                 @"Georgia",
-                 @"Tajikistan",
-                 @"Turkmenistan",
-                 @"Belarus",
-                 @"Moldova",
-                 @"Russia",
-                 @"Australia",
-                 @"Kiribati",
-                 @"CookIslands",
-                 @"Samoa",
-                 @"SolomonIslands",
-                 @"Tuvalu",
-                 @"Tonga",
-                 @"Nauru",
-                 @"New Zealand",
-                 @"Vanuatu",
-                 @"PapuaNewGuinea",
-                 @"Palau",
-                 @"Fiji",
-                 @"MarshallIslands",
-                 @"Micronesia",
-                 @"Argentina",
-                 @"Uruguay",
-                 @"Ecuador",
-                 @"Guyana",
-                 @"Colombia",
-                 @"Suriname",
-                 @"Chile",
-                 @"Paraguay",
-                 @"Brazil",
-                 @"Venezuela",
-                 @"Peru",
-                 @"Bolivia"].mutableCopy;
+    countries   =  [NSMutableDictionary dictionaryWithDictionary:@{
+                    
+                    @"Algeria":@"Alger",
+                     
+                     @"Angola":@"Luanda",
+                     
+                     @"Uganda":@"Kampala",
+                     
+                     @"Egypt":@"Cairo",
+                     
+                     @"Ethiopia":@"AddisAbaba",
+                     
+                     @"Eritrea":@"Asmara",
+                     
+                     @"Ghana":@"Accra",
+                     
+                     @"CapeVerde":@"Praia",
+                     
+                     @"GaboneseRepublic":@"Libreville",
+                     
+                     @"Cameroon":@"Yaounde",
+                     
+                     @"Gambia":@"Banjul",
+                     
+                     @"Guinea":@"Conakry",
+                     
+                     @"Guinea-Bissau":@"Bissau",
+                     
+                     @"Kenya":@"Nairobi",
+                     
+                     @"Coted'Ivoire":@"Yamoussoukro",
+                     
+                     @"Comoros":@"Moroni",
+                     
+                     @"RepublicofCongo":@"Brazzaville",
+                     
+                     @"DemocraticRepublicoftheCongo":@"Kinshasa",
+                     
+                     @"SaoTomeandPrincipe":@"SaoTome",
+                     
+                     @"Zambia":@"Lusaka",
+                     
+                     @"SierraLeone":@"Freetown",
+                     
+                     @"Djibouti":@"Djibouti",
+                     
+                     @"Zimbabwe":@"Harare",
+                     
+                     @"Sudan":@"Khartum",
+                     
+                     @"Swaziland":@"Mbabane",
+                     
+                     @"Seychelles":@"Victoria",
+                     
+                     @"Senegal":@"Dakar",
+                     
+                     @"Somalia":@"Mogadishu",
+                     
+                     @"Tanzania":@"Dodoma",
+                     
+                     @"Chad":@"N'Djamena",
+                     
+                     @"Tunisia":@"Tunis",
+                     
+                     @"Togo":@"Lome",
+                     
+                     @"Nigeria":@"Abuja",
+                     
+                     @"Namibia":@"Windhoek",
+                     
+                     @"Niger":@"Niamey",
+                     
+                     @"BurkinaFaso":@"Ouagadougou",
+                     
+                     @"Burundi":@"Bujumbura",
+                     
+                     @"Benin":@"PortoNovo",
+                     
+                     @"Botswana":@"Gaborone",
+                   
+                     @"Madagascar":@"Antananarivo",
+                     
+                     @"Malawi":@"Lilongwe",
+                     
+                     @"Mali":@"Bamako",
+                     
+                     @"Mauritius":@"PortLouis",
+                     
+                     @"Mauritania":@"Nouakchott",
+                     
+                     @"Mozambique":@"Maputo",
+                     
+                     @"Morocco":@"Rabat",
+                     
+                     @"Libya":@"Tripoli",
+                     
+                     @"Liberia":@"Monrovia",
+                     
+                     @"Rwanda":@"Kigali",
+                     
+                     @"Lesotho":@"Maseru",
+                     
+                     @"Equatorial Guinea":@"Malabo",
+                     
+                     @"CentralAfrican Republic":@"Bangui",
+                     
+                     @"SouthAfrica":@"Pretoria",
+                     
+                     @"SouthSudan":@"Juba",
+                     
+                     @"Afghanistan":@"Kabul",
+                     
+                     @"UnitedArabEmirates" :@"AbuDhabi",
+                     
+                     @"Yemen":@"Sanaa",
+                     
+                     @"Israel":@"TelAviv",
+                     
+                     @"Iraq":@"Bagdad",
+                     
+                     @"Iran":@"Teheran",
+                     
+                     @"India":@"NewDelhi",
+                     
+                     @"Indonesia":@"Jakarta",
+                     
+                     @"Oman":@"Muscat",
+                     
+                     @"Qatar":@"Doha",
+                     
+                     @"Cambodia":@"PhnomPenh",
+                     
+                     @"Cyprus":@"Nicosia",
+                     
+                     @"Kuwait":@"Kuwait",
+                     
+                     @"Saudi Arabia":@"Riyadh",
+                     
+                     @"Syria":@"Damascus",
+                     
+                     @"Singapore":@"Singapore",
+                     
+                     @"SriLanka":@"SriJayawardenepuraKotte",
+                     
+                     @"Thailand":@"Bangkok",
+                     
+                     @"Turkey":@"Ankara",
+                     
+                     @"Nepal":@"Kathmandu",
+                     
+                     @"Bahrain":@"Manama",
+                     
+                     @"Pakistan":@"Islamabad",
+                     
+                     @"Bangladesh":@"Dhaka",
+                     
+                     @"Philippines":@"Manila",
+                     
+                     @"Bhutan":@"Thimphu",
+                     
+                     @"Brunei":@"BandarSeriBegawan",
+                     
+                     @"Vietnam":@"Hanoi",
+                     
+                     @"Malaysia":@"KualaLumpur",
+                     
+                     @"Myanmar":@"Naypyidaw",
+                     
+                     @"Maldives":@"Male",
+                     
+                     @"Mongolia":@"Ulaanbaatar",
+                     
+                     @"Jordan":@"Amman",
+                     
+                     @"Laos":@"Vientiane",
+                     
+                     @"Lebanon":@"Beirut",
+                     
+                     @"Korea":@"Seoul",
+                     
+                     @"Taiwan":@"Taipei",
+                     
+                     @"China":@"Beijin",
+                     
+                     @"Timor-Leste":@"Dili",
+                     
+                     @"Japan":@"Tokyo",
+                     
+                     @"NorthKorea":@"Pyongyang",
+                     
+                     @"Iceland":@"Reykjavik",
+                     
+                     @"Ireland":@"Dublin",
+                     
+                     @"Albania":@"Tirane",
+                     
+                     @"Andorra":@"AndorralaVella",
+                     
+                     @"UnitedKingdom":@"London",
+                     
+                     @"Italy":@"Rome",
+                     
+                     @"Vatican":@"VaticanCity",
+                     
+                     @"Estonia":@"Tallin",
+                     
+                     @"Austria":@"Vienna",
+                     
+                     @"Netherlands":@"Amsterdam",
+                     
+                     @"Greece":@"Athens",
+                     
+                     @"Croatia":@"Zagreb",
+                     
+                     @"Kosovo":@"Pristina",
+                     
+                     @"SanMarino":@"SanMarino",
+                     
+                     @"Switzerland":@"Bern",
+                     
+                     @"Sweden":@"Stockholm",
+                     
+                     @"Spain":@"Madrid",
+                
+                     @"SlovakRepublic":@"Bratislava",
+                     
+                     @"Slovenia":@"Ljubljana",
+                     
+                     @"Serbia":@"Beograd",
+                   
+                     @"CzechRepublic":@"Praha",
+                     
+                     @"Denmark":@"Copenhagen",
+                     
+                     @"Germany":@"Berlin",
+                     
+                     @"Norway":@"Oslo",
+                     
+                     @"Hungary":@"Budapest",
+                     
+                     @"Finland":@"Helsinki",
+                     
+                     @"France":@"Paris",
+                     
+                     @"Bulgaria":@"Sofia",
+                     
+                     @"Belgium":@"Bruxelles",
+                     
+                     @"Poland":@"Warszawa",
+                     
+                     @"BosniaandHerzegovina":@"Sarajevo",
+                     
+                     @"Portugal":@"Lisbon",
+                     
+                     @"Macedonia":@"Skopje",
+                     
+                     @"Malta":@"Valletta",
+                   
+                     @"Monaco":@"Monaco",
+                   
+                     @"Montenegro":@"Podgorica",
+                     
+                     @"Latvia":@"Riga",
+                     
+                     @"Lithuania":@"Vilnius",
+                     
+                     @"Liechtenstein":@"Vaduz",
+                     
+                     @"Romania":@"Bucharest",
+                     
+                     @"Luxembourg":@"Luxembourg",
+                     
+                     @"UnitedStates":@"Washington,D.C.",
+                     
+                     @"AntiguaandBarbuda":@"SaintJohn's",
+                     
+                     @"ElSalvador":@"SanSalvador",
+                     
+                     @"Canada":@"Ottawa",
+                     
+                     @"Cuba":@"Havana",
+                     
+                     @"Guatemala":@"GuatemalaCity",
+                     
+                     @"Grenada":@"SaintGeorge's",
+                     
+                     @"Costa Rica":@"SanJose",
+                     
+                     @"Jamaica":@"Kingston",
+                     
+                     @"SaintChristopherandNevis":@"Basseterre",
+                     
+                     @"SaintVincentandtheGrenadines":@"Kingstown",
+                     
+                     @"SaintLucia":@"Castries",
+                     
+                     @"TrinidadandTobago":@"PortofSpain",
+                     
+                     @"CommonwealthofDominica":@"Roseau",
+                     
+                     @"DominicanRepublic":@"SantoDomingo",
+                     
+                     @"Nicaragua":@"Managua",
+                
+                     @"Haiti":@"Port-au-Prince",
+                     
+                     @"Panama":@"PanamaCity",
+                     
+                     @"Bahamas":@"Nassau",
+                     
+                     @"Barbados":@"Bridgetown",
+                     
+                     @"Belize":@"Belmopan",
+                     
+                     @"Honduras":@"Tegucigalpa",
+                     
+                     @"Mexico":@"MexicoCity",
+                     
+                     @"Azerbaijan":@"Baku",
+                     
+                     @"Armenia":@"Yerevan",
+                     
+                     @"Ukraine":@"Kyiv",
+                     
+                     @"Uzbekistan":@"Toshkent",
+                     
+                     @"Kazakhstan":@"Astana",
+                     
+                     @"KyrgyzRepublic":@"Bishkek",
+                     
+                     @"Georgia":@"Tbilisi",
+                     
+                     @"Tajikistan":@"Dushanbe",
+                     
+                     @"Turkmenistan":@"Ashgabat",
+                     
+                     @"Belarus":@"Minsk",
+                     
+                     @"Moldova":@"kishinev",
+                     
+                     @"Russia":@"Moscow",
+                     
+                     @"Australia":@"Canberra",
+                     
+                     @"Kiribati":@"Tarawa",
+                     
+                     @"CookIslands":@"Avarua",
+                     
+                     @"Samoa":@"Apia",
+                     
+                     @"SolomonIslands":@"Honiara",
+                     
+                     @"Tuvalu":@"Funafuti",
+                     
+                     @"Tonga":@"Nuku'alofa",
+                     
+                     @"Nauru":@"Yaren",
+                     
+                     @"New Zealand":@"Wellington",
+                   
+                     @"Vanuatu":@"PortVila",
+                     
+                     @"PapuaNewGuinea":@"PortMoresby",
+                     
+                     @"Palau":@"Melekeok",
+                     
+                     @"Fiji":@"Suva",
+                     
+                     @"MarshallIslands":@"Majuro",
+                     
+                     @"Micronesia":@"Palikir",
+                   
+                     @"Argentina":@"BuenosAires",
+                     
+                     @"Uruguay":@"Montevideo",
+                     
+                     @"Ecuador":@"Quito",
+                     
+                     @"Guyana":@"Georgetown",
+                     
+                     @"Colombia":@"Bogota",
+                     
+                     @"Suriname":@"Paramaribo",
+                     
+                     @"Chile":@"SantiagodeChile",
+                     
+                     @"Paraguay":@"Asuncion",
+                     
+                     @"Brazil":@"Brasilia",
+                     
+                     @"Venezuela":@"Caracas",
+                     
+                     @"Peru":@"Lima",
+                     
+                     @"Bolivia":@"LaPaz"}];
+
     
+    for (NSString *key in [countries allKeys]) {
+        countries[countries[key]] = key;
+        [countries removeObjectForKey:key];
+    }
     
+    NSLog(@"%@", countries);
     
-    capital = @[@"Alger",
-                @"Luanda",
-                @"Kampala",
-                @"Cairo",
-                @"Addis Ababa",
-                @"Asmara",
-                @"Accra",
-                @"Praia",
-                @"Libreville",
-                @"Yaounde",
-                @"Banjul",
-                @"Conakry",
-                @"Bissau",
-                @"Nairobi",
-                @"Yamoussoukro",
-                @"Moroni",
-                @"Brazzaville",
-                @"Kinshasa",
-                @"Sao Tome",
-                @"Lusaka",
-                @"Freetown",
-                @"Djibouti",
-                @"Harare",
-                @"Khartum",
-                @"Mbabane",
-                @"Victoria",
-                @"Dakar",
-                @"Mogadishu",
-                @"Dodoma",
-                @"N'Djamena",
-                @"Tunis",
-                @"Lome",
-                @"Abuja",
-                @"Windhoek",
-                @"Niamey",
-                @"Ouagadougou",
-                @"Bujumbura",
-                @"Porto Novo",
-                @"Gaborone",
-                @"Antananarivo",
-                @"Lilongwe",
-                @"Bamako",
-                @"Port Louis",
-                @"Nouakchott",
-                @"Maputo",
-                @"Rabat",
-                @"Tripoli",
-                @"Monrovia",
-                @"Kigali",
-                @"Maseru",
-                @"Malabo",
-                @"Bangui",
-                @"Pretoria",
-                @"Juba",
-                @"Kabul",
-                @"Abu Dhabi",
-                @"Sanaa",
-                @"Tel Aviv",
-                @"Bagdad",
-                @"Teheran",
-                @"New Delhi",
-                @"Jakarta",
-                @"Muscat",
-                @"Doha",
-                @"Phnom Penh",
-                @"Nicosia",
-                @"Kuwait",
-                @"Riyadh",
-                @"Damascus",
-                @"Singapore",
-                @"Sri Jayawardenepura Kotte",
-                @"Bangkok",
-                @"Ankara",
-                @"Kathmandu",
-                @"Manama",
-                @"Islamabad",
-                @"Dhaka",
-                @"Manila",
-                @"Thimphu",
-                @"Bandar Seri Begawan",
-                @"Hanoi",
-                @"Kuala Lumpur",
-                @"Naypyidaw",
-                @"Male",
-                @"Ulaanbaatar",
-                @"Amman",
-                @"Vientiane",
-                @"Beirut",
-                @"Seoul",
-                @"Taipei",
-                @"Beijin",
-                @"Dili",
-                @"Tokyo",
-                @"Pyongyang",
-                @"Reykjavik",
-                @"Dublin",
-                @"Tirane",
-                @"Andorra la Vella",
-                @"London",
-                @"Rome",
-                @"Vatican City",
-                @"Tallin",
-                @"Vienna",
-                @"Amsterdam",
-                @"Athens",
-                @"Zagreb",
-                @"Pristina",
-                @"San Marino",
-                @"Bern",
-                @"Stockholm",
-                @"Madrid",
-                @"Bratislava",
-                @"Ljubljana",
-                @"Beograd",
-                @"Praha",
-                @"Copenhagen",
-                @"Berlin",
-                @"Oslo",
-                @"Budapest",
-                @"Helsinki",
-                @"Paris",
-                @"Sofia",
-                @"Bruxelles",
-                @"Warszawa",
-                @"Sarajevo",
-                @"Lisbon",
-                @"Skopje",
-                @"Valletta",
-                @"Monaco",
-                @"Podgorica",
-                @"Riga",
-                @"Vilnius",
-                @"Vaduz",
-                @"Bucharest",
-                @"Luxembourg",
-                @"Washington, D.C.",
-                @"Saint George's",
-                @"San Salvador",
-                @"Ottawa",
-                @"Havana",
-                @"Guatemala City",
-                @"Saint George's",
-                @"San Jose",
-                @"Kingston",
-                @"Basseterre",
-                @"Kingstown",
-                @"Castries",
-                @"Port of Spain",
-                @"Roseau",
-                @"Santo Domingo",
-                @"Managua",
-                @"Port-au-Prince",
-                @"Panama City",
-                @"Nassau",
-                @"Bridgetown",
-                @"Belmopan",
-                @"Tegucigalpa",
-                @"Mexico City",
-                @"Baku",
-                @"Yerevan",
-                @"Kyiv",
-                @"Astana",
-                @"Bishkek",
-                @"Tbilisi",
-                @"Dushanbe",
-                @"Ashgabat",
-                @"Minsk",
-                @"kishinev",
-                @"Moscow",
-                @"Canberra",
-                @"Tarawa",
-                @"Avarua",
-                @"Apia",
-                @"Honiara",
-                @"Funafuti",
-                @"Nuku'alofa",
-                @"Yaren",
-                @"Wellington",
-                @"Port Vila",
-                @"Port Moresby",
-                @"Melekeok",
-                @"Suva",
-                @"Majuro",
-                @"Palikir",
-                @"Buenos Aires",
-                @"Montevideo",
-                @"Quito",
-                @"Georgetown",
-                @"Bogota",
-                @"Paramaribo",
-                @"Santiago de Chile",
-                @"Asuncion",
-                @"Brasilia",
-                @"Caracas",
-                @"Lima",
-                @"La Paz"].mutableCopy;
+    NSLog(@"capitalstr = %@",[CapitalStrManager sharedManager].capitalstr);
     
-    int count = [self getNumberOfArray:capital withKey:[CapitalStrManager sharedManager].capitalstr];
+    countrylabel.text = [countries valueForKey:[CapitalStrManager sharedManager].capitalstr];
     
-    countrylabel.text = [NSString stringWithFormat:@"%@",country[count]];
 }
 
 - (int)getNumberOfArray: (NSMutableArray *)mutableArray withKey: (NSString *)key {
@@ -726,17 +757,24 @@
                                  otherButtonTitles:@"OK", nil
                                  ];
             [alert show];
+            
+            _buttonIndex = -1;
+            while (_buttonIndex == -1) {
+                [[NSRunLoop currentRunLoop]
+                 runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.5f]]; // 0.5秒
+            }
+            
         }
         else{
             if(favcount >= 11){
-                UIAlertView *alert =[[UIAlertView alloc]
+                UIAlertView *alert1 =[[UIAlertView alloc]
                                      initWithTitle:@"You can't add favorate anymore!"
                                      message:@"There are too many favorates!"
                                      delegate:nil
                                      cancelButtonTitle:nil
                                      otherButtonTitles:@"OK", nil
                                      ];
-                [alert show];
+                [alert1 show];
                 
             }
             else{
@@ -773,6 +811,5 @@
     }
 
 }
-
 
 @end

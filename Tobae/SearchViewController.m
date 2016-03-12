@@ -29,6 +29,8 @@
     NSDictionary *listDict;
     UIImage *cellimg;
     NSDictionary *weather_icon;
+    
+    NSMutableArray *weather_capital;
 }
 
 
@@ -239,6 +241,7 @@
                       @"Yerevan",
                       @"Zagreb"];
     
+    
 }
 
 
@@ -313,7 +316,7 @@
 - (void)filterContainsWithSearchText:(NSString *)searchText
 {
     //CONTAINS右辺値が含まれているか,cは大文字小文字の区別なしオプション
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF contains[l] %@", searchText];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF contains[c] %@", searchText];
     
     self.SearchCapitals= [self.Capitals filteredArrayUsingPredicate:predicate];
 
@@ -347,11 +350,10 @@
                      @"13n":[UIImage imageNamed:@"24.png"],
                      @"50n":[UIImage imageNamed:@"19.png"]};
 
-
-    [CapitalStrManager sharedManager].capitalstr = [NSString stringWithFormat:@"%@",_Capitals[indexPath.row]];
     capitalname = _Capitals[indexPath.row];
     [CapitalStrManager sharedManager].icon = cellimg;
-    [CapitalStrManager sharedManager].capitalstr = _Capitals[indexPath.row];
+    [CapitalStrManager sharedManager].capitalstr = _SearchCapitals[indexPath.row];
+    NSLog(@"cell.textLabel.tex = %@",_SearchCapitals[indexPath.row]);
     
     [self performSegueWithIdentifier:@"ToDetail" sender:self];
 

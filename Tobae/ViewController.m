@@ -26,8 +26,8 @@
     titlesArray = @[@"AFRICA",
                     @"ASIA",
                     @"EUROPE",
-                    @"NORTH AMERICA",
                     @"NIS",
+                    @"NORTH AMERICA",
                     @"OCEANIA",
                     @"SOUTH AMERICA"].mutableCopy;
     
@@ -411,7 +411,7 @@
         
     }
     else if (section==3) {
-        UIImage *image = [UIImage imageNamed:@"NIS_text_25pixel.png"];
+        UIImage *image = [UIImage imageNamed:@"NorthAmerica_text_25pixel.png"];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
         imageView.contentMode = UIViewContentModeLeft;
         
@@ -419,7 +419,7 @@
         
     }
     else if (section==4) {
-        UIImage *image = [UIImage imageNamed:@"NorthAmerica_text_25pixel.png"];
+        UIImage *image = [UIImage imageNamed:@"NIS_text_25pixel.png"];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
         imageView.contentMode = UIViewContentModeLeft;
         
@@ -463,9 +463,9 @@
 
 - (void)refresh
 {
-    NSLog(@"refresh");
     //TODO:アクションを書く
-   
+    NSLog(@"refresh");
+
     [NSTimer scheduledTimerWithTimeInterval:1.f target:self selector:@selector(endRefresh) userInfo:nil repeats:NO];
 }
 

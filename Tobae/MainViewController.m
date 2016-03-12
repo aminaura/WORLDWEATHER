@@ -74,97 +74,110 @@
     // スクロールビューにラベルを貼付ける
     for (int i = 0; i < pageSize; i++) {
         
-        NSString *string = [NSString stringWithFormat:@"%@",array[i]];
+        NSString *name = array[i];
+        NSString *URL_String = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?q=%@&mode=json&units=metric&cnt=7&appid=b8f4ce09ae1ca4d1b34a14438e857866",name];
         
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?APPID=b8f4ce09ae1ca4d1b34a14438e857866&q=%@",string]];
         
+        NSURL *url = [NSURL URLWithString: URL_String];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-        NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
         
-        // ⑦ weather.mainの値を抽出
-        NSArray *main = [object valueForKeyPath:@"weather.main"]; //天候
-        NSArray *description = [object valueForKeyPath:@"weather.description"]; // 天候詳細
-        NSArray *speed = [object valueForKeyPath:@"wind.speed"]; //風速
-        NSArray *icons = [object valueForKeyPath:@"weather.icon"];
+        NSError *error;
+        NSURLResponse *responce;
+        NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&responce error:&error];
         
         
-        NSLog(@"main(天候)=%@,description(天候詳細)=%@,speed(風速)=%@,icons(天気アイコン)=%@",main,description,speed,icons);
+        if(error == nil){
+            if(data.length){
+                
+                NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+                
+                // ⑦ weather.mainの値を抽出
+                NSArray *main = [object valueForKeyPath:@"list.weather.main"]; //天候
+                NSArray *description = [object valueForKeyPath:@"list.weather.description"]; // 天候詳細
+//                NSArray *speed = [object valueForKeyPath:@"wind.speed"]; //風速
+                NSArray *icons = [object valueForKeyPath:@"list.weather.icon"];
+                
+                
+                NSLog(@"main(天候)=%@,description(天候詳細)=%@,icons(天気アイコン)=%@",main,description,icons);
+                
+                NSMutableDictionary *weather= @{@"main":main,
+                                                @"description":description,
+                                                @"icons":icons}.mutableCopy;
+                
+                
+                weather_icon = @{//day
+                                 @"01d":[UIImage imageNamed:@"01.png"],
+                                 @"02d":[UIImage imageNamed:@"02.png"],
+                                 @"03d":[UIImage imageNamed:@"09.png"],
+                                 @"04d":[UIImage imageNamed:@"12.png"],
+                                 @"09d":[UIImage imageNamed:@"11.png"],
+                                 @"10d":[UIImage imageNamed:@"05.png"],
+                                 @"11d":[UIImage imageNamed:@"13.png"],
+                                 @"13d":[UIImage imageNamed:@"15.png"],
+                                 @"50d":[UIImage imageNamed:@"10.png"],
+                                 //night
+                                 @"01n":[UIImage imageNamed:@"17.png"],
+                                 @"02n":[UIImage imageNamed:@"18.png"],
+                                 @"03n":[UIImage imageNamed:@"09.png"],
+                                 @"04n":[UIImage imageNamed:@"12.png"],
+                                 @"09n":[UIImage imageNamed:@"22.png"],
+                                 @"10n":[UIImage imageNamed:@"21.png"],
+                                 @"11n":[UIImage imageNamed:@"23.png"],
+                                 @"13n":[UIImage imageNamed:@"24.png"],
+                                 @"50n":[UIImage imageNamed:@"19.png"]};
+                
+                
+                //         UILabel作成
+                NSLog(@"i * width = %f",(i * width));
+                button = [[UIButton alloc]initWithFrame:CGRectMake(i * width + 90, 240, 210, 26)];
+                [button setTitle:[NSString stringWithFormat:@"%@",array[i]] forState:UIControlStateNormal];
+                button.titleLabel.font = [UIFont fontWithName:@"Century Gothic" size:19];
+                button.titleLabel.textColor = [UIColor whiteColor];
+                button.titleLabel.textAlignment = NSTextAlignmentLeft;
+                [button addTarget:self action:@selector(goDetail) forControlEvents:UIControlEventTouchDown];
+                [scrollView addSubview:button];
+                
+                button = [[UIButton alloc]initWithFrame:CGRectMake(i * width + 90, 20, 210, 210)];
+                NSArray *imageKeyname = icons[0];
+                NSLog(@"imageKeyname = %@",imageKeyname);
+                UIImage *iconimg = [weather_icon objectForKey:imageKeyname[0]];
+                [button setBackgroundImage:iconimg forState:UIControlStateNormal];
+                [button addTarget:self action:@selector(goDetail) forControlEvents:UIControlEventTouchDown];
+                [scrollView addSubview:button];
+                
+                
+                NSLog(@"imagenum:%d",i);
+            
+            // ページ数を設定
+            pageControl.numberOfPages = pageSize;
+            
+            // 現在のページを設定
+            pageControl.currentPage = 0;
+            
+            // デフォルトの色
+            pageControl.pageIndicatorTintColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0];
+            // 選択されてるページを現す色
+            pageControl.currentPageIndicatorTintColor =  [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+            
+            // ページコントロールをタップされたときに呼ばれるメソッドを設定
+            pageControl.userInteractionEnabled = YES;
+            [pageControl addTarget:self
+                            action:@selector(pageControl_Tapped:)
+                  forControlEvents:UIControlEventValueChanged];
+            
+            // ページコントロールを貼付ける
+            [self.view addSubview:pageControl];
+            
+            }
+        }
+        else{
+            
+        }
         
-        NSMutableDictionary *weather= @{@"main":main,
-                                        @"description":description,
-                                        @"speed":speed,
-                                        @"icons":icons}.mutableCopy;
-        
-        
-        weather_icon = @{//day
-                         @"01d":[UIImage imageNamed:@"01.png"],
-                         @"02d":[UIImage imageNamed:@"02.png"],
-                         @"03d":[UIImage imageNamed:@"09.png"],
-                         @"04d":[UIImage imageNamed:@"12.png"],
-                         @"09d":[UIImage imageNamed:@"11.png"],
-                         @"10d":[UIImage imageNamed:@"05.png"],
-                         @"11d":[UIImage imageNamed:@"13.png"],
-                         @"13d":[UIImage imageNamed:@"15.png"],
-                         @"50d":[UIImage imageNamed:@"10.png"],
-                         //night
-                         @"01n":[UIImage imageNamed:@"17.png"],
-                         @"02n":[UIImage imageNamed:@"18.png"],
-                         @"03n":[UIImage imageNamed:@"09.png"],
-                         @"04n":[UIImage imageNamed:@"12.png"],
-                         @"09n":[UIImage imageNamed:@"22.png"],
-                         @"10n":[UIImage imageNamed:@"21.png"],
-                         @"11n":[UIImage imageNamed:@"23.png"],
-                         @"13n":[UIImage imageNamed:@"24.png"],
-                         @"50n":[UIImage imageNamed:@"19.png"]};
-        
-        
-//         UILabel作成
-        NSLog(@"i * width = %f",(i * width));
-        button = [[UIButton alloc]initWithFrame:CGRectMake(i * width + 90, 240, 210, 26)];
-        [button setTitle:[NSString stringWithFormat:@"%@",array[i]] forState:UIControlStateNormal];
-        button.titleLabel.font = [UIFont fontWithName:@"Century Gothic" size:19];
-        button.titleLabel.textColor = [UIColor whiteColor];
-        button.titleLabel.textAlignment = NSTextAlignmentLeft;
-        [button addTarget:self action:@selector(goDetail) forControlEvents:UIControlEventTouchDown];
-        [scrollView addSubview:button];
-        
-        img = [[UIImageView alloc] initWithFrame:CGRectMake(i * width + 90, 20, 210, 210)];
-        NSString *imageKeyname = weather[@"icons"][0];
-        NSLog(@"imageKeyname = %@",imageKeyname);
-        UIImage *iconimg = [weather_icon objectForKey:imageKeyname];
-        NSLog(@"iconimg = %@",iconimg);
-        img.image = iconimg;
-        [scrollView addSubview:img];
-        
-        NSLog(@"imagenum:%d",i);
-    }
-    
-    
-    
-    // ページ数を設定
-    pageControl.numberOfPages = pageSize;
-    
-    // 現在のページを設定
-    pageControl.currentPage = 0;
-    
-    // デフォルトの色
-    pageControl.pageIndicatorTintColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0];
-    // 選択されてるページを現す色
-    pageControl.currentPageIndicatorTintColor =  [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-    
-    // ページコントロールをタップされたときに呼ばれるメソッドを設定
-    pageControl.userInteractionEnabled = YES;
-    [pageControl addTarget:self
-                    action:@selector(pageControl_Tapped:)
-          forControlEvents:UIControlEventValueChanged];
-    
-    // ページコントロールを貼付ける
-    [self.view addSubview:pageControl];
-    
+      
     
 }
-
+}
 
 -(void)viewWillAppear:(BOOL)animated {
     [self getUserImage];

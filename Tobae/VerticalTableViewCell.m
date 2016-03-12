@@ -185,40 +185,6 @@ static NSString * const TableViewCustomCellIdentifier = @"Cell";
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
-    /*
-    __block NSDictionary *object;
-    [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-        
-        if (error) {
-            // Error
-            NSLog(@"エラー == %@", error);
-            
-        }else {
-            NSLog(@"responseText = %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
-            object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-            NSArray *main = [object valueForKeyPath:@"weather.main"]; //天候
-            NSArray *description = [object valueForKeyPath:@"weather.description"]; // 天候詳細
-            NSArray *speed = [object valueForKeyPath:@"wind.speed"]; //風速
-            NSArray *icons = [object valueForKeyPath:@"weather.icon"];
-            
-            
-            NSLog(@"main(天候)=%@,description(天候詳細)=%@,speed(風速)=%@,icons(天気アイコン)=%@",main,description,speed,icons);
-            NSLog(@"str=%@",string);
-            
-            NSMutableDictionary *weather= @{@"main":main,
-                                            @"description":description,
-                                            @"speed":speed,
-                                            @"icons":icons}.mutableCopy;
-            
-            return weather;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                // ここに何か処理を書く。
-                
-            });
-        }
-    }];
-     */
-    
     
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];

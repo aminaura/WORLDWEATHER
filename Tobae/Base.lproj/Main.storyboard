@@ -327,7 +327,7 @@
                                 <color key="backgroundColor" red="0.44313725490196076" green="0.45098039215686275" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hb9-dm-xz0">
-                                <rect key="frame" x="19" y="579" width="340" height="67.5"/>
+                                <rect key="frame" x="19" y="578" width="340" height="67.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="1/6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjE-MT-qx3">
                                         <rect key="frame" x="1" y="19" width="56" height="32"/>
