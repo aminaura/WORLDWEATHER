@@ -413,12 +413,6 @@
                         <outlet property="sunset" destination="a4W-um-MRW" id="gYu-Hq-u8N"/>
                         <outlet property="temperaturela" destination="GOY-aj-gg8" id="Z3I-8t-Kb9"/>
                         <outletCollection property="templa" destination="GOY-aj-gg8" id="FDf-7h-trg"/>
-                        <outletCollection property="weekdayla" destination="YFn-hI-XNB" id="Vw4-R2-bE6"/>
-                        <outletCollection property="weekdayla" destination="hEM-02-EmD" id="lf6-dx-1bP"/>
-                        <outletCollection property="weekdayla" destination="k3V-cK-rFz" id="oLq-Uo-wsO"/>
-                        <outletCollection property="weekdayla" destination="Szg-J8-5rS" id="cuC-mD-CYv"/>
-                        <outletCollection property="weekdayla" destination="VR9-he-wMx" id="4RW-99-1Er"/>
-                        <outletCollection property="weekdayla" destination="nZh-eI-mfm" id="wK9-GY-U11"/>
                         <outletCollection property="imageViews" destination="c0I-HC-rou" id="hrY-xY-jSz"/>
                         <outletCollection property="imageViews" destination="dhw-wU-gsG" id="XZr-qZ-Z8s"/>
                         <outletCollection property="imageViews" destination="GaS-Ku-BKi" id="EoQ-oI-nXq"/>
@@ -444,6 +438,12 @@
                         <outletCollection property="rainfallla" destination="Lhb-vs-C9r" id="ENh-kV-uel"/>
                         <outletCollection property="rainfallla" destination="q85-IX-pkl" id="wxQ-zb-lsM"/>
                         <outletCollection property="rainfallla" destination="mNY-dE-qdI" id="hn3-Nr-MeF"/>
+                        <outletCollection property="weekdayla" destination="YFn-hI-XNB" id="YzU-nV-6Nw"/>
+                        <outletCollection property="weekdayla" destination="Szg-J8-5rS" id="Jbk-NQ-Dv7"/>
+                        <outletCollection property="weekdayla" destination="hEM-02-EmD" id="iYd-dA-Pq5"/>
+                        <outletCollection property="weekdayla" destination="k3V-cK-rFz" id="Not-ll-Leq"/>
+                        <outletCollection property="weekdayla" destination="VR9-he-wMx" id="79u-GX-vik"/>
+                        <outletCollection property="weekdayla" destination="nZh-eI-mfm" id="G8P-8W-x0E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ij-wQ-KGs" userLabel="First Responder" sceneMemberID="firstResponder"/>

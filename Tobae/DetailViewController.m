@@ -738,8 +738,6 @@
             
             UILabel *weekdayl = weekdayla[i - 1];
             weekdayl.text = [weekday valueForKey:eStr];
-            
-            
         }
     }
 }
