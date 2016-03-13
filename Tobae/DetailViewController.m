@@ -40,11 +40,6 @@
     
     [self sendRequestForWeather];
     
-//   //
-//
-//
-    
-    
     [self get];
     
     NSString *name = [CapitalStrManager sharedManager].capitalstr;
@@ -83,13 +78,14 @@
             NSLog(@"object = %@",object);
             NSArray *main = [object valueForKeyPath:@"weather.main"]; //天候
             NSArray *description = [object valueForKeyPath:@"weather.description"]; // 天候詳細
-            NSArray *speed = [object valueForKeyPath:@"wind.speed"]; //風速
             NSArray *icons = [object valueForKeyPath:@"weather.icon"];
-            humidityla.text = [NSString stringWithFormat:@"humidity : %@％", [object valueForKeyPath:@"main.humidity"]];
+            
+            NSLog(@"humidity = %@",[object valueForKeyPath:@"main.humidity"]);
 
+            humidityla.text = [NSString stringWithFormat:@"humidity：%@％",[object valueForKeyPath:@"main.humidity"]];
+                
             NSMutableDictionary *weather= @{@"main":main,
                                             @"description":description,
-                                            @"speed":speed,
                                             @"icons":icons}.mutableCopy;
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -210,10 +206,11 @@
                 
             }
         }
+        [self sunrise:[CapitalStrManager sharedManager].capitalstr];
     }else {
        //TODO: エラー処理
     }
-    [self sunrise:[CapitalStrManager sharedManager].capitalstr];
+    
 }
 
 -(void)sunrise: (NSString *)string{
@@ -709,7 +706,7 @@
             NSDateFormatter* formatter_e = [[NSDateFormatter alloc] init];
             
             // 変換用の書式を設定します。
-            [formatter setDateFormat:@"MM/dd"];
+            [formatter setDateFormat:@"M/dd"];
             [formatter_e setDateFormat:@"E"];
             
             // NSDate を NSString に変換します。
