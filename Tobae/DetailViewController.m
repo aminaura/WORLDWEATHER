@@ -79,10 +79,10 @@
             NSArray *main = [object valueForKeyPath:@"weather.main"]; //天候
             NSArray *description = [object valueForKeyPath:@"weather.description"]; // 天候詳細
             NSArray *icons = [object valueForKeyPath:@"weather.icon"];
-            
-            NSLog(@"humidity = %@",[object valueForKeyPath:@"main.humidity"]);
 
-            humidityla.text = [NSString stringWithFormat:@"humidity：%@％",[object valueForKeyPath:@"main.humidity"]];
+            NSString *humidity = [object valueForKeyPath:@"main.humidity"];
+            NSLog(@"humidity = %@",humidity);
+            humidityla.text = [NSString stringWithFormat:@"humidity：%@％",humidity];
                 
             NSMutableDictionary *weather= @{@"main":main,
                                             @"description":description,
@@ -200,8 +200,6 @@
             for(int j = 0; j < listarray.count; j ++){
                 
                 int temp = [[[(NSDictionary *)listarray[j] valueForKey:@"temp"] valueForKey:@"day"]intValue];
-                NSLog(@"%d",temp);
-                
                 ((UILabel*)templa[j]).text = [NSString stringWithFormat:@"%d℃",temp];
                 
             }
@@ -226,7 +224,7 @@
     NSURLResponse *responce;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&responce error:&error];
     
-    if(error != nil){
+    if(error == nil){
         if(data.length){
             NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
             NSDictionary *sysDic = [object valueForKeyPath:@"sys"]; //天候;
@@ -241,7 +239,7 @@
             [sunriseFormatter setDateFormat:@"HH:mm"];
             NSString *sunrisestr = [sunriseFormatter stringFromDate:sunriseDate];
             
-            NSLog(@"sunriseDate: %@", sunriseDate);
+            NSLog(@"SunriseStr: %@", sunrisestr);
             sunrise.text = [NSString stringWithFormat:@"sunrise : %@",sunrisestr];
             
             NSDateFormatter *sunsetFormatter = [[NSDateFormatter alloc] init];
@@ -249,13 +247,13 @@
             NSString *sunsetstr = [sunriseFormatter stringFromDate:sunsetDate];
             
             
-            NSLog(@"sunsetDate: %@", sunsetDate);
+            NSLog(@"sunsetstr: %@", sunrisestr);
             sunset.text = [NSString stringWithFormat:@"sunset : %@",sunsetstr];
 
         }
     }
     else{
-        
+            NSLog(@"error=%@",error);
     }
     
     }
@@ -663,10 +661,6 @@
         countries[countries[key]] = key;
         [countries removeObjectForKey:key];
     }
-    
-    NSLog(@"%@", countries);
-    
-    NSLog(@"capitalstr = %@",[CapitalStrManager sharedManager].capitalstr);
     
     countrylabel.text = [countries valueForKey:[CapitalStrManager sharedManager].capitalstr];
     [self getweather:[CapitalStrManager sharedManager].capitalstr];

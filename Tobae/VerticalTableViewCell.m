@@ -131,7 +131,7 @@ static NSString * const TableViewCustomCellIdentifier = @"Cell";
                                            });
                                        }else {
                                            // TODO: ここに取得できなかったときの処理。でも本当は、「すでに取れてたらリクエストを送らない」というのが正解
-                                       }
+                                        }
                                    }else {
                                        NSLog(@"レスポンス == %@, エラー == %@", response, error);
                                    }

@@ -40,7 +40,6 @@
 		DBCAA9331B817032003E70EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCAA9321B817032003E70EE /* Images.xcassets */; };
 		DBCAA9361B817032003E70EE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBCAA9341B817032003E70EE /* LaunchScreen.xib */; };
 		DBCAAAD51B8170C1003E70EE /* VerticalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCAAAD41B8170C1003E70EE /* VerticalTableViewCell.m */; };
-		DBCAABC71B820B9A003E70EE /* tobae_daruma_character.ai in Resources */ = {isa = PBXBuildFile; fileRef = DBCAAAF41B820B9A003E70EE /* tobae_daruma_character.ai */; };
 		DBCAABC81B820B9A003E70EE /* tobae_daruma_character.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBCAAAF51B820B9A003E70EE /* tobae_daruma_character.jpg */; };
 		DBCAABC91B820B9A003E70EE /* tobae_daruma_direction.png in Resources */ = {isa = PBXBuildFile; fileRef = DBCAAAF61B820B9A003E70EE /* tobae_daruma_direction.png */; };
 		DBCAABCA1B820B9A003E70EE /* tobae_daruma_drawing.png in Resources */ = {isa = PBXBuildFile; fileRef = DBCAAAF71B820B9A003E70EE /* tobae_daruma_drawing.png */; };
@@ -226,10 +225,7 @@
 		DBCAAC7E1B820B9A003E70EE /* preview1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABB41B820B9A003E70EE /* preview1.jpg */; };
 		DBCAAC7F1B820B9A003E70EE /* preview2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABB51B820B9A003E70EE /* preview2.jpg */; };
 		DBCAAC801B820B9A003E70EE /* tt.png in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABB61B820B9A003E70EE /* tt.png */; };
-		DBCAAC811B820B9A003E70EE /* Weather-App-Icons改.ai in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABB71B820B9A003E70EE /* Weather-App-Icons改.ai */; };
-		DBCAAC821B820B9A003E70EE /* Weather-App-Icons.ai in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABB81B820B9A003E70EE /* Weather-App-Icons.ai */; };
 		DBCAAC831B820B9A003E70EE /* Weather-App-Icons.eps in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABB91B820B9A003E70EE /* Weather-App-Icons.eps */; };
-		DBCAAC841B820B9A003E70EE /* Weather-App-Icons.psd in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABBA1B820B9A003E70EE /* Weather-App-Icons.psd */; };
 		DBCAAC851B820B9A003E70EE /* Weather-App-Icons.png in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABBB1B820B9A003E70EE /* Weather-App-Icons.png */; };
 		DBCAAC861B820B9A003E70EE /* IMG_Article.PNG in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABBD1B820B9A003E70EE /* IMG_Article.PNG */; };
 		DBCAAC871B820B9A003E70EE /* IMG_Loading.png in Resources */ = {isa = PBXBuildFile; fileRef = DBCAABBE1B820B9A003E70EE /* IMG_Loading.png */; };
@@ -302,7 +298,6 @@
 		DBCAA9351B817032003E70EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DBCAAAD31B8170C1003E70EE /* VerticalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalTableViewCell.h; sourceTree = "<group>"; };
 		DBCAAAD41B8170C1003E70EE /* VerticalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalTableViewCell.m; sourceTree = "<group>"; };
-		DBCAAAF41B820B9A003E70EE /* tobae_daruma_character.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tobae_daruma_character.ai; sourceTree = "<group>"; };
 		DBCAAAF51B820B9A003E70EE /* tobae_daruma_character.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tobae_daruma_character.jpg; sourceTree = "<group>"; };
 		DBCAAAF61B820B9A003E70EE /* tobae_daruma_direction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tobae_daruma_direction.png; sourceTree = "<group>"; };
 		DBCAAAF71B820B9A003E70EE /* tobae_daruma_drawing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tobae_daruma_drawing.png; sourceTree = "<group>"; };
@@ -488,10 +483,7 @@
 		DBCAABB41B820B9A003E70EE /* preview1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = preview1.jpg; sourceTree = "<group>"; };
 		DBCAABB51B820B9A003E70EE /* preview2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = preview2.jpg; sourceTree = "<group>"; };
 		DBCAABB61B820B9A003E70EE /* tt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tt.png; sourceTree = "<group>"; };
-		DBCAABB71B820B9A003E70EE /* Weather-App-Icons改.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Weather-App-Icons\b改.ai"; sourceTree = "<group>"; };
-		DBCAABB81B820B9A003E70EE /* Weather-App-Icons.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Weather-App-Icons.ai"; sourceTree = "<group>"; };
 		DBCAABB91B820B9A003E70EE /* Weather-App-Icons.eps */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Weather-App-Icons.eps"; sourceTree = "<group>"; };
-		DBCAABBA1B820B9A003E70EE /* Weather-App-Icons.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Weather-App-Icons.psd"; sourceTree = "<group>"; };
 		DBCAABBB1B820B9A003E70EE /* Weather-App-Icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Weather-App-Icons.png"; sourceTree = "<group>"; };
 		DBCAABBD1B820B9A003E70EE /* IMG_Article.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_Article.PNG; sourceTree = "<group>"; };
 		DBCAABBE1B820B9A003E70EE /* IMG_Loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_Loading.png; sourceTree = "<group>"; };
@@ -628,7 +620,6 @@
 		DBCAAAF31B820B9A003E70EE /* Icon_Daruma */ = {
 			isa = PBXGroup;
 			children = (
-				DBCAAAF41B820B9A003E70EE /* tobae_daruma_character.ai */,
 				DBCAAAF51B820B9A003E70EE /* tobae_daruma_character.jpg */,
 				DBCAAAF61B820B9A003E70EE /* tobae_daruma_direction.png */,
 				DBCAAAF71B820B9A003E70EE /* tobae_daruma_drawing.png */,
@@ -886,10 +877,7 @@
 				DBCAABB41B820B9A003E70EE /* preview1.jpg */,
 				DBCAABB51B820B9A003E70EE /* preview2.jpg */,
 				DBCAABB61B820B9A003E70EE /* tt.png */,
-				DBCAABB71B820B9A003E70EE /* Weather-App-Icons改.ai */,
-				DBCAABB81B820B9A003E70EE /* Weather-App-Icons.ai */,
 				DBCAABB91B820B9A003E70EE /* Weather-App-Icons.eps */,
-				DBCAABBA1B820B9A003E70EE /* Weather-App-Icons.psd */,
 			);
 			path = PIXEDEN;
 			sourceTree = "<group>";
@@ -1035,7 +1023,6 @@
 				DBCAAC731B820B9A003E70EE /* snow.png in Resources */,
 				DBCAAC891B820B9A003E70EE /* IMG_Menu.png in Resources */,
 				DBCAABE71B820B9A003E70EE /* NIS_text_25pixel.png in Resources */,
-				DBCAAC811B820B9A003E70EE /* Weather-App-Icons改.ai in Resources */,
 				DBCAAC4B1B820B9A003E70EE /* Moon-Waning-Gibbous.svg in Resources */,
 				DBCAABE41B820B9A003E70EE /* NIS_20pixel.png in Resources */,
 				DBCAABF01B820B9A003E70EE /* Oceania_30pixel.png in Resources */,
@@ -1059,7 +1046,6 @@
 				DB44DB381BBFC6310054EF17 /* Favorite_Cancel.png in Resources */,
 				DBCAABD31B820B9A003E70EE /* tobae_daruma_voice.png in Resources */,
 				DBCAA9311B817032003E70EE /* Main.storyboard in Resources */,
-				DBCAAC821B820B9A003E70EE /* Weather-App-Icons.ai in Resources */,
 				DBCAAC101B820B9A003E70EE /* 24.png in Resources */,
 				DBCAAC191B820B9A003E70EE /* Cloud-Drizzle-Sun-Alt.svg in Resources */,
 				DBCAAC321B820B9A003E70EE /* Cloud-Refresh.svg in Resources */,
@@ -1070,7 +1056,6 @@
 				DBCAABF41B820B9A003E70EE /* SouthAmerica_25pixel.png in Resources */,
 				DB44DB391BBFC6310054EF17 /* Profile.png in Resources */,
 				DBCAAC371B820B9A003E70EE /* Cloud-Snow-Sun.svg in Resources */,
-				DBCAABC71B820B9A003E70EE /* tobae_daruma_character.ai in Resources */,
 				DBCAABCF1B820B9A003E70EE /* tobae_daruma_overseas.png in Resources */,
 				DBCAAC7B1B820B9A003E70EE /* sunny.png in Resources */,
 				DBCAAC641B820B9A003E70EE /* cloudy_rain_later.png in Resources */,
@@ -1093,7 +1078,6 @@
 				DBCAAC3D1B820B9A003E70EE /* Cloud-Wind.svg in Resources */,
 				DB44DB371BBFC6310054EF17 /* Favorite_Add.png in Resources */,
 				DBCAAC5F1B820B9A003E70EE /* cloudy.png in Resources */,
-				DBCAAC841B820B9A003E70EE /* Weather-App-Icons.psd in Resources */,
 				DBCAAC381B820B9A003E70EE /* Cloud-Snow.svg in Resources */,
 				DB9B3EFB1C40F5A500BF2812 /* SignIn.png in Resources */,
 				DBCAA9361B817032003E70EE /* LaunchScreen.xib in Resources */,
